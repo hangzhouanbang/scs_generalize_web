@@ -1,0 +1,26 @@
+tr th:nth-child(1),
+tr td:nth-child(1){
+    width:2.2rem;
+}
+tr th:nth-child(2),
+tr td:nth-child(2){
+    width:2rem;
+}
+tr th:nth-child(3),
+tr td:nth-child(3){
+    width:2.2rem;
+}
+tr td:nth-child(3) span{
+    display:inline-block;
+    width: 1.64rem;
+    height: 0.58rem;
+    line-height: 0.58rem;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+}
+tr td{
+    height:0.8rem;
+}
