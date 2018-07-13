@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>推广员管理后台</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/membercard_conversion.css.css">
+    <link rel="stylesheet" type="text/css" href="../css/membercard_buy.css.css">
 </head>
 <body>
 <table class="t_table">
@@ -22,8 +25,8 @@
 <table class="t_table">
     <tr>
         <td> 推广积分：XXXXX</td>
-        <td><input type="button" value="会员卡兑换" class="btn"></td>
-        <td><input type="button" value="会员卡购买" class="btn"/></td>
+        <td><input type="button" value="会员卡兑换" class="btn" onclick="memberCardConversion()"></td>
+        <td><input type="button" value="会员卡购买" class="btn" onclick="memberCardBuy()"/></td>
     </tr>
 </table>
 <table class="t_table">
@@ -39,7 +42,7 @@
             <input type="button" value="充值账号" class="btn1 recharge"
                    onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
             <input type="button" value="转赠" class="btn1 donation"
-            onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
+                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))"/>
         </td>
     </tr>
     <tr>
@@ -49,7 +52,7 @@
             <input type="button" value="充值账号" class="btn1 recharge"
                    onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
             <input type="button" value="转赠" class="btn1 donation"
-                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
+                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))"/>
         </td>
     </tr>
     <tr>
@@ -59,7 +62,7 @@
             <input type="button" value="充值账号" class="btn1 recharge"
                    onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
             <input type="button" value="转赠" class="btn1 donation"
-                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
+                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))"/>
         </td>
     </tr>
 </table>
@@ -139,5 +142,7 @@
 
 <script src="../js/public.js"></script>
 <script src="../js/first_index.js"></script>
+<script src="../js/membercard_conversion.js"></script>
+<script src="../js/membercard_buy.js"></script>
 </body>
 </html>
