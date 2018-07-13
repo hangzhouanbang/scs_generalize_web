@@ -1,0 +1,52 @@
+body {
+    font-family: Arial;
+    font-size: 0.28rem;
+}
+
+.d_back {
+    width: 1.5rem;
+    /* border: solid 0.01rem gray;*/
+}
+
+table {
+    margin-top: 0.2rem;
+}
+
+/*tr td {
+    border: solid 0.001rem orange;
+}*/
+
+.btn {
+    width: 1.7rem;
+    height: 0.54rem;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+    line-height: 0.54rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a .btn {
+    width: 1.7rem;
+    height: 0.54rem;
+}
+
+span {
+    margin-left: 0.1rem;
+}
+
+.d_goods {
+    width: 2.5rem;
+    height: 3rem;
+    border: solid 0.001rem gray;
+    line-height: 0.5rem;
+}
+
+.i_img {
+    margin-top: 0.4rem;
+}

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>一级推广员</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 <body>
@@ -23,8 +24,8 @@
 <table class="t_table">
     <tr>
         <td> 推广积分：XXXXX</td>
-        <td><input type="button" value="会员卡兑换" class="btn"></td>
-        <td><input type="button" value="会员卡购买" class="btn"/></td>
+        <td><input type="button" value="会员卡兑换" class="btn" onclick="memberCardConversion()"></td>
+        <td><input type="button" value="会员卡购买" class="btn" onclick="memberCardBuy()"/></td>
     </tr>
 </table>
 
@@ -77,5 +78,7 @@
     </tr>
 </table>
 <script src="../js/public.js"></script>
+<script src="../js/membercard_conversion.js"></script>
+<script src="../js/membercard_buy.js"></script>
 </body>
 </html>
