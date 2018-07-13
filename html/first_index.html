@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>一级推广员</title>
+    <title>推广员管理后台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
@@ -19,7 +19,6 @@
         <td class="td_message">注册时间：2018年X月X日</td>
     </tr>
 </table>
-
 <table class="t_table">
     <tr>
         <td> 推广积分：XXXXX</td>
@@ -27,7 +26,6 @@
         <td><input type="button" value="会员卡购买" class="btn"/></td>
     </tr>
 </table>
-
 <table class="t_table">
     <tr>
         <td>物品</td>
@@ -38,8 +36,10 @@
         <td><img src="../img/u15.png" style="width: 1.46rem;height:1.46rem;"></td>
         <td>3</td>
         <td>
-            <input type="button" value="充值账号" class="btn1 recharge"/><br/>
-            <input type="button" value="转增" class="btn1 donation"/>
+            <input type="button" value="充值账号" class="btn1 recharge"
+                   onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
+            <input type="button" value="转赠" class="btn1 donation"
+            onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
         </td>
     </tr>
     <tr>
@@ -59,9 +59,7 @@
         </td>
     </tr>
 </table>
-
 <hr/>
-
 <table class="t_table">
     <tr>
         <td><input type="button" value="查看购买记录" class="btn2"/></td>
@@ -76,6 +74,66 @@
         <td><input type="button" value="我的下级" class="btn2"/></td>
     </tr>
 </table>
+<!--充值账号-->
+<div class="GAME_GUIDE">
+    <div class="player">
+        <span>玩家ID</span>
+        <input type="text" placeholder="输入赠送玩家的ID">
+    </div>
+    <div class="categories">
+        <span>物品类型</span>
+        <input type="text" placeholder="如周卡、月卡、季卡">
+    </div>
+    <div class="number">
+        <span>赠送数量</span>
+        <input type="text" placeholder="输入物品数量，如1,2">
+    </div>
+    <div class="querycard">
+        <span onclick="show(document.getElementsByClassName('confirm_prepaid_phone'),document.getElementsByClassName('GAME_GUIDE'))">确认充值</span>
+        <span>取消</span>
+    </div>
+    <div class="tip">周卡数量不够啦~</div>
+    <div class="X" onclick="hide(document.getElementsByClassName('GAME_GUIDE'))">x</div>
+</div>
+<!--确认充值-->
+<div class="confirm_prepaid_phone">
+    <div class="headline">请确认使用内容 <br> 给玩家ID 充值3张会员周卡</div>
+    <div class="querycard">
+        <span onclick="show(document.getElementsByClassName('recharged_successfully'),document.getElementsByClassName('confirm_prepaid_phone'))">确认充值</span>
+        <span onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))">返回修改</span>
+    </div>
+    <div class="X" onclick="hide(document.getElementsByClassName('confirm_prepaid_phone'))">x</div>
+</div>
+<!--充值成功-->
+<div class="recharged_successfully">
+    <div class="headline">充值成功！</div>
+    <div class="querycard">
+        <a href="first_index.html" onclick="hide(document.getElementsByClassName('recharged_successfully'))">返回首页</a>
+        <a href="recharge_record.html">查看充值记录</a>
+    </div>
+    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>
+</div>
+<!--转赠-->
+<div class="Donation">
+    <div class="headline">请确认转赠内容 <br>
+        转赠推广员昵称（ID）会员周卡3张
+    </div>
+    <div class="querycard">
+        <span onclick="show(document.getElementsByClassName('examples_of_successful'),document.getElementsByClassName('Donation'))">确认转赠</span>
+        <a href="first_index.html" onclick="hide(document.getElementsByClassName('Donation'))">我再想想</a>
+    </div>
+</div>
+<!--转赠成功-->
+<div class="examples_of_successful">
+    <div class="headline">转赠成功！</div>
+    <div class="querycard">
+        <a href="examples_record.html">查看转赠记录</a>
+        <a href="first_index.html" onclick="hide(document.getElementsByClassName('examples_of_successful'))">返回首页</a>
+    </div>
+    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>
+</div>
+
 <script src="../js/public.js"></script>
+<script src="../js/first_index.js"></script>
 </body>
 </html>

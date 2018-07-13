@@ -64,3 +64,126 @@ hr {
     width: 3.08rem;
     height: 0.64rem;
 }
+/*充值账号*/
+.GAME_GUIDE,
+.confirm_prepaid_phone,
+.recharged_successfully,
+.Donation,
+.examples_of_successful{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+    display:none;
+    width: 6.22rem;
+}
+.GAME_GUIDE{
+    height: 4.4rem;
+}
+.player,
+.categories,
+.number,
+.querycard{
+    width:6rem;
+    margin:0.3rem auto 0 auto;
+}
+.player{
+    margin-top:0.4rem;
+}
+.player span,
+.categories span,
+.number span{
+    width:1.14rem;
+    display:inline-block;
+}
+.player input,
+.categories input,
+.number input,
+.querycard input{
+    width: 4rem;
+    height: 0.6rem;
+    color: rgba(136, 136, 136, 1);
+    border: 1px solid rgba(187, 187, 187, 1);
+    padding-left:0.1rem;
+}
+.querycard span,
+.querycard a{
+    display:inline-block;
+    width: 1.6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+}
+.querycard span:nth-child(2),
+.querycard a:nth-child(2){
+    margin-left:0.8rem;
+}
+.tip{
+    display:none;
+}
+.X{
+    position: absolute;
+    right:-0.2rem;
+    top:-0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    border-radius: 50%;
+    line-height: 0.6rem;
+    font-size:0.4rem;
+    background-color: #fff;
+}
+/*确认充值*/
+.confirm_prepaid_phone{
+    height:4.14rem;
+}
+.headline{
+    width: 5.32rem;
+    height: 1.26rem;
+    line-height: 29px;
+    color: rgba(16, 16, 16, 1);
+    font-size: 0.4rem;
+    text-align: center;
+    margin:0.5rem auto;
+}
+/*充值成功*/
+.recharged_successfully{
+    width: 6.46rem;
+    height: 3.94rem;
+}
+.recharged_successfully .headline,
+.examples_of_successful .headline{
+    height:0.7rem;
+}
+.recharged_successfully .querycard a,
+.Donation .querycard a,
+.examples_of_successful .querycard a{
+    width:1.8rem;
+    text-decoration: none;
+}
+.mess{
+    margin-top:0.5rem;
+}
+/*转赠*/
+.Donation{
+    width: 6.42rem;
+    height: 4.1rem;
+}
+.Donation .headline{
+    height:1.8rem;
+}
+/*转赠成功*/
+.examples_of_successful{
+    width: 6.42rem;
+    height: 4.1rem;
+}
+
