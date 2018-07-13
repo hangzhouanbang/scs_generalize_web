@@ -3,36 +3,44 @@
     padding: 0rem;
 }
 
-.s_choose {
-    width: 5rem;
-    height: 2.5rem;
-    float: right;
-    margin-right: 0.3rem;
+tr th {
+    font-size: 20px;
+}
+
+tr td {
+    font-size: 20px;
 }
 
 .d-select {
     width: 100%;
-    height: 2rem;
-    margin-top: 0.3rem;
+    height: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+.s_choose {
+    width: 0.6rem;
+    height: 0.3rem;
+    float: right;
+    margin-right: 0.2rem;
 }
 
 .t_table {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0.2rem;
 }
 
 hr {
     background: gray;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 1rem;
+    margin-left: 0.05rem;
+    margin-right: 0.05rem;
+    margin-top: 0.2rem;
 }
 
 .td_message {
     text-align: left;
 }
 
-td {
-    line-height: 3rem;
-    /* border:solid 0.01rem gray;*/
+tr td {
+    line-height: 0.5rem;
+     /*border:solid 0.01rem gray;*/
 }
