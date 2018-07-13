@@ -12,7 +12,7 @@ body{
 }
 .title{
     margin:0 auto;
-    width: 3rem;
+    width: 6.5rem;
     height: 26px;
     line-height: 26px;
     color: rgba(16, 16, 16, 1);
@@ -32,6 +32,9 @@ tr{
 }
 table td {
     border-top: 1px solid #bbb;
+}
+table tr th{
+    background-color: #eee;
 }
 table tr td:first-child{
     border-left: 1px solid #bbb;
