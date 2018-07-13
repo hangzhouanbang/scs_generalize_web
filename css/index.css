@@ -1,46 +1,66 @@
-* {
-    margin: 0rem;
-    padding: 0rem;
+body{
+    font-family: Arial;
+    font-size:0.28rem;
 }
-
-tr th {
-    font-size: 20px;
-}
-
-tr td {
-    font-size: 20px;
-}
-
-.d-select {
-    width: 100%;
-    height: 0.2rem;
-    margin-top: 0.2rem;
-}
-
-.s_choose {
-    width: 0.6rem;
-    height: 0.3rem;
-    float: right;
-    margin-right: 0.2rem;
-}
-
 .t_table {
     text-align: center;
+    width:7rem;
+    margin:0 auto;
+    border-collapse: collapse;
+}
+.t_table:nth-child(1){
+    margin-top: 0.4rem;
+}
+.t_table:nth-child(2),
+.t_table:nth-child(3){
     margin-top: 0.2rem;
 }
-
+.t_table:nth-child(3) tr,
+.t_table:nth-child(5) tr{
+    width: 7rem;
+    display: block; /*将tr设置为块体元素*/
+    margin: 10px 0; /*设置tr间距为2px*/
+}
+.t_table:nth-child(3) tr td{
+   width:2.26rem;
+}
+.t_table:nth-child(3) tr:nth-child(1) td{
+    height:0.56rem;
+    background-color: #eee;
+}
+.t_table:nth-child(5) tr td:nth-child(2) .btn2{
+    margin-left:0.7rem;
+}
 hr {
     background: gray;
-    margin-left: 0.05rem;
-    margin-right: 0.05rem;
-    margin-top: 0.2rem;
+    width:7rem;
+    margin:0 auto 0.2rem auto;
 }
-
 .td_message {
     text-align: left;
 }
-
-tr td {
-    line-height: 0.5rem;
-     /*border:solid 0.01rem gray;*/
+.btn,
+.btn1,
+.btn2{
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+}
+.btn{
+    width: 1.7rem;
+    height: 0.54rem;
+    padding:0;
+}
+.btn1{
+    width: 1.64rem;
+    height: 0.6rem;
+}
+.donation{
+    margin-top:0.12rem;
+}
+.btn2{
+    width: 3.08rem;
+    height: 0.64rem;
 }
