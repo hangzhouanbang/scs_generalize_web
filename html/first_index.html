@@ -43,35 +43,39 @@
         </td>
     </tr>
     <tr>
-        <td><img src="../img/u15.png" style="width: 1.46rem;height: 1.46rem;"></td>
+        <td><img src="../img/u15.png" style="width: 1.46rem;height:1.46rem;"></td>
         <td>3</td>
         <td>
-            <input type="button" value="充值账号" class="btn1 recharge"/><br/>
-            <input type="button" value="转增" class="btn1 donation"/>
+            <input type="button" value="充值账号" class="btn1 recharge"
+                   onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
+            <input type="button" value="转赠" class="btn1 donation"
+                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
         </td>
     </tr>
     <tr>
-        <td><img src="../img/u15.png" style="width: 1.46rem;height: 1.46rem;"></td>
+        <td><img src="../img/u15.png" style="width: 1.46rem;height:1.46rem;"></td>
         <td>3</td>
         <td>
-            <input type="button" value="充值账号" class="btn1 recharge"/><br/>
-            <input type="button" value="转增" class="btn1 donation"/>
+            <input type="button" value="充值账号" class="btn1 recharge"
+                   onclick="show(document.getElementsByClassName('GAME_GUIDE'),document.getElementsByClassName('confirm_prepaid_phone'))"/><br/>
+            <input type="button" value="转赠" class="btn1 donation"
+                   onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))" />
         </td>
     </tr>
 </table>
 <hr/>
 <table class="t_table">
     <tr>
-        <td><input type="button" value="查看购买记录" class="btn2"/></td>
-        <td><input type="button" value="查看充值记录" class="btn2"/></td>
+        <td><a class="btn2" href="purchase_history.html">查看购买记录</a></td>
+        <td><a class="btn2" href="recharge_record.html">查看充值记录</a></td>
     </tr>
     <tr>
-        <td><input type="button" value="推广码查询" class="btn2"/></td>
-        <td><input type="button" value="积分兑换记录" class="btn2"/></td>
+        <td><a class="btn2" href="promotion_code.html">推广码查询</a></td>
+        <td><a class="btn2" href="for_record.html">积分兑换记录</a></td>
     </tr>
     <tr>
-        <td><input type="button" value="查看转增记录" class="btn2"/></td>
-        <td><input type="button" value="我的下级" class="btn2"/></td>
+        <td><a class="btn2" href="examples_record.html">查看转增记录</a></td>
+        <td><a class="btn2" href="my_subordinates.html">我的下级</a></td>
     </tr>
 </table>
 <!--充值账号-->
@@ -90,7 +94,7 @@
     </div>
     <div class="querycard">
         <span onclick="show(document.getElementsByClassName('confirm_prepaid_phone'),document.getElementsByClassName('GAME_GUIDE'))">确认充值</span>
-        <span>取消</span>
+        <span onclick="back()">取消</span>
     </div>
     <div class="tip">周卡数量不够啦~</div>
     <div class="X" onclick="hide(document.getElementsByClassName('GAME_GUIDE'))">x</div>
