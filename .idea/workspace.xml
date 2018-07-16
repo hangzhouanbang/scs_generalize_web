@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc7bd480-e811-400b-ac01-b6892522c3d2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/application_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/login_limit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/application_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/login_limit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/application_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/first_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/first_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/membercard_buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_buy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/membercard_conversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_conversion.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +37,8 @@
       <file leaf-file-name="login_limit.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/login_limit.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="208">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -4935,15 +4925,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531472587740</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="推广员申请">
+      <created>1531718009020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1531718009020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40285000" />
+    <option name="totallyTimeSpent" value="40435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11169652" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -4985,7 +4981,8 @@
     <MESSAGE value="登录界面&#10;查看购买记录" />
     <MESSAGE value="首页样式修改" />
     <MESSAGE value="首页新增功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="首页新增功能" />
+    <MESSAGE value="推广员申请" />
+    <option name="LAST_COMMIT_MESSAGE" value="推广员申请" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/html/recharge_record.html">
@@ -5290,8 +5287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/login_limit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="208">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
