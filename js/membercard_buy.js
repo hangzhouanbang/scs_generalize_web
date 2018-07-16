@@ -1,3 +1,3 @@
 function memberCardBuy() {
-    window.open("membercard_buy.html");
+    window.location.href = "../html/membercard_buy.html";
 }
