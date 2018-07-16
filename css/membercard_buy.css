@@ -50,3 +50,61 @@ span {
 .i_img {
     margin-top: 0.4rem;
 }
+
+.Donation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+    display: none;
+    text-align: center;
+    width: 6.42rem;
+    height: 4.1rem;
+}
+
+.Donation .headline {
+    height: 1.8rem;
+    margin-top: 1rem;
+}
+
+.querycard span,
+.querycard a {
+    display: inline-block;
+    width: 1.8rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+}
+
+.querycard {
+    width: 6rem;
+    margin: 0.3rem auto 0 auto;
+}
+
+.Donation,
+.examples_of_successful {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+    display: none;
+    width: 6.22rem;
+}
+
+.headline {
+    width: 5.32rem;
+    height: 1.26rem;
+    color: rgba(16, 16, 16, 1);
+    font-size: 0.4rem;
+    text-align: center;
+    margin: 0.5rem auto;
+}
