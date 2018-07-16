@@ -1,121 +1,156 @@
-body{
+body {
     font-family: Arial;
-    font-size:0.28rem;
+    font-size: 0.28rem;
 }
+
 .t_table {
     text-align: center;
-    width:7rem;
-    margin:0 auto;
+    width: 7rem;
+    margin: 0 auto;
     border-collapse: collapse;
 }
-.t_table:nth-child(1){
+
+.t_table:nth-child(1) {
     margin-top: 0.4rem;
 }
+
 .t_table:nth-child(2),
-.t_table:nth-child(3){
+.t_table:nth-child(3) {
     margin-top: 0.2rem;
 }
+
 .t_table:nth-child(3) tr,
-.t_table:nth-child(5) tr{
+.t_table:nth-child(5) tr {
     width: 7rem;
     display: block; /*将tr设置为块体元素*/
     margin: 10px 0; /*设置tr间距为2px*/
 }
-.t_table:nth-child(3) tr td{
-   width:2.26rem;
+
+.t_table:nth-child(3) tr td {
+    width: 2.26rem;
 }
-.t_table:nth-child(3) tr:nth-child(1) td{
-    height:0.56rem;
+
+.t_table:nth-child(3) tr:nth-child(1) td {
+    height: 0.56rem;
     background-color: #eee;
 }
-.t_table:nth-child(5) tr td:nth-child(2) .btn2{
-    margin-left:0.7rem;
+
+.t_table:nth-child(5) tr td:nth-child(2) .btn2 {
+    margin-left: 0.7rem;
 }
+
 hr {
     background: gray;
-    width:7rem;
-    margin:0 auto 0.2rem auto;
+    width: 7rem;
+    margin: 0 auto 0.2rem auto;
 }
+
 .td_message {
     text-align: left;
 }
+
 .btn,
 .btn1,
-.btn2{
+.btn2 {
     border-radius: 4px;
     color: rgba(16, 16, 16, 1);
     text-align: center;
     border: 1px solid rgba(187, 187, 187, 1);
     background-color: #fff;
-    display:inline-block;
+    display: inline-block;
     text-decoration: none;
 }
-.btn{
+
+.btn {
     width: 1.7rem;
     height: 0.54rem;
-    padding:0;
+    padding: 0;
 }
-.btn1{
+
+.btn1 {
     width: 1.64rem;
     height: 0.6rem;
 }
-.donation{
-    margin-top:0.12rem;
+
+.donation {
+    margin-top: 0.12rem;
 }
-.btn2{
+
+.btn2 {
     width: 3.08rem;
     height: 0.64rem;
     line-height: 0.64rem;
 }
+
+.btn_member {
+    text-decoration: none;
+    width: 2rem;
+    height: 0.50rem;
+    line-height: 0.50rem;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 1);
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+    background-color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
+
 /*充值账号*/
 .GAME_GUIDE,
 .confirm_prepaid_phone,
 .recharged_successfully,
 .Donation,
-.examples_of_successful{
+.examples_of_successful {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     line-height: 20px;
     text-align: center;
     border: 1px solid rgba(187, 187, 187, 1);
     background-color: #fff;
-    display:none;
+    display: none;
     width: 6.22rem;
 }
-.GAME_GUIDE{
+
+.GAME_GUIDE {
     height: 4.4rem;
 }
+
 .player,
 .categories,
 .number,
-.querycard{
-    width:6rem;
-    margin:0.3rem auto 0 auto;
+.querycard {
+    width: 6rem;
+    margin: 0.3rem auto 0 auto;
 }
-.player{
-    margin-top:0.4rem;
+
+.player {
+    margin-top: 0.4rem;
 }
+
 .player span,
 .categories span,
-.number span{
-    width:1.14rem;
-    display:inline-block;
+.number span {
+    width: 1.14rem;
+    display: inline-block;
 }
+
 .player input,
 .categories input,
 .number input,
-.querycard input{
+.querycard input {
     width: 4rem;
     height: 0.6rem;
     color: rgba(136, 136, 136, 1);
     border: 1px solid rgba(187, 187, 187, 1);
-    padding-left:0.1rem;
+    padding-left: 0.1rem;
 }
+
 .querycard span,
-.querycard a{
-    display:inline-block;
+.querycard a {
+    display: inline-block;
     width: 1.6rem;
     height: 0.6rem;
     line-height: 0.6rem;
@@ -124,17 +159,20 @@ hr {
     text-align: center;
     border: 1px solid rgba(187, 187, 187, 1);
 }
+
 .querycard span:nth-child(2),
-.querycard a:nth-child(2){
-    margin-left:0.8rem;
+.querycard a:nth-child(2) {
+    margin-left: 0.8rem;
 }
-.tip{
-    display:none;
+
+.tip {
+    display: none;
 }
-.X{
+
+.X {
     position: absolute;
-    right:-0.2rem;
-    top:-0.3rem;
+    right: -0.2rem;
+    top: -0.3rem;
     width: 0.6rem;
     height: 0.6rem;
     color: rgba(16, 16, 16, 1);
@@ -142,50 +180,59 @@ hr {
     border: 1px solid rgba(187, 187, 187, 1);
     border-radius: 50%;
     line-height: 0.6rem;
-    font-size:0.4rem;
+    font-size: 0.4rem;
     background-color: #fff;
 }
+
 /*确认充值*/
-.confirm_prepaid_phone{
-    height:4.14rem;
+.confirm_prepaid_phone {
+    height: 4.14rem;
 }
-.headline{
+
+.headline {
     width: 5.32rem;
     height: 1.26rem;
     line-height: 29px;
     color: rgba(16, 16, 16, 1);
     font-size: 0.4rem;
     text-align: center;
-    margin:0.5rem auto;
+    margin: 0.5rem auto;
 }
+
 /*充值成功*/
-.recharged_successfully{
+.recharged_successfully {
     width: 6.46rem;
     height: 3.94rem;
 }
+
 .recharged_successfully .headline,
-.examples_of_successful .headline{
-    height:0.7rem;
+.examples_of_successful .headline {
+    height: 0.7rem;
 }
+
 .recharged_successfully .querycard a,
 .Donation .querycard a,
-.examples_of_successful .querycard a{
-    width:1.8rem;
+.examples_of_successful .querycard a {
+    width: 1.8rem;
     text-decoration: none;
 }
-.mess{
-    margin-top:0.5rem;
+
+.mess {
+    margin-top: 0.5rem;
 }
+
 /*转赠*/
-.Donation{
+.Donation {
     width: 6.42rem;
     height: 4.1rem;
 }
-.Donation .headline{
-    height:1.8rem;
+
+.Donation .headline {
+    height: 1.8rem;
 }
+
 /*转赠成功*/
-.examples_of_successful{
+.examples_of_successful {
     width: 6.42rem;
     height: 4.1rem;
 }
