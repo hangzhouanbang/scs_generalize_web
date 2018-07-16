@@ -1,0 +1,29 @@
+body{
+    font-family: Arial;
+}
+.content,
+.content1,
+.wxm{
+    margin:3rem auto 0 auto;
+    width:6.5rem;
+    font-size:0.32rem;
+    text-align: center;
+}
+.content,
+.content1{
+    font-family: bold;
+}
+.content1{
+    display:none;
+}
+a{
+    text-decoration: none;
+    color:#213cf2;
+}
+.wxm{
+    font-size:0.24rem;
+}
+img{
+    width:2rem;
+    height:2rem;
+}

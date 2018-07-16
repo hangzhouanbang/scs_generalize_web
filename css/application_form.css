@@ -1,0 +1,70 @@
+body{
+    font-family: Arial;
+}
+.content{
+    width:100%;
+}
+.content .title,
+.content .phone,
+.content .name,
+.content .ID_card,
+.content .img{
+    width:5.5rem;
+    height:30px;
+    margin:20px auto;
+    font-size:0.28rem;
+    position: relative;
+}
+.content .title{
+    text-align: center;
+    font-size:0.32rem;
+    font-family: bold;
+    margin:0.6rem auto;
+}
+.content .phone span,
+.content .name span,
+.content .ID_card span,
+.content .img span{
+    position: absolute;
+    top:0.15rem;
+    display:inline-block;
+    width:1.7rem;
+    text-align: center;
+}
+.content .phone input,
+.content .name input,
+.content .ID_card input{
+    float:right;
+    height:0.5rem;
+    padding-left:0.1rem;
+}
+.content .img input,
+.content .img .upload{
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    background-color: #eee;
+    width:2rem;
+    height:2rem;
+}
+.content .img input{
+    opacity:0;
+}
+.content .img .upload img{
+    width:0.5rem;
+    height:0.5rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+.submit{
+    width:3rem;
+    height:0.7rem;
+    margin:3.5rem auto 0 auto;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    line-height:0.7rem;
+    font-size:0.32rem;
+}
