@@ -38,8 +38,9 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>3张</span>
                 <span>1500积分</span>
-                <div>
-                    <div class="btn">兑换</div>
+                <div class="btn"
+                     onclick="show(document.getElementsByClassName('Donation'),document.getElementsByClassName('confirm_prepaid_phone'))">
+                    兑换
                 </div>
             </div>
         </td>
@@ -48,9 +49,7 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>10张</span>
                 <span>4600积分</span>
-                <div>
-                    <div class="btn">兑换</div>
-                </div>
+                <div class="btn">兑换</div>
             </div>
         </td>
     </tr>
@@ -60,9 +59,7 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>3张</span>
                 <span>3000积分</span>
-                <div>
-                    <div class="btn">兑换</div>
-                </div>
+                <div class="btn">兑换</div>
             </div>
         </td>
         <td align="center">
@@ -70,9 +67,7 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>10张</span>
                 <span>1000积分</span>
-                <div>
-                    <div class="btn">兑换</div>
-                </div>
+                <div class="btn">兑换</div>
             </div>
         </td>
     </tr>
@@ -82,9 +77,7 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>3张</span>
                 <span>9000积分</span>
-                <div>
-                    <div class="btn">兑换</div>
-                </div>
+                <div class="btn">兑换</div>
             </div>
         </td>
         <td align="center">
@@ -92,14 +85,25 @@
                 <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>
                 <span>10张</span>
                 <span>30000积分</span>
-                <div>
-                    <div class="btn">兑换</div>
-                </div>
+                <div class="btn">兑换</div>
             </div>
         </td>
     </tr>
 </table>
 
+
+<div class="Donation">
+    <div class="headline">请确认兑换内容<br>
+        消耗10000积分兑换10张月卡
+    </div>
+    <div class="querycard">
+        <span onclick="show(document.getElementsByClassName('examples_of_successful'),document.getElementsByClassName('Donation'))">确认兑换</span>
+        <a href="membercard_conversion.html" onclick="hide(document.getElementsByClassName('Donation'))">我再想想</a>
+    </div>
+</div>
+
+
 <script src="../js/public.js"></script>
+<script src="../js/membercard_conversion.js"></script>
 </body>
 </html>
