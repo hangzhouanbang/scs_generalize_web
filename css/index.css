@@ -100,6 +100,7 @@ hr {
 .GAME_GUIDE,
 .confirm_prepaid_phone,
 .recharged_successfully,
+.zhuanzeng,
 .Donation,
 .examples_of_successful {
     position: absolute;
@@ -114,7 +115,8 @@ hr {
     width: 6.22rem;
 }
 
-.GAME_GUIDE {
+.GAME_GUIDE ,
+.zhuanzeng{
     height: 4.4rem;
 }
 
