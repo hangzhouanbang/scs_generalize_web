@@ -68,6 +68,7 @@ var map = {
     invitation:'/invitation/queryinvitation',
     info:'/agent/info',
     recharge:'/member/recharge',
-    giveclubcard:'/clubcard/giveclubcard'
+    giveclubcard:'/clubcard/giveclubcard',
+    queryagentclubcard:'/clubcard/queryagentclubcard'
 };
 map.localurl = "http://192.168.0.116:96";
