@@ -18,7 +18,7 @@ function hide(dom) {
     init();
 }
 
-var token = 'e09a3c95-e9ca-457f-b673-5b6f8f787984'
+var token = 'bcb45066-6351-4ea3-9ece-3d96c37cb980'
 
 //初始化数据
 function init() {
