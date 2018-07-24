@@ -26,6 +26,7 @@
     text-align: center;
     border: 1px solid rgba(187, 187, 187, 1);
     display:inline-block;
+    line-height: 0.46rem;
 }
 table{
     margin-top:0.2rem;

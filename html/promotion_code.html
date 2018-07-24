@@ -15,53 +15,20 @@
     <span>兑换会员卡</span>
 </div>
 <div class="invitation_code">
-    <span>我的邀请码：XXFAFFWEWF12345</span>
-    <span>复制</span>
+    <span id="code">我的邀请码：XXFAFFWEWF12345</span>
+    <span onclick="copy()">复制</span>
 </div>
 <div class="title">我的邀请记录</div>
-<table>
+<table id="table">
     <tr>
-        <th>商品名称</th>
-        <th>兑换时间</th>
-        <th>兑换记录</th>
-        <th>剩余积分</th>
+        <th>绑定时间</th>
+        <th>绑定ID</th>
+        <th>玩家昵称</th>
+        <th>积分</th>
     </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
-    <tr>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>兑换成功</td>
-        <td>3000</td>
-    </tr>
+    <div class="loadmore">
+        已全部加载
+    </div>
 </table>
 <script src="../js/public.js"></script>
 <script src="../js/promotion_code.js"></script>
