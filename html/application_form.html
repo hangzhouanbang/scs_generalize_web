@@ -24,12 +24,14 @@
     <div class="img">
         <span>身份证正反照</span><br>
         <span class="upload">
-            <img src="../img/upload.png" alt="">
+            <img src="../img/upload.png" alt="" id="upload">
+            <input type="file" name="file" onchange="doUpload(this)" id="file">
         </span>
-        <input type="file" name="img">
+        <span id="IMg"></span>
     </div>
     <div class="submit">提交申请</div>
 </div>
 <script src="../js/public.js"></script>
+<script src="../js/application_form.js"></script>
 </body>
 </html>
