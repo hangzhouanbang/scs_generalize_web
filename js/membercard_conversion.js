@@ -37,7 +37,7 @@ function init() {
                 '                    兑换\n' +
                 '                </div>\n' +
                 '            </div>\n' +
-                '        </td>\n';
+                '        </td>';
             sessionStorage.setItem('id', data.data.items[i].id);
             document.getElementById('table_integral').appendChild(tr);
 
