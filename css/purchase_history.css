@@ -66,3 +66,8 @@ tr th:nth-child(4),
 tr td:nth-child(4){
     width:1.8rem;
 }
+.loadmore{
+    display:none;
+    font-size:0.32rem;
+    text-align: center;
+}

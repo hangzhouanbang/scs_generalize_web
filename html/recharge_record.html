@@ -9,55 +9,18 @@
 <body>
 <div class="back" onclick="back()">< 返回首页</div>
 <div class="title">会员卡充值记录</div>
-<table>
+<table id="table">
     <tr>
         <th>玩家ID</th>
         <th>充值</th>
         <th>充值时间</th>
         <th>充值记录</th>
     </tr>
-    <tr>
-        <td>12345678</td>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>充值成功</td>
-    </tr>
-    <tr>
-        <td>12345678</td>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>充值成功</td>
-    </tr>
-    <tr>
-        <td>12345678</td>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>充值成功</td>
-    </tr>
-    <tr>
-        <td>12345678</td>
-        <td>3张会员周卡</td>
-        <td>2018-7-11 13:24:21</td>
-        <td>充值成功</td>
-    </tr>
 </table>
-<!--分页-->
-<!--<div style="position:relative;">-->
-<!--<div id="pageGro" class="cb">-->
-<!--<div class="pagenum_box">-->
-<!--<div class="pagenum comm">共 <span class="SP">{{page.totalCount}}</span> 条</div>-->
-<!--<div class="pageUp" ng-click="Goback()"></div>-->
-<!--<div class="pageList">-->
-<!--<ol>-->
-<!--<li ng-click="num($event)" ng-repeat="number in things">{{number}}</li>-->
-<!--</ol>-->
-<!--</div>-->
-<!--<div class="pageDown" ng-click="Gonext()"></div>-->
-<!--<div class="totalnum comm">第&nbsp;&nbsp;<input type="text" class="tiaozhuan"/>&nbsp;&nbsp;页</div>-->
-<!--<div class="refurbish"  ng-click="skip()"><a href="#"></a></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+<div class="loadmore">
+    已全部加载
+</div>
 <script src="../js/public.js"></script>
+<script src="../js/recharge_record.js"></script>
 </body>
 </html>
