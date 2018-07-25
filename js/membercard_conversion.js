@@ -18,104 +18,61 @@ function hide(dom) {
     init();
 }
 
-var token = '28757783-0d14-4c28-963b-daf2d9a0b10d'
+var token = 'f82fdb93-7ea1-46e1-aeab-09a82b5cab30'
 
 //初始化数据
 function init() {
-     ajax_method(map.localurl + map.queryagentclubcard, 'token=' + token + '&payType=积分', 'post', function successCallBack(a) {
+    ajax_method(map.localurl + map.queryagentclubcard, 'token=' + token + '&payType=积分', 'post', function successCallBack(a) {
         var data = JSON.parse(a)
-        html = '兑换物品' +
-            ' <tr>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span id="sp1">' + data.forecast.low + '张</span>\n' +
-            '                <span>' + data.forecast.high + '积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span>10张</span>\n' +
-            '                <span>4600积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '    </tr>' +
-            ' <tr>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span>3张</span>\n' +
-            '                <span>3000积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span>10张</span>\n' +
-            '                <span>1000积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '    </tr>' +
-            ' <tr>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span>3张</span>\n' +
-            '                <span>9000积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '        <td align="center">\n' +
-            '            <div class="d_goods">\n' +
-            '                <div><img src="../img/u15.png" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
-            '                <span>10张</span>\n' +
-            '                <span>30000积分</span>\n' +
-            '                <div class="btn"\n' +
-            '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
-            '                    兑换\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </td>\n' +
-            '    </tr>';
-        document.getElementById('table_integral').innerHTML = html;
+
+
+        for (var i = 0; i < data.data.items.length; i++) {
+            var tr = document.createElement('tr');
+            tr.innerHTML =
+                '        <td align="center" rowspan="2">\n' +
+                '            <div class="d_goods">\n' +
+                '                <div><img src="data.data.items[i].productPic" style="width: 1rem;height: 1rem;" class="i_img"></div>\n' +
+                '                <span id="sp1">' + data.data.items[i].number + '张</span>\n' +
+                '                <span>' + data.data.items[i].price + '积分</span>\n' +
+                '                <div class="btn"\n' +
+                '                     onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">\n' +
+                '                    兑换\n' +
+                '                </div>\n' +
+                '            </div>\n' +
+                '        </td>\n';
+            sessionStorage.setItem('id', data.data.items[i].id);
+            document.getElementById('table_integral').appendChild(tr);
+        }
+
+        html2 = ' <div class="headline">请确认兑换内容<br>\n' +
+            '        消耗' + data.data.items[0].price + '积分兑换' + data.data.items[0].number + '张月卡\n' +
+            '    </div>\n' +
+            '    <div class="querycard">\n' +
+            '        <span  onclick="qr()">确认兑换</span>\n' +
+            '        <a href="membercard_conversion.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
+            '    </div>';
+        document.getElementById('don').innerHTML = html2;
+
+        html3 = ' <div class="headline">恭喜您成功兑换<br/>' + data.data.items[i].number + '张月卡</div>\n' +
+            '    <div class="querycard">\n' +
+            '        <a href="for_record.html">查看兑换记录</a>\n' +
+            '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
+            '    </div>\n' +
+            '    <br>\n' +
+            '    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>\n' +
+            '    <br>';
+        document.getElementById('eos').innerHTML = html3;
+
     })
 }
 
 init();
 
-function show() {
-    show(document.getElementsByClassName('confirm_prepaid_phone'), document.getElementsByClassName('GAME_GUIDE'));
-    var obj = {
-        memberId: document.getElementById("playerID").value,
-        card: document.getElementById("Stdmode").value,
-        number: document.getElementById("number").value
-    }
-    var html4 = '<div class="headline">请确认使用内容 <br> 给玩家' + obj.memberId + ' 充值' + obj.number + '张会员' + obj.card + '</div>\n' +
-        '    <div class="querycard">\n' +
-        '        <span onclick="sure1()">确认充值</span>\n' +
-        '        <span onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))">返回修改</span>\n' +
-        '    </div>\n' +
-        '    <div class="X" onclick="hide(document.getElementsByClassName(\'confirm_prepaid_phone\'))">x</div>'
-    document.getElementsByClassName('confirm_prepaid_phone')[0].innerHTML = html4;
+function qr() {
+    ajax_method(map.localurl + map.buyscoreclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
+        var sure = JSON.parse(a);
+        if (sure.success) {
+            show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
+        }
+    })
 }
-
