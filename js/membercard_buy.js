@@ -18,14 +18,13 @@ function hide(dom) {
     init();
 }
 
-// var token = 'f82fdb93-7ea1-46e1-aeab-09a82b5cab30'
 //初始化数据
 function init() {
     ajax_method(map.localurl + map.queryagentclubcard, 'token=' + token + '&payType=微信', 'post', function successCallBack(a) {
         var data = JSON.parse(a)
         for (var i = 0; i < data.data.items.length; i++) {
             var tr = document.createElement('tr');
-            console.log(data.data.items[i].price)
+            //console.log(data.data.items[i].price)
             tr.className = 'tr'
             tr.innerHTML =
                 '        <td>' +
@@ -33,16 +32,14 @@ function init() {
                 '                <div><img src="' + data.data.items[i].productPic + '" class="i_img"></div>\n' +
                 '                <span>' + data.data.items[i].number + '张</span>\n' +
                 '                <span>' + data.data.items[i].price + '元</span>\n' +
+                '                <span style="display: none">' + data.data.items[i].id + '</span>\n' +
                 '                <div class="btn"\n' +
                 '                     onclick="buy()">\n' +
                 '                    购买\n' +
                 '                </div>\n' +
                 '            </div>\n' +
                 '        </td>';
-            sessionStorage.setItem('id', data.data.items[i].id);
             document.getElementById('table_buy').appendChild(tr);
-
-
 
             html3 = '<div class="headline">您成功购买<br/>会员周卡' + data.data.items[i].number + '张</div>\n' +
                 '    <div class="querycard">\n' +
@@ -59,9 +56,10 @@ function init() {
 
 init();
 
-function buy(e){
+function buy(e) {
     var e = event || window.event;
     document.getElementsByClassName('Donation')[0].style.display = 'block'
+    sessionStorage.setItem('id', e.path[1].children[3].innerHTML);
     html2 = ' <div class="headline">请确认购买内容<br>\n' +
         '        以' + e.path[1].children[2].innerHTML + '购买' + e.path[1].children[1].innerHTML + '会员周卡\n' +
         '    </div>\n' +
@@ -74,9 +72,11 @@ function buy(e){
 
 function qr() {
     ajax_method(map.localurl + map.buyscoreclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
-        var sure = JSON.parse(a);
-        if (sure.success) {
+        var data = JSON.parse(a);
+        if (data.success ==true) {
             show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
+        }else if(data.success == false){
+           alert('仓库已售空')
         }
     })
 }
