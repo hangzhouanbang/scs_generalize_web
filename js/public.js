@@ -14,7 +14,7 @@ function ajax_method(url,data,method,success) {
         // get请求
         if (data) {
             // 如果有值
-            url+='?';
+            url+='';
             url+=data;
         }else{
 
@@ -123,7 +123,10 @@ var map = {
     queryscorerecord:'/agent/queryscorerecord',
     queryjunior:'/agent/queryjunior',
     agentapply:'/apply/agentapply',
-    uptoken:'/apply/uptoken'
+    uptoken:'/apply/uptoken',
+    queryagentclubcard:'/clubcard/queryagentclubcard',
+    buyscoreclubcard:'/clubcard/buyscoreclubcard',
+    buycostclubcard:'/clubcard/buycostclubcard'
 };
 map.localurl = "http://192.168.0.116:96";
 
@@ -132,4 +135,4 @@ map.domain = 'http://up.qiniu.com'
 // 这是七牛云空间的外链默认域名
 map.qiniuaddr = 'paly4iump.bkt.clouddn.com'
 
-var token = 'f82fdb93-7ea1-46e1-aeab-09a82b5cab30'
+var token = 'd558b4ea-f50a-4a5a-bd04-d52e7e42afef'
