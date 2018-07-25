@@ -5,7 +5,7 @@ function back() {
 }
 
 //ajax原生请求
-function ajax_method(url,data,method,header,success) {
+function ajax_method(url,data,method,success) {
     // 异步对象
     var ajax = new XMLHttpRequest();
 
@@ -130,6 +130,6 @@ map.localurl = "http://192.168.0.116:96";
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'
 // 这是七牛云空间的外链默认域名
-map.qiniuaddr = 'http://paly4iump.bkt.clouddn.com'
+map.qiniuaddr = 'paly4iump.bkt.clouddn.com'
 
 var token = 'f82fdb93-7ea1-46e1-aeab-09a82b5cab30'
