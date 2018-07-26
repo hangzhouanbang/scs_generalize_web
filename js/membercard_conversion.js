@@ -41,7 +41,7 @@ function init() {
                 '        </td>';
             document.getElementById('table_integral').appendChild(tr);
 
-            html3 = ' <div class="headline">恭喜您成功兑换<br/>' + data.data.items[i].number + '张月卡</div>\n' +
+            html3 = ' <div class="headline">恭喜您成功兑换<br/>' + '1' + '月卡</div>\n' +
                 '    <div class="querycard">\n' +
                 '        <a href="for_record.html">查看兑换记录</a>\n' +
                 '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
@@ -71,7 +71,7 @@ function conversion(e) {
     document.getElementById('don').innerHTML = html2;
 }
 
-function qr() {
+function qr(e) {
     ajax_method(map.localurl + map.buyscoreclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
         var data = JSON.parse(a);
         if (data.success == true) {

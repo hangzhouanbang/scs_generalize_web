@@ -73,10 +73,13 @@ function buy(e) {
 function qr() {
     ajax_method(map.localurl + map.buyscoreclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
         var data = JSON.parse(a);
-        if (data.success ==true) {
+        if (data.success == true) {
             show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
-        }else if(data.success == false){
-           alert('仓库已售空')
+        } else if (data.success == false) {
+            alert('仓库已售空')
         }
     })
 }
+
+
+

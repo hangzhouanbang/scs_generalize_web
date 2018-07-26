@@ -135,4 +135,4 @@ map.domain = 'http://up.qiniu.com'
 // 这是七牛云空间的外链默认域名
 map.qiniuaddr = 'paly4iump.bkt.clouddn.com'
 
-var token = 'd558b4ea-f50a-4a5a-bd04-d52e7e42afef'
+var token = 'aa1c9d5a-0d99-483f-89b8-bcfbb44118ac'
