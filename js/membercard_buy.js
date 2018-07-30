@@ -49,7 +49,7 @@ function init() {
                 '    <br>\n' +
                 '    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>\n' +
                 '    <br>';
-            document.getElementById('eos').innerHTML = html3;
+            document.getElementsByClassName('examples_of_successful')[0].innerHTML = html3;
         }
     })
 }
@@ -67,19 +67,17 @@ function buy(e) {
         '        <span onclick="qr()">确认购买</span>\n' +
         '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
         '    </div>';
-    document.getElementById('don').innerHTML = html2;
+    document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
 
 function qr() {
-    ajax_method(map.localurl + map.buyscoreclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
+    ajax_method(map.localurl + map.buycostclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
         var data = JSON.parse(a);
         if (data.success == true) {
             show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
         } else if (data.success == false) {
-            alert('仓库已售空')
+            alert(data.msg)
         }
     })
 }
-
-
 

@@ -41,7 +41,7 @@ function init() {
                 '        </td>';
             document.getElementById('table_integral').appendChild(tr);
 
-            html3 = ' <div class="headline">恭喜您成功兑换<br/>' + '1' + '月卡</div>\n' +
+            html3 = ' <div class="headline">恭喜您成功兑换<br/>' + data.data.items[i].number + '月卡</div>\n' +
                 '    <div class="querycard">\n' +
                 '        <a href="for_record.html">查看兑换记录</a>\n' +
                 '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
@@ -49,7 +49,7 @@ function init() {
                 '    <br>\n' +
                 '    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>\n' +
                 '    <br>';
-            document.getElementById('eos').innerHTML = html3;
+            document.getElementsByClassName('examples_of_successful')[0].innerHTML = html3;
         }
     })
 }
@@ -68,7 +68,7 @@ function conversion(e) {
         '        <span  onclick="qr()">确认兑换</span>\n' +
         '        <a href="membercard_conversion.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
         '    </div>';
-    document.getElementById('don').innerHTML = html2;
+    document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
 
 function qr(e) {
@@ -77,7 +77,7 @@ function qr(e) {
         if (data.success == true) {
             show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
         } else if (data.success == false) {
-            alert('仓库已售空')
+            alert(data.msg)
         }
     })
 }

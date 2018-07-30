@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc7bd480-e811-400b-ac01-b6892522c3d2" name="Default" comment="会员卡兑换布局调整">
+    <list default="true" id="cc7bd480-e811-400b-ac01-b6892522c3d2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/membercard_buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membercard_buy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/membercard_conversion.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membercard_conversion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/membercard_buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_buy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/membercard_conversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_conversion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/public.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,28 +20,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="membercard_buy.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
+      <file leaf-file-name="membercard_buy.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="582">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="n#style#0;n#span#2;n#div#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membercard_buy.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
+      <file leaf-file-name="membercard_buy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+            <state relative-caret-position="648">
+              <caret line="76" column="117" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="117" />
               <folding>
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#div#0;n#td#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,14 +93,14 @@
         <option value="$PROJECT_DIR$/js/promotion_code.js" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/html/first_index.html" />
-        <option value="$PROJECT_DIR$/js/first_index.js" />
         <option value="$PROJECT_DIR$/html/application_form.html" />
         <option value="$PROJECT_DIR$/js/application_form.js" />
         <option value="$PROJECT_DIR$/css/membercard_buy.css" />
         <option value="$PROJECT_DIR$/css/membercard_conversion.css" />
-        <option value="$PROJECT_DIR$/js/membercard_conversion.js" />
         <option value="$PROJECT_DIR$/js/public.js" />
+        <option value="$PROJECT_DIR$/js/first_index.js" />
         <option value="$PROJECT_DIR$/html/membercard_conversion.html" />
+        <option value="$PROJECT_DIR$/js/membercard_conversion.js" />
         <option value="$PROJECT_DIR$/js/membercard_buy.js" />
         <option value="$PROJECT_DIR$/html/membercard_buy.html" />
       </list>
@@ -200,7 +201,9 @@
       <workItem from="1532330466495" duration="2462000" />
       <workItem from="1532480401233" duration="13099000" />
       <workItem from="1532514161764" duration="935000" />
-      <workItem from="1532566967514" duration="3681000" />
+      <workItem from="1532566967514" duration="10368000" />
+      <workItem from="1532589111456" duration="1943000" />
+      <workItem from="1532911498055" duration="6207000" />
     </task>
     <task id="LOCAL-00001" summary="新增项目文件">
       <created>1531374242603</created>
@@ -279,11 +282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532511469179</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="会员卡兑换布局调整">
+      <created>1532571540917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532571540917</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117199000" />
+    <option name="totallyTimeSpent" value="132036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -535,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/first_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/promotion_code.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -563,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/first_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1870">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/for_record.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -584,27 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/membercard_conversion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/public.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/membercard_conversion.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -612,10 +587,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/public.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/first_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/first_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="70" column="154" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/membercard_conversion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="560">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -625,25 +628,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
+    <entry file="file://$PROJECT_DIR$/js/membercard_conversion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
+        <state relative-caret-position="396">
+          <caret line="51" column="91" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="91" />
           <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#div#0;n#td#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="648">
+          <caret line="76" column="117" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="117" />
           <folding>
             <element signature="n#style#0;n#span#2;n#div#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
