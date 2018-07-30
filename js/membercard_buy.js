@@ -57,6 +57,7 @@ function init() {
 init();
 
 function buy(e) {
+    show(document.getElementsByClassName('Donation'),document.getElementsByClassName('examples_of_successful'));
     var e = event || window.event;
     document.getElementsByClassName('Donation')[0].style.display = 'block'
     sessionStorage.setItem('id', e.path[1].children[3].innerHTML);

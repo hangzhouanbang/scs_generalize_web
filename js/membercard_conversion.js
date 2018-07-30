@@ -57,6 +57,7 @@ function init() {
 init();
 
 function conversion(e) {
+    show(document.getElementsByClassName('Donation'), document.getElementsByClassName('examples_of_successful'));
     var e = event || window.event;
     //console.log(e)
     document.getElementsByClassName('Donation')[0].style.display = 'block'
