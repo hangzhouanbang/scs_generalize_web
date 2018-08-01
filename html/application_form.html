@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>3财神推广员管理后台</title>
+    <title>推广员申请表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../css/application_form.css">
 </head>
@@ -11,26 +11,33 @@
     <div class="title">推广员申请表</div>
     <div class="phone">
         <span>手机号码</span>
-        <input type="text" placeholder="请输入手机号">
+        <input type="text" placeholder="请输入手机号" id="phone">
     </div>
     <div class="name">
         <span>姓名</span>
-        <input type="text" placeholder="请输入姓名">
+        <input type="text" placeholder="请输入姓名" id="name">
     </div>
     <div class="ID_card">
         <span>身份证号码</span>
-        <input type="text" placeholder="请输入身份证号码">
+        <input type="text" placeholder="请输入身份证号码" id="idCard">
     </div>
     <div class="img">
-        <span>身份证正反照</span><br>
-        <span class="upload">
-            <img src="../img/upload.png" alt="" id="upload">
-            <input type="file" name="file" onchange="doUpload(this)" id="file">
-        </span>
-        <span id="IMg"></span>
+        <div class="photo">身份证正反照</div>
+        <button id="upload" class="upload" type="button" onclick="upload()">
+            <img src="../img/upload.png" alt="" id="uploadimg">
+        </button>
+        <div id="IMg">
+            <!--<div>-->
+                <!--<img style="width:2rem;height:2rem;margin-left:20px;" src='../img/u15.png'>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<img style="width:2rem;height:2rem;margin-left:20px;" src='../img/u15.png'>-->
+            <!--</div>-->
+        </div>
     </div>
-    <div class="submit">提交申请</div>
+    <div class="submit" onclick="apply()">提交申请</div>
 </div>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js"></script>
 <script src="../js/application_form.js"></script>
 </body>

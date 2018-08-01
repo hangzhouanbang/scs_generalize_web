@@ -2,23 +2,18 @@ body {
     font-family: Arial;
     font-size: 0.28rem;
 }
-
 .d_back {
     width: 1.5rem;
-    /* border: solid 0.01rem gray;*/
 }
-
 table {
     margin-top: 0.2rem;
 }
-
 .tr {
     width: 3rem;
     height: 1rem;
     float: left;
-    margin: 0 0 2.5rem 0.55rem;
+    margin: 0 0 2.5rem 0.5rem;
 }
-
 .btn {
     width: 1.7rem;
     height: 0.54rem;
@@ -30,24 +25,19 @@ table {
     line-height: 0.54rem;
     margin: 0.1rem auto 0 auto;
 }
-
 a {
     text-decoration: none;
 }
-
 a .btn {
     width: 1.7rem;
     height: 0.54rem;
 }
-
 span:nth-child(2) {
-    margin-left: 0.3rem;
+    margin-left: 0.6rem;
 }
-
 span:nth-child(3) {
     margin-left: 0.1rem;
 }
-
 .d_goods {
     width: 2.5rem;
     height: 3rem;
@@ -55,14 +45,20 @@ span:nth-child(3) {
     line-height: 0.5rem;
     display: inline-block;
 }
-
 .i_img {
     margin-top: 0.4rem;
     width: 1rem;
     height: 1rem;
     margin-left: 0.75rem;
 }
-
+.headline {
+    width: 5.32rem;
+    height: 1.26rem;
+    color: rgba(16, 16, 16, 1);
+    font-size: 0.4rem;
+    text-align: center;
+    margin: 0.5rem auto;
+}
 .Donation {
     position: absolute;
     top: 50%;
@@ -76,12 +72,10 @@ span:nth-child(3) {
     width: 6.42rem;
     height: 4.1rem;
 }
-
 .Donation .headline {
-    height: 1.8rem;
+    height: 1rem;
     margin-top: 1rem;
 }
-
 .querycard span,
 .querycard a {
     display: inline-block;
@@ -93,12 +87,10 @@ span:nth-child(3) {
     text-align: center;
     border: 1px solid rgba(187, 187, 187, 1);
 }
-
 .querycard {
     width: 6rem;
     margin: 0.3rem auto 0 auto;
 }
-
 .Donation,
 .examples_of_successful {
     position: absolute;
@@ -110,13 +102,4 @@ span:nth-child(3) {
     background-color: #fff;
     display: none;
     width: 6.22rem;
-}
-
-.headline {
-    width: 5.32rem;
-    height: 1.26rem;
-    color: rgba(16, 16, 16, 1);
-    font-size: 0.4rem;
-    text-align: center;
-    margin: 0.5rem auto;
 }

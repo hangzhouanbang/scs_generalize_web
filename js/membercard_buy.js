@@ -1,84 +1,101 @@
-function show(dom1, dom2) {
-    for (var i = 0; i < dom1.length; i++) {
-        dom1[i].style.display = 'block';
-    }
-    ;
-    for (var j = 0; j < dom1.length; j++) {
-        dom2[j].style.display = 'none';
-    }
-    ;
-    init();
+function back() {
+    window.location.href = 'first_index.html?token='+localStorage.getItem('token')
 }
 
 function hide(dom) {
     for (var i = 0; i < dom.length; i++) {
         dom[i].style.display = 'none';
     }
-    ;
     init();
 }
 
 //初始化数据
 function init() {
-    ajax_method(map.localurl + map.queryagentclubcard, 'token=' + token + '&payType=微信', 'post', function successCallBack(a) {
-        var data = JSON.parse(a)
-        for (var i = 0; i < data.data.items.length; i++) {
+    ajax_method(map.localurl + map.queryagentclubcard, 'token=' + localStorage.getItem('token') + '&payType=微信', 'post', function successCallBack(a) {
+        var data = JSON.parse(a).data.items
+        console.log(data)
+        for (var i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
             //console.log(data.data.items[i].price)
             tr.className = 'tr'
             tr.innerHTML =
                 '        <td>' +
-                '            <div class="d_goods">\n' +
-                '                <div><img src="' + data.data.items[i].productPic + '" class="i_img"></div>\n' +
-                '                <span>' + data.data.items[i].number + '张</span>\n' +
-                '                <span>' + data.data.items[i].price + '元</span>\n' +
-                '                <span style="display: none">' + data.data.items[i].id + '</span>\n' +
+                '            <div class="d_goods" id="">\n' +
+                '                <div><img src="' + data[i].productPic + '" class="i_img"></div>\n' +
+                '                <span>' + data[i].number + '张</span>\n' +
+                '                <span>' + data[i].price + '元</span>\n' +
+                '                <span style="display: none"> </span>\n' +
                 '                <div class="btn"\n' +
-                '                     onclick="buy()">\n' +
+                '                     onclick="buy(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\')">\n' +
                 '                    购买\n' +
                 '                </div>\n' +
                 '            </div>\n' +
                 '        </td>';
             document.getElementById('table_buy').appendChild(tr);
-
-            html3 = '<div class="headline">您成功购买<br/>会员周卡' + data.data.items[i].number + '张</div>\n' +
-                '    <div class="querycard">\n' +
-                '        <a href="purchase_history.html">查看购买记录</a>\n' +
-                '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
-                '    </div>\n' +
-                '    <br>\n' +
-                '    <div class="mess">目前会员周卡：6张，月卡：3张，季卡：3张</div>\n' +
-                '    <br>';
-            document.getElementsByClassName('examples_of_successful')[0].innerHTML = html3;
         }
     })
 }
-
 init();
 
-function buy(e) {
-    show(document.getElementsByClassName('Donation'),document.getElementsByClassName('examples_of_successful'));
-    var e = event || window.event;
+function buy(number,price,id,product) {
     document.getElementsByClassName('Donation')[0].style.display = 'block'
-    sessionStorage.setItem('id', e.path[1].children[3].innerHTML);
-    html2 = ' <div class="headline">请确认购买内容<br>\n' +
-        '        以' + e.path[1].children[2].innerHTML + '购买' + e.path[1].children[1].innerHTML + '会员周卡\n' +
+
+    var html2 = ' <div class="headline">请确认购买内容<br>\n' +
+        '        以' + price + '元购买' + number + '张会员'+ product +
         '    </div>\n' +
         '    <div class="querycard">\n' +
-        '        <span onclick="qr()">确认购买</span>\n' +
+        '        <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\')">确认购买</span>\n' +
         '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
         '    </div>';
-    document.getElementsByClassName('Donation')[0].innerHTML = html2;
+    document.getElementById('don').innerHTML = html2;
 }
 
-function qr() {
-    ajax_method(map.localurl + map.buycostclubcard, 'token=' + token + '&cardId=' + sessionStorage.getItem('id'), 'post', function successCallBack(a) {
+function qr(id,number,product) {
+    ajax_method(map.localurl + map.buycostclubcard, 'token=' + localStorage.getItem('token') + '&cardId=' + id, 'post', function successCallBack(a) {
         var data = JSON.parse(a);
-        if (data.success == true) {
-            show(document.getElementsByClassName('examples_of_successful'), document.getElementsByClassName('Donation'))
-        } else if (data.success == false) {
-            alert(data.msg)
+        if (data.success ==true) {
+            function onBridgeReady(){
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest', {
+                        "appId":data.data.appId,     //公众号名称，由商户传入
+                        "timeStamp":data.data.timeStamp,         //时间戳，自1970年以来的秒数
+                        "nonceStr":data.data.nonceStr, //随机串
+                        "package":data.data.package,
+                        "signType":"MD5",         //微信签名方式：
+                        "paySign":data.data.paySign //微信签名
+                    },
+                    function(res){
+                        if(res.err_msg == "get_brand_wcpay_request:ok"){
+                            document.getElementsByClassName('examples_of_successful')[0].style.display = 'block'
+                            document.getElementsByClassName('Donation')[0].style.display = 'none'
+                            ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
+                                var html3 = '<div class="headline">您成功购买<br/>会员'+ product + number + '张</div>\n' +
+                                    '    <div class="querycard">\n' +
+                                    '        <a href="purchase_history.html">查看购买记录</a>\n' +
+                                    '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
+                                    '    </div>\n' +
+                                    '    <br>\n' +
+                                    '    <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
+                                    '    <br>';
+                                document.getElementById('eos').innerHTML = html3;
+                            })
+                        }
+                        if(res.err_msg == "get_brand_wcpay_request:cancel"){}
+                        if(res.err_msg == "get_brand_wcpay_request:fail"){}
+                    });
+            }
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                    document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+                }
+            }else{
+                onBridgeReady();
+            }
+        }else if(data.success == false){
+           alert('仓库已售空')
         }
     })
 }
-

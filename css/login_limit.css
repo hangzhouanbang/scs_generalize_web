@@ -2,19 +2,14 @@ body{
     font-family: Arial;
 }
 .content,
-.content1,
 .wxm{
     margin:3rem auto 0 auto;
     width:6.5rem;
     font-size:0.32rem;
     text-align: center;
 }
-.content,
-.content1{
+.content{
     font-family: bold;
-}
-.content1{
-    display:none;
 }
 a{
     text-decoration: none;

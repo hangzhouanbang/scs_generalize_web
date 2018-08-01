@@ -6,11 +6,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="stylesheet" type="text/css" href="../css/membercard_conversion.css">
-    <link rel="stylesheet" type="text/css" href="../css/membercard_buy.css">
 </head>
 <body>
-<table class="t_table" id="table1"></table>
+<div class="aa" id="table1"></div>
 <table class="t_table" id="table2"></table>
 <table class="t_table" id="table3">
 
@@ -25,7 +23,7 @@
         <td><a class="btn2" href="promotion_code.html">推广码查询</a></td>
         <td><a class="btn2" href="for_record.html">积分兑换记录</a></td>
     </tr>
-    <tr>
+    <tr id="hide">
         <td><a class="btn2" href="examples_record.html">查看转赠记录</a></td>
         <td><a class="btn2" href="my_subordinates.html">我的下级</a></td>
     </tr>
@@ -38,7 +36,12 @@
     </div>
     <div class="categories">
         <span>物品类型</span>
-        <input type="text" placeholder="如周卡、月卡、季卡" id="Stdmode">
+        <select name="" id="Stdmode">
+            <option value="">请选择</option>
+            <option value="周卡">周卡</option>
+            <option value="月卡">月卡</option>
+            <option value="季卡">季卡</option>
+        </select>
     </div>
     <div class="number">
         <span>赠送数量</span>
@@ -70,7 +73,12 @@
     </div>
     <div class="categories">
         <span>物品类型</span>
-        <input type="text" placeholder="如周卡、月卡、季卡" id="type">
+        <select name="" id="type">
+            <option value="">请选择</option>
+            <option value="周卡">周卡</option>
+            <option value="月卡">月卡</option>
+            <option value="季卡">季卡</option>
+        </select>
     </div>
     <div class="number">
         <span>赠送数量</span>
@@ -81,7 +89,7 @@
         <span onclick="back()">取消</span>
     </div>
     <div class="tip">周卡数量不够啦~</div>
-    <div class="X" onclick="hide(document.getElementsByClassName('GAME_GUIDE'))">x</div>
+    <div class="X" onclick="hide(document.getElementsByClassName('zhuanzeng'))">x</div>
 </div>
 <div class="Donation"></div>
 <!--转赠成功-->
@@ -96,7 +104,5 @@
 
 <script src="../js/public.js"></script>
 <script src="../js/first_index.js"></script>
-<script src="../js/membercard_conversion.js"></script>
-<script src="../js/membercard_buy.js"></script>
 </body>
 </html>

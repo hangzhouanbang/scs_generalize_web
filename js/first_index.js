@@ -16,20 +16,21 @@ function hide(dom){
 
 //初始化数据
 function init(){
-    ajax_method(map.localurl+map.info,'token='+token,'post',function successCallBack(a){
+    ajax_method(map.localurl+map.info,'token='+localStorage.getItem('token'),'post',function successCallBack(a){
         var data = JSON.parse(a)
+        if(data.agent.level == 2){
+            document.getElementById('hide').style.display = 'none'
+        }
         data.agent.createTime = formatDate(new Date(data.agent.createTime))
-        html = '<tr>\n' +
-            '        <td rowspan="3"><img src="'+data.agent.headimgurl+'" style="width: 2.2rem;height: 2.2rem;"></td>\n' +
-            '        <td class="td_message">昵称：'+data.agent.nickname+'</td>\n' +
-            '    </tr>\n' +
-            '    <tr>\n' +
-            '        <td class="td_message">推广员ID：'+data.agent.id+'</td>\n' +
-            '    </tr>\n' +
-            '    <tr>\n' +
-            '        <td class="td_message">注册时间：'+data.agent.createTime+'</td>\n' +
-            '    </tr>';
-        html2='<tr>\n' +
+        var html = '<div class="left">\n' +
+            '        <img src="'+data.agent.headimgurl+'" style="width: 2.2rem;height: 2.2rem;">\n' +
+            '    </div>\n' +
+            '    <div class="right">\n' +
+            '        <div class="name">昵称：'+data.agent.nickname+'</div>\n' +
+            '        <div class="agentid">推广员ID：'+data.agent.id+'</div>\n' +
+            '        <div class="time">注册时间：'+data.agent.createTime+'</div>\n' +
+            '    </div>';
+        var html2='<tr>\n' +
             '        <td> 推广积分：'+data.score+'</td>\n' +
             '        <td>\n' +
             '            <a class="btn_member" href="membercard_conversion.html">会员卡兑换</a>\n' +
@@ -38,7 +39,7 @@ function init(){
             '            <a class="btn_member" href="membercard_buy.html">会员卡购买</a>\n' +
             '        </td>\n' +
             '    </tr>';
-        html3='<tr>\n' +
+        var html3='<tr>\n' +
             '        <td>物品</td>\n' +
             '        <td>拥有数量</td>\n' +
             '        <td>操作</td>\n' +
@@ -50,7 +51,7 @@ function init(){
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
             '            <input type="button" value="转赠" class="btn1 donation"\n' +
-            '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/>\n' +
+            '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>\n' +
             '    <tr>\n' +
@@ -60,7 +61,7 @@ function init(){
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
             '            <input type="button" value="转赠" class="btn1 donation"\n' +
-            '                   onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/>\n' +
+            '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>\n' +
             '    <tr>\n' +
@@ -70,7 +71,7 @@ function init(){
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
             '            <input type="button" value="转赠" class="btn1 donation"\n' +
-            '                   onclick="show(document.getElementsByClassName(\'Donation\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/>\n' +
+            '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>';
         document.getElementById('table1').innerHTML = html;
@@ -97,7 +98,7 @@ function sure(){
 }
 //第二次确认充值
 function sure1(){
-    ajax_method(map.localurl+map.recharge,'token='+token+'&memberId='+
+    ajax_method(map.localurl+map.recharge,'token='+localStorage.getItem('token')+'&memberId='+
         document.getElementById("playerID").value+
         '&card='+document.getElementById("Stdmode").value+
         '&number='+document.getElementById("number").value,'post',function successCallBack(a){
@@ -126,7 +127,7 @@ function Donation1(){
 }
 //转赠
 function Donation2(){
-    ajax_method(map.localurl+map.giveclubcard,'token='+token+'&receiverId='+
+    ajax_method(map.localurl+map.giveclubcard,'token='+localStorage.getItem('token')+'&receiverId='+
         document.getElementById("ID").value+
         '&card='+document.getElementById("type").value+
         '&number='+document.getElementById("num").value,'post',function successCallBack(a){

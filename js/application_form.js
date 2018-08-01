@@ -1,57 +1,115 @@
 //上传图片
-function doUpload(obj){
-    var file = obj.files;
-    var formData = new FormData(); // FormData 对象
-    var keyname = 'anbang' + Math.random() + '.jpg'
-    var a=[]
-    ajax_method(map.localurl+map.uptoken,
-     'accessKey=qQj7mRKyvE7dOOjObMC8W58i6Yn3penfr7-_fg4d&secretKey=9f70kmAddF1maP1U0jy0vRNAhwWNv_huR1xDSH_s&bucket=anbang',
-     'post','application/x-www-form-urlencoded',function successCallBack(a) {
-        console.log(file)
-        formData.append("file", file[0])
-        formData.append('token', JSON.parse(a).data)
-        formData.append('key', keyname)
-        console.log(keyname)
-        var ajax = new XMLHttpRequest();
-        ajax.open('post', map.domain);
-        ajax.send(formData);
-        ajax.onreadystatechange = function () {
-            if (ajax.readyState==4&&ajax.status==200) {
-                console.log(ajax.responseText);
-                var img = JSON.parse(ajax.responseText).key;
+var img,img1;
+var flag = 0;
 
-                // for(var j = 0;j < img.length;j++){
-                //     if( img.length < 3){
+ajax_method(map.localurl+map.getconfig,'url='+location.href.split('#')[0], 'post',function successCallBack(a){
+    var data = JSON.parse(a)
+    console.log(data.data)
+    if(data.success){
+        wx.config({
+            debug: false, // 因为在手机上测试没法打印，当debug为true时，所有的返回值都会在手机上alert出来
+            appId: data.data.appId, // 必填，公众号唯一标识
+            timestamp: data.data.timestamp, // 必填，生成签名的时间戳
+            nonceStr: data.data.noncestr, // 必填，生成签名的随机串
+            signature: data.data.signature,// 必填，签名
+            jsApiList: ['chooseImage','uploadImage','getLocalImgData'] // 必填，需要使用的JS接口列表，需要用到什么接口就去开发者文档查看相应的字段名
+        });
+    }
+})
+var images = {
+    localId: [],
+    serverId: []
+};
+var arrayImgs = new Array();
+function upload(){
+    wx.ready(function(){
+        wx.chooseImage({
+            count: 2, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                images.localId = res.localIds;
+                alert('已选择 ' + res.localIds.length + ' 张图片'); // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                var localIds  = res.localIds;
+                console.log(localIds)
+                if(window.__wxjs_is_wkwebview){
+                    //alert(localIds[0])
+                    for (var i = 0;i <localIds.length;i++ ) {
+                        wx.getLocalImgData({
+                            localId: localIds[i],
+                            success: function (res) {
+                                var localData = res.localData;
+                                console.log(localData)
+                                localData = localData.replace('jgp', 'jpeg');
+                                var div = document.createElement('div');
+                                div.innerHTML = '<img style="width:2rem;height:2rem;margin-left:20px;" src="'+localData+'">';
+                                document.getElementById('IMg').appendChild(div);
+                            },
+                            fail:function(res){
+                                alert(res.errMsg);
+                            }
+                        });
+                    }
+                }else{
+                    //遍历数组
+                    console.log(localIds)
+                    for(var i = 0;i < localIds.length;i++){
+                        console.log(localIds[i])
                         var div = document.createElement('div');
-                        div.style.position = 'relative';
-                        div.style.display = 'inline-block';
-                        div.innerHTML = '<img style="width:100px;height:100px;" src="'+map.qiniuaddr + '/' + img+'">';
+                        div.innerHTML = '<img style="width:2rem;height:2rem;margin-left:20px;" src="'+localIds[i]+'">';
                         document.getElementById('IMg').appendChild(div);
-                    // }
-                // }
+                    }
+                }
+                if (images.localId.length == 0) {
+                    alert('请先选择图片');
+                    return;
+                }
+                var i = 0, length = images.localId.length;
+                images.serverId = [];
+                function upload() {
+                    wx.uploadImage({
+                        localId: images.localId[i],
+                        success: function (res) {
+                            arrayImgs[i] = res.serverId
+                            console.log(typeof(arrayImgs))
+                            i++;
+                            //alert('已上传：' + i + '/' + length);
+                            images.serverId.push(res.serverId);
+                            if (i < length) {
+                                upload();
+                            }else{
+                                // 循环结束
+                                console.log(arrayImgs)
+                                document.getElementById('upload').style.display = 'none';
+                                document.getElementById('IMg').style.margin = '0.3rem 0 0 0.2rem';
+                            }
+                        },
+                        fail: function (res) {
+                            alert(JSON.stringify(res));
+                        }
+                    });
+                }
+                upload();
             }
-        }
-    })
+        });
+    });
+
 }
 
-
-//初始化数据
-// var html=[];
-// var data,tr;
-// function init(page){
-//     ajax_method(map.localurl+map.agentapply,'token='+token+'&page='+page+'&size=15','post',function successCallBack(a){
-//         data = JSON.parse(a).data.items
-//         console.log(data)
-//         for(var i = 0;i < data.length;i++){
-//             tr = document.createElement('tr')
-//             data[i].createTime = formatDate(new Date(data[i].createTime))
-//             tr.innerHTML =
-//                 '<td>'+data[i].createTime+'</td>\n' +
-//                 '<td>'+data[i].memberId+'</td>\n' +
-//                 '<td>'+data[i].nickname+'</td>\n' +
-//                 '<td>'+data[i].score+'</td>\n'
-//             document.getElementById('table').appendChild(tr)
-//         }
-//     })
-// }
-// init(1);
+//提交申请
+function apply(){
+    console.log(images.serverId)
+    ajax_method(map.localurl+map.agentapply,
+        'token='+localStorage.getItem('token')+
+        '&phone='+document.getElementById('phone').value+
+        '&userName='+document.getElementById('name').value+
+        '&idCard='+document.getElementById('idCard').value+
+        '&frontUrl='+images.serverId[0]+
+        '&reverseUrl='+images.serverId[1],
+        'post',function successCallBack(a){
+        data = JSON.parse(a)
+            if(data.success){
+                window.location.href='login_limit.html'
+            }
+    })
+}

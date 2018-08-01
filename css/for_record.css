@@ -1,7 +1,7 @@
 .record,
 .invitation_code{
     font-size:0.28rem;
-    /*margin-top:0.2rem;*/
+    position: relative;
     width:6.5rem;
     margin:0.2rem auto 0 auto;
 }
@@ -16,6 +16,9 @@
     line-height:0.5rem;
     background-color: #eee;
 }
+.invitation_code span:nth-child(1){
+    height:1rem;
+}
 .record span:nth-child(2),
 .invitation_code span:nth-child(2){
     width: 1.66rem;
@@ -27,6 +30,11 @@
     border: 1px solid rgba(187, 187, 187, 1);
     display:inline-block;
     line-height: 0.46rem;
+}
+.invitation_code span:nth-child(2){
+    position: absolute;
+    top:0.27rem;
+    margin-left:0.08rem;
 }
 table{
     margin-top:0.2rem;

@@ -8,13 +8,8 @@
 </head>
 <body>
 <div class="content">
-    <p><a href="first_index.html">点击进入推广员界面</a></p>
-    <p><a href="application_form.html">申请成为推广员</a></p>
-</div>
-<div class="content1">
-    <p>申请成功！</p>
-    <p>可联系客服（微信号：abkf01）</p>
-    <p>了解申请情况！</p>
+    <p><a onclick="getToken()">点击进入推广员界面</a></p>
+    <p><a onclick="judge()">申请成为推广员</a></p>
 </div>
 <div class="wxm">
     <p>官方客服微信：abkf01</p>
@@ -22,5 +17,21 @@
     <img src="../img/u15.png" alt="">
 </div>
 <script src="../js/public.js"></script>
+<script>
+    var token = window.location.href.slice(window.location.href.indexOf('token=')+6);
+    localStorage.setItem('token',token)
+    function getToken(){
+        window.location.href = 'first_index.html?token='+token;
+    }
+    function judge(){
+        ajax_method(map.localurl+map.applyinfo,'token='+token,'post',function successCallBack(a){
+            if(JSON.parse(a).success){
+                window.location.href = 'application_form.html';
+            }else{
+                window.location.href = 'login_limit.html';
+            }
+        })
+    }
+</script>
 </body>
 </html>

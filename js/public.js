@@ -1,8 +1,5 @@
 document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 
-function back() {
-    window.location.href = 'first_index.html'
-}
 
 //ajax原生请求
 function ajax_method(url,data,method,success) {
@@ -126,13 +123,17 @@ var map = {
     uptoken:'/apply/uptoken',
     queryagentclubcard:'/clubcard/queryagentclubcard',
     buyscoreclubcard:'/clubcard/buyscoreclubcard',
-    buycostclubcard:'/clubcard/buycostclubcard'
+    buycostclubcard:'/clubcard/buycostclubcard',
+    getconfig:'/access/getconfig',
+    downloadimg:'/apply/downloadimg',
+    queryaccount:'/agent/queryaccount',
+    applyinfo:'/apply/applyinfo'
 };
-map.localurl = "http://192.168.0.116:96";
+map.localurl = "http://www.linshaocong.cn:96";
 
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'
 // 这是七牛云空间的外链默认域名
-map.qiniuaddr = 'paly4iump.bkt.clouddn.com'
+map.qiniuaddr = 'http://qiniu.3cscy.com'
 
-var token = 'aa1c9d5a-0d99-483f-89b8-bcfbb44118ac'
+
