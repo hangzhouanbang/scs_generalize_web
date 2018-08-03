@@ -47,7 +47,7 @@ function buy(number,price,id,product) {
         '        <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\')">确认购买</span>\n' +
         '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
         '    </div>';
-    document.getElementById('don').innerHTML = html2;
+    document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
 
 function qr(id,number,product) {
@@ -77,7 +77,7 @@ function qr(id,number,product) {
                                     '    <br>\n' +
                                     '    <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                                     '    <br>';
-                                document.getElementById('eos').innerHTML = html3;
+                                document.getElementsByClassName('examples_of_successful')[0].innerHTML = html3;
                             })
                         }
                         if(res.err_msg == "get_brand_wcpay_request:cancel"){}

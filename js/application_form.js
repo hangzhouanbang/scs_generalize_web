@@ -32,6 +32,7 @@ function upload(){
                 alert('已选择 ' + res.localIds.length + ' 张图片'); // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
                 var localIds  = res.localIds;
                 console.log(localIds)
+                document.getElementsByClassName('img')[0].style.height = '180px';
                 if(window.__wxjs_is_wkwebview){
                     //alert(localIds[0])
                     for (var i = 0;i <localIds.length;i++ ) {
@@ -80,8 +81,8 @@ function upload(){
                             }else{
                                 // 循环结束
                                 console.log(arrayImgs)
-                                document.getElementById('upload').style.display = 'none';
-                                document.getElementById('IMg').style.margin = '0.3rem 0 0 0.2rem';
+                                // document.getElementById('upload').style.display = 'none';
+                                // document.getElementById('IMg').style.margin = '0.3rem 0 0 0.2rem';
                             }
                         },
                         fail: function (res) {

@@ -18,9 +18,6 @@ function hide(dom){
 function init(){
     ajax_method(map.localurl+map.info,'token='+localStorage.getItem('token'),'post',function successCallBack(a){
         var data = JSON.parse(a)
-        if(data.agent.level == 2){
-            document.getElementById('hide').style.display = 'none'
-        }
         data.agent.createTime = formatDate(new Date(data.agent.createTime))
         var html = '<div class="left">\n' +
             '        <img src="'+data.agent.headimgurl+'" style="width: 2.2rem;height: 2.2rem;">\n' +
@@ -50,7 +47,7 @@ function init(){
             '        <td>\n' +
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
-            '            <input type="button" value="转赠" class="btn1 donation"\n' +
+            '            <input type="button" value="转赠"  class="btn1 donation zeng"\n' +
             '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>\n' +
@@ -60,7 +57,7 @@ function init(){
             '        <td>\n' +
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
-            '            <input type="button" value="转赠" class="btn1 donation"\n' +
+            '            <input type="button" value="转赠" class="btn1 donation zeng"\n' +
             '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>\n' +
@@ -70,13 +67,19 @@ function init(){
             '        <td>\n' +
             '            <input type="button" value="充值账号" class="btn1 recharge"\n' +
             '                   onclick="show(document.getElementsByClassName(\'GAME_GUIDE\'),document.getElementsByClassName(\'confirm_prepaid_phone\'))"/><br/>\n' +
-            '            <input type="button" value="转赠" class="btn1 donation"\n' +
+            '            <input type="button" value="转赠" class="btn1 donation zeng"\n' +
             '                   onclick="show(document.getElementsByClassName(\'zhuanzeng\'),document.getElementsByClassName(\'examples_of_successful\'))"/>\n' +
             '        </td>\n' +
             '    </tr>';
         document.getElementById('table1').innerHTML = html;
         document.getElementById('table2').innerHTML = html2;
         document.getElementById('table3').innerHTML = html3;
+        if(data.agent.level == 2){
+            document.getElementById('hide').style.display = 'none'
+            for(var i = 0;i < document.getElementsByClassName('zeng').length;i++){
+                document.getElementsByClassName('zeng')[i].style.display = 'none'
+            }
+        }
     })
 }
 init();
@@ -105,6 +108,15 @@ function sure1(){
         var sure = JSON.parse(a);
         if(sure.success){
             show(document.getElementsByClassName('recharged_successfully'),document.getElementsByClassName('confirm_prepaid_phone'))
+            ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
+                var html7 = '<div class="headline">充值成功！</div>\n' +
+                    '    <div class="querycard">\n' +
+                    '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'recharged_successfully\'))">返回首页</a>\n' +
+                    '        <a href="recharge_record.html">查看充值记录</a>\n' +
+                    '    </div>\n' +
+                    '    <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>';
+                document.getElementsByClassName('recharged_successfully')[0].innerHTML = html7;
+            })
         }
     })
 }
@@ -134,6 +146,15 @@ function Donation2(){
         var sure = JSON.parse(a);
         if(sure.success){
             show(document.getElementsByClassName('examples_of_successful'),document.getElementsByClassName('Donation'))
+            ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
+                var html6 = '<div class="headline">转赠成功！</div>\n' +
+                    '    <div class="querycard">\n' +
+                    '        <a href="examples_record.html">查看转赠记录</a>\n' +
+                    '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
+                    '    </div>\n' +
+                    '    <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>';
+                document.getElementsByClassName('examples_of_successful')[0].innerHTML = html6;
+            })
         }
     })
 }
