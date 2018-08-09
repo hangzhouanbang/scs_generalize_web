@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc7bd480-e811-400b-ac01-b6892522c3d2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/application_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/application_form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/application_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/application_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/first_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/first_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/membercard_buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membercard_buy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/application_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/application_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/first_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/first_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/membercard_buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_buy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/membercard_conversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_conversion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/for_record.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/for_record.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,12 +20,8 @@
       <file leaf-file-name="application_form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/application_form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1287">
+              <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -46,24 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membercard_conversion.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/membercard_conversion.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1089">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="membercard_buy.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="membercard_buy.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="495">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -75,11 +51,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="for_record.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/for_record.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application_form.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/application_form.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+            <state relative-caret-position="3135">
+              <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -123,7 +108,7 @@
       <file leaf-file-name="application_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/application_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="1122">
               <caret line="34" column="22" selection-start-line="29" selection-start-column="16" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
@@ -171,7 +156,6 @@
         <option value="$PROJECT_DIR$/css/login_limit.css" />
         <option value="$PROJECT_DIR$/js/public.js" />
         <option value="$PROJECT_DIR$/html/login.html" />
-        <option value="$PROJECT_DIR$/css/for_record.css" />
         <option value="$PROJECT_DIR$/js/promotion_code.js" />
         <option value="$PROJECT_DIR$/css/membercard_conversion.css" />
         <option value="$PROJECT_DIR$/js/for_record.js" />
@@ -191,6 +175,7 @@
         <option value="$PROJECT_DIR$/js/application_form.js" />
         <option value="$PROJECT_DIR$/css/application_form.css" />
         <option value="$PROJECT_DIR$/html/membercard_buy.html" />
+        <option value="$PROJECT_DIR$/css/for_record.css" />
       </list>
     </option>
   </component>
@@ -247,7 +232,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="btn&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scs_admin_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -289,7 +274,9 @@
       <workItem from="1532998995515" duration="23624000" />
       <workItem from="1533085431894" duration="23145000" />
       <workItem from="1533171777523" duration="7283000" />
-      <workItem from="1533258026208" duration="4421000" />
+      <workItem from="1533258026208" duration="5052000" />
+      <workItem from="1533344343932" duration="1617000" />
+      <workItem from="1533517224376" duration="1054000" />
     </task>
     <task id="LOCAL-00001" summary="新增项目文件">
       <created>1531374242603</created>
@@ -368,14 +355,22 @@
       <option name="project" value="LOCAL" />
       <updated>1533116562943</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改">
+      <created>1533289718259</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1533289718259</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224631000" />
+    <option name="totallyTimeSpent" value="227933000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1264489" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -413,7 +408,8 @@
     <MESSAGE value="推广员页面下六个按钮接口" />
     <MESSAGE value="推广员申请" />
     <MESSAGE value="调试完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试完毕" />
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/login.css">
@@ -551,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/for_record.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/membercard_buy.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -653,10 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1089">
           <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,33 +682,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/application_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="1122">
           <caret line="34" column="22" selection-start-line="29" selection-start-column="16" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/application_form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1287">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/application_form.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+        <state relative-caret-position="3135">
+          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="495">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -731,6 +712,13 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/for_record.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
