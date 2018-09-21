@@ -26,7 +26,7 @@ function init() {
                 '                <span>' + data[i].price + '元</span>\n' +
                 '                <span style="display: none"> </span>\n' +
                 '                <div class="btn"\n' +
-                '                     onclick="buy(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\')">\n' +
+                '                     onclick="buy(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\',\''+ data[i].img +'\')">\n' +
                 '                    购买\n' +
                 '                </div>\n' +
                 '            </div>\n' +
@@ -37,15 +37,15 @@ function init() {
 }
 init();
 
-function buy(number,price,id,product) {
-    document.getElementsByClassName('Donation')[0].style.display = 'block'
+function buy(number,price,id,product,img) {
+    document.getElementsByClassName('mask')[0].style.display = 'block'
 
-    var html2 = ' <div class="headline">请确认购买内容<br>\n' +
-        '        以' + price + '元购买' + number + '张会员'+ product +
-        '    </div>\n' +
+    var html2 = ' <div class="headline">请确认购买内容</div>\n' +
+        '<img src="\''+ img +'\'">'+
+        '<div class="headline_content">以' + price + '元购买' + number + '张会员'+ product+'</div>\n'+
         '    <div class="querycard">\n' +
+        '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'mask\'))">我再想想</a>\n' +
         '        <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\')">确认购买</span>\n' +
-        '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'Donation\'))">我再想想</a>\n' +
         '    </div>';
     document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
@@ -66,17 +66,17 @@ function qr(id,number,product) {
                     },
                     function(res){
                         if(res.err_msg == "get_brand_wcpay_request:ok"){
-                            document.getElementsByClassName('examples_of_successful')[0].style.display = 'block'
-                            document.getElementsByClassName('Donation')[0].style.display = 'none'
+                            document.getElementsByClassName('mask1')[0].style.display = 'block'
+                            document.getElementsByClassName('mask')[0].style.display = 'none'
                             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
-                                var html3 = '<div class="headline">您成功购买<br/>会员'+ product + number + '张</div>\n' +
-                                    '    <div class="querycard">\n' +
-                                    '        <a href="purchase_history.html">查看购买记录</a>\n' +
-                                    '        <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'examples_of_successful\'))">返回首页</a>\n' +
-                                    '    </div>\n' +
-                                    '    <br>\n' +
-                                    '    <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
-                                    '    <br>';
+                                var html3 = '<div class="headline">恭喜您购买成功</div>\n' +
+                                    '        <img src="../img/icon_jika.png" alt="">\n' +
+                                    '        <div class="headline_content">'+ number +'张会员'+ product +'卡</div>\n' +
+                                    '        <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
+                                    '        <div class="querycard">\n' +
+                                    '            <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'mask1\'))">返回首页</a>\n' +
+                                    '            <a href="purchase_history.html">购买记录</a>\n' +
+                                    '        </div>'
                                 document.getElementsByClassName('examples_of_successful')[0].innerHTML = html3;
                             })
                         }
@@ -95,7 +95,7 @@ function qr(id,number,product) {
                 onBridgeReady();
             }
         }else if(data.success == false){
-           alert('仓库已售空')
+            document.getElementsByClassName('mask2')[0].style.display = 'block';
         }
     })
 }

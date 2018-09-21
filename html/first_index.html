@@ -8,89 +8,126 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 <body>
-<div class="aa" id="table1"></div>
-<table class="t_table" id="table2"></table>
-<table class="t_table" id="table3">
+<div class="title">
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);">
+    <span>推广员申请表</span>
+</div>
+<div class="mess" id="table1">
 
+</div>
+<div id="table2" class="t_table">
+
+</div>
+<table class="t_table" id="table3">
+     <!--<tr>-->
+        <!--<td class="tpti">推广积分:98</td>-->
+        <!--<td>-->
+            <!--<a class="btn_member exchange" href="membercard_conversion.html">会员卡兑换</a>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<a class="btn_member purchase" href="membercard_buy.html">会员卡购买</a>-->
+        <!--</td>-->
+    <!--</tr>-->
 </table>
-<hr/>
-<table class="t_table">
+<table class="t_table" id="table4">
     <tr>
-        <td><a class="btn2" href="purchase_history.html">查看购买记录</a></td>
-        <td><a class="btn2" href="recharge_record.html">查看充值记录</a></td>
+        <td onclick="javascript:window.location.href='purchase_history.html'">
+            <img src="../img/icon_goumai.png" alt="">
+            <p>查看购买记录</p>
+        </td>
+        <td onclick="javascript:window.location.href='recharge_record.html'">
+            <img src="../img/icon_chongzhi.png" alt=""><br>
+            <p>查看充值记录</p>
+        </td>
+        <td onclick="javascript:window.location.href='for_record.html'">
+            <img src="../img/icon_jifen.png" alt=""><br>
+            <p>积分兑换记录</p>
+        </td>
     </tr>
     <tr>
-        <td><a class="btn2" href="promotion_code.html">推广码查询</a></td>
-        <td><a class="btn2" href="for_record.html">积分兑换记录</a></td>
-    </tr>
-    <tr id="hide">
-        <td><a class="btn2" href="examples_record.html">查看转赠记录</a></td>
-        <td><a class="btn2" href="my_subordinates.html">我的下级</a></td>
+        <td onclick="javascript:window.location.href='promotion_code.html'">
+            <img src="../img/icon_tuiguang.png" alt="">
+            <p>推广码查询</p>
+        </td>
+        <td id="hide" onclick="javascript:window.location.href='examples_record.html'">
+            <img src="../img/icon_zhuanzeng.png" alt="">
+            <p>查看转赠记录</p>
+        </td>
+        <td id="hide1" onclick="javascript:window.location.href='my_subordinates.html'">
+            <img src="../img/icon_xiaji.png" alt="">
+            <p>我的下级</p>
+        </td>
     </tr>
 </table>
 <!--充值账号-->
-<div class="GAME_GUIDE">
-    <div class="player">
-        <span>玩家ID</span>
-        <input type="text" placeholder="输入玩家的ID" id="playerID">
+<div class="mask">
+    <div class="GAME_GUIDE">
+        <div class="player">
+            <img src="../img/icon_person.png" alt="">
+            <input type="text" placeholder="请输入充值玩家的ID" id="playerID">
+        </div>
+        <div class="categories">
+            <img src="../img/icon_leixing.png" alt="">
+            <input type="text" id="Card">
+        </div>
+        <div class="number">
+            <img src="../img/icon_shuliang.png" alt="">
+            <input type="text" placeholder="请输入充值数量，如1,2" id="number">
+        </div>
+        <div class="querycard">
+            <span onclick="hide(document.getElementsByClassName('mask'))">取消</span>
+            <span onclick="sure()">确认充值</span>
+        </div>
+        <div class="tip">周卡数量不够啦~</div>
+        <div class="X" onclick="hide(document.getElementsByClassName('mask'))">x</div>
     </div>
-    <div class="categories">
-        <span>物品类型</span>
-        <select name="" id="Stdmode">
-            <option value="">请选择</option>
-            <option value="周卡">周卡</option>
-            <option value="月卡">月卡</option>
-            <option value="季卡">季卡</option>
-        </select>
-    </div>
-    <div class="number">
-        <span>赠送数量</span>
-        <input type="text" placeholder="输入物品数量，如1,2" id="number">
-    </div>
-    <div class="querycard">
-        <span onclick="sure()">确认充值</span>
-        <span onclick="back()">取消</span>
-    </div>
-    <div class="tip">周卡数量不够啦~</div>
-    <div class="X" onclick="hide(document.getElementsByClassName('GAME_GUIDE'))">x</div>
 </div>
+
 <!--确认充值-->
-<div class="confirm_prepaid_phone"></div>
+<div class="mask1">
+    <div class="confirm_prepaid_phone"></div>
+</div>
 <!--充值成功-->
-<div class="recharged_successfully">
+<div class="mask2">
+    <div class="recharged_successfully">
 
+    </div>
 </div>
+
 <!--转赠-->
-<div class="zhuanzeng">
-    <div class="player">
-        <span>推广员ID</span>
-        <input type="text" placeholder="输入赠送推广员的ID" id="ID">
+<div class="mask3">
+    <div class="zhuanzeng">
+        <div class="player">
+            <img src="../img/icon_person.png" alt="">
+            <input type="text" placeholder="请输入赠送玩家的ID" id="ID">
+        </div>
+        <div class="categories">
+            <img src="../img/icon_leixing.png" alt="">
+            <input type="text" id="Card1">
+        </div>
+        <div class="number">
+            <img src="../img/icon_shuliang.png" alt="">
+            <input type="text" placeholder="请输入赠送物品数量，如1,2" id="num">
+        </div>
+        <div class="querycard">
+            <span onclick="hide(document.getElementsByClassName('mask3'))">取消</span>
+            <span onclick="Donation1()">确认转赠</span>
+        </div>
+        <div class="tip">周卡数量不够啦~</div>
+        <div class="X" onclick="hide(document.getElementsByClassName('mask3'))">x</div>
     </div>
-    <div class="categories">
-        <span>物品类型</span>
-        <select name="" id="type">
-            <option value="">请选择</option>
-            <option value="周卡">周卡</option>
-            <option value="月卡">月卡</option>
-            <option value="季卡">季卡</option>
-        </select>
-    </div>
-    <div class="number">
-        <span>赠送数量</span>
-        <input type="text" placeholder="输入物品数量，如1,2" id="num">
-    </div>
-    <div class="querycard">
-        <span onclick="Donation1()">确认转赠</span>
-        <span onclick="back()">取消</span>
-    </div>
-    <div class="tip">周卡数量不够啦~</div>
-    <div class="X" onclick="hide(document.getElementsByClassName('zhuanzeng'))">x</div>
 </div>
-<div class="Donation"></div>
-<!--转赠成功-->
-<div class="examples_of_successful">
+<div class="mask4">
+    <div class="Donation"></div>
+</div>
 
+<!--转赠成功-->
+<div class="mask5">
+    <div class="examples_of_successful">
+
+    </div>
 </div>
+
 
 <script src="../js/public.js"></script>
 <script src="../js/first_index.js"></script>

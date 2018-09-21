@@ -5,36 +5,46 @@
     <title>会员卡兑换</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/membercard_buy.css">
     <link rel="stylesheet" href="../css/membercard_conversion.css">
 </head>
 <body>
-<div class="d_back" onclick="back()">
-    <img src="../img/back.png" style="width: 0.22rem;height: 0.22rem;">返回首页
+<div class="title">
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);">
+    <span>会员卡兑换</span>
 </div>
-
-<table style="width: 100%;">
-    <tr>
-        <td colspan="2">付款方式</td>
-    </tr>
-    <tr>
-        <td>
-            <div class="btn" id="btn2">
-                礼券兑换
-            </div>
-        </td>
-        <td style="width: 30%"></td>
-    </tr>
-</table>
-
+<div class="generalization">
+    <span>我的推广积分</span>
+    <br>
+    <span>88888888</span>
+</div>
+<div class="exchange_card">兑换会员卡</div>
 <table id="table_integral" style="width: 100%">
-    兑换物品
 </table>
 
 <!--积分兑换弹窗-->
-<div class="Donation"></div>
+<div class="mask">
+    <div class="Donation">
+
+    </div>
+</div>
 
 <!--兑换成功-->
-<div class="examples_of_successful"></div>
+<div class="mask1">
+    <div class="examples_of_successful"></div>
+</div>
+
+<!--兑换失败-->
+<div class="mask2">
+    <div class="for_failure">
+        <div class="headline">兑换失败</div>
+        <img src="../img/icon_jinzhi.png" alt="">
+        <div class="querycard">
+            <a href="first_index.html" onclick="hide(document.getElementsByClassName('examples_of_successful'))">返回首页</a>
+            <a href="membercard_conversion.html">重新兑换</a>
+        </div>
+    </div>
+</div>
 
 <script src="../js/public.js"></script>
 <script src="../js/membercard_conversion.js"></script>

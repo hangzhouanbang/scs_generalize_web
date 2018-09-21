@@ -1,49 +1,55 @@
-body{
-    font-family: Arial;
-}
-.back{
-    left: 0px;
-    top: 1.2rem;
-    width: 1.5rem;
-    height: 20px;
-    color: rgba(16, 16, 16, 1);
+body {
+    font-family: PingFangSC-Medium;
     font-size: 0.28rem;
+    margin:0;
+    padding:0;
+    color:#333;
+}
+.select_code{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    position: relative;
+}
+.select_code img{
+    width:0.36rem;
+    height:0.36rem;
+    margin:0.22rem 0 0 0.5rem;
+}
+.select_code span{
+    display:inline-block;
     text-align: center;
+    line-height: 0.8rem;
+    height:0.8rem;
+    position: absolute;
+    top:0;
+    left:2.9rem;
 }
 .title{
-    margin:0 auto;
-    width: 6.5rem;
-    height: 26px;
-    line-height: 26px;
-    color: rgba(16, 16, 16, 1);
-    font-size: 0.36rem;
+    color:#333;
+    font-size: 0.28rem;
     text-align: center;
+    margin-top:0.2rem;
 }
 table{
     font-size:0.28rem;
     margin:0.1rem auto;
-    width:6.5rem;
+    width:100%;
     border-collapse:collapse;
 }
 tr{
-    width:6.5rem;
+    width:100%;
     display:block; /*将tr设置为块体元素*/
     margin:5px 0; /*设置tr间距为2px*/
 }
-table td {
-    border-top: 1px solid #bbb;
-}
 table tr th{
-    background-color: #eee;
+    /*background-color: #eee;*/
 }
-table tr td:first-child{
-    border-left: 1px solid #bbb;
-}
-table tr td:last-child{
-    border-right: 1px solid #bbb;
-}
-table tr td{
-    border-bottom: 1px solid #bbb;
+table tr{
+    background: #FAFAFA;
+    box-shadow: 0 1px 1px 0 #B3BECB;
+    border-radius: 2px;
 }
 tr th,
 tr td{
@@ -52,11 +58,11 @@ tr td{
 }
 tr th:nth-child(1),
 tr td:nth-child(1){
-    width:1.8rem;
+    width:2rem;
 }
 tr th:nth-child(2),
 tr td:nth-child(2){
-    width:1.7rem;
+    width:1.8rem;
 }
 tr th:nth-child(3),
 tr td:nth-child(3){

@@ -129,7 +129,7 @@ var map = {
     queryaccount:'/agent/queryaccount',
     applyinfo:'/apply/applyinfo'
 };
-map.localurl = "http://www.linshaocong.cn:96";
+map.localurl = "http://scs.3cscy.com";
 
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'

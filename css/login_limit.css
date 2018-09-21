@@ -1,24 +1,71 @@
 body{
-    font-family: Arial;
+    font-family: PingFangSC-Medium;
+    margin:0;
+    padding:0;
 }
-.content,
-.wxm{
-    margin:3rem auto 0 auto;
+/*推广员后台加载页*/
+.logo{
+    width:2rem;
+    height:2rem;
+    margin:2rem 0 0 2.55rem;
+}
+.matter{
+    margin:5rem auto 0 auto;
     width:6.5rem;
     font-size:0.32rem;
     text-align: center;
 }
-.content{
-    font-family: bold;
-}
 a{
-    text-decoration: none;
-    color:#213cf2;
+    text-decoration: underline;
+    color:#4A90E2;
+}
+/*推广员申请成功页*/
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    position: relative;
+}
+.title img{
+    width:0.36rem;
+    height:0.36rem;
+    margin:0.22rem 0 0 0.5rem;
+}
+.title span{
+    display:inline-block;
+    text-align: center;
+    line-height: 0.8rem;
+    height:0.8rem;
+    position: absolute;
+    top:0;
+    left:3rem;
+}
+.content{
+    margin-bottom:2.5rem;
+}
+.content img{
+    width:1.2rem;
+    height:1.2rem;
+    margin:1.2rem 0 0 3rem;
+}
+.content p,
+.wxm p{
+    text-align:center;
+}
+.content p:nth-child(2){
+    color:#4BAE4F;
+    font-size:0.36rem;
+    margin:-0.1rem 0 1.5rem 0.2rem;
+}
+.content p:not(:nth-child(2)){
+    font-size:0.28rem;
 }
 .wxm{
-    font-size:0.24rem;
+    font-size:0.28rem;
 }
-img{
+.wxm img{
     width:2rem;
     height:2rem;
+    margin:0.1rem 0 0 2.6rem;
 }

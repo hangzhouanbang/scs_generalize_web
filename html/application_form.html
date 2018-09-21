@@ -8,32 +8,34 @@
 </head>
 <body>
 <div class="content">
-    <div class="title">推广员申请表</div>
+    <div class="title">
+        <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);">
+        <span>推广员申请表</span>
+    </div>
     <div class="phone">
-        <span>手机号码</span>
-        <input type="text" placeholder="请输入手机号" id="phone">
+        <img src="../img/icon_phone.png" alt="">
+        <input type="text" placeholder="请输入您的手机号" id="phone">
     </div>
     <div class="name">
-        <span>姓名</span>
-        <input type="text" placeholder="请输入姓名" id="name">
+        <img src="../img/icon_person.png" alt="">
+        <input type="text" placeholder="请输入您的姓名" id="name">
     </div>
     <div class="ID_card">
-        <span>身份证号码</span>
-        <input type="text" placeholder="请输入身份证号码" id="idCard">
+        <img src="../img/icon_cad.png" alt="">
+        <input type="text" placeholder="请输入您的身份证号码" id="idCard">
     </div>
     <div class="img">
-        <span class="photo">身份证正反照</span>
-        <button id="upload" class="upload" type="button" onclick="upload()">
-            <img src="../img/upload.png" alt="" id="uploadimg">
-        </button>
-        <div id="IMg">
+        <p class="photo">请上传您的身份证照片（正反照）</p>
+        <img src="../img/img_add.png" alt="" class="uploadimg" onclick="upload()">
+        <img src="../img/img_add.png" alt="" class="uploadimg uploadimg1">
+        <span id="IMg">
             <!--<div>-->
-                <!--<img style="width:2rem;height:2rem;margin-left:20px;" src='../img/u15.png'>-->
+                <!--<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src='../img/u15.png'>-->
             <!--</div>-->
             <!--<div>-->
-                <!--<img style="width:2rem;height:2rem;margin-left:20px;" src='../img/u15.png'>-->
+                <!--<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src='../img/u15.png'>-->
             <!--</div>-->
-        </div>
+        </span>
     </div>
     <div class="submit" onclick="apply()">提交申请</div>
 </div>

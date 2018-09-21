@@ -8,37 +8,51 @@
     <link rel="stylesheet" type="text/css" href="../css/membercard_buy.css">
 </head>
 <body>
-<div class="d_back" onclick="back()
-">
-    <img src="../img/back.png" style="width: 0.22rem;height: 0.22rem;">返回首页
+<div class="title">
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);">
+    <span>会员卡购买</span>
 </div>
 
-<table style="width: 100%">
+<table>
     <tr>
-        <td>付款方式</td>
+        <td>支付方式</td>
         <td></td>
     </tr>
     <tr>
-        <td style="width: 10%"></td>
-        <td style="width: 30%">
-            <div class="wxpay" style="width:2rem;height:0.5rem;border:1px solid rgba(187, 187, 187, 1);border-radius: 4px;position: relative;">
-                <img src="../img/wchatpay_on.png" style="width: 0.25rem;height: 0.25rem;position: absolute;top:0.13rem;left:0.2rem;">
-                <span style="margin-left:0.7rem;line-height:0.55rem;">微信支付</span>
+        <td>
+            <div class="wxpay">
+                <img src="../img/icon_weinxinpay.png">
+                <span>微信支付</span>
             </div>
         </td>
     </tr>
 </table>
-
+<div class="exchange_card">兑换会员卡</div>
 <table id="table_buy" style="width: 100%">
-    购买物品
+
 </table>
 
 <!--积分兑换弹窗-->
-<div class="Donation"></div>
+<div class="mask">
+    <div class="Donation"></div>
+</div>
 
 <!--兑换成功-->
-<div class="examples_of_successful"></div>
+<div class="mask1">
+    <div class="examples_of_successful"></div>
+</div>
 
+<!--兑换失败-->
+<div class="mask2">
+    <div class="for_failure">
+        <div class="headline">兑换失败</div>
+        <img src="../img/icon_jinzhi.png" alt="">
+        <div class="querycard">
+            <a href="first_index.html" onclick="hide(document.getElementsByClassName('examples_of_successful'))">返回首页</a>
+            <a href="membercard_buy.html">重新购买</a>
+        </div>
+    </div>
+</div>
 <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
 <script src="../js/public.js"></script>
 <script src="../js/membercard_buy.js"></script>

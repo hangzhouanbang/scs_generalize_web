@@ -42,8 +42,10 @@ function upload(){
                                 var localData = res.localData;
                                 console.log(localData)
                                 localData = localData.replace('jgp', 'jpeg');
+                                var uploadimg1 = document.getElementsByClassName('uploadimg')[0];
+                                uploadimg1.style.display = 'none';
                                 var div = document.createElement('div');
-                                div.innerHTML = '<img style="width:2rem;height:2rem;margin-left:20px;" src="'+localData+'">';
+                                div.innerHTML = '<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src="'+localData+'">';
                                 document.getElementById('IMg').appendChild(div);
                             },
                             fail:function(res){
@@ -54,10 +56,12 @@ function upload(){
                 }else{
                     //遍历数组
                     console.log(localIds)
+                    var uploadimg1 = document.getElementsByClassName('uploadimg')[0];
+                    uploadimg1.style.display = 'none';
                     for(var i = 0;i < localIds.length;i++){
                         console.log(localIds[i])
                         var div = document.createElement('div');
-                        div.innerHTML = '<img style="width:2rem;height:2rem;margin-left:20px;" src="'+localIds[i]+'">';
+                        div.innerHTML = '<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src="'+localIds[i]+'">';
                         document.getElementById('IMg').appendChild(div);
                     }
                 }

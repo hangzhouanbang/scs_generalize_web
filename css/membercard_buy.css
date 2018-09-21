@@ -1,13 +1,63 @@
 body {
-    font-family: Arial;
+    font-family: PingFangSC-Medium;
     font-size: 0.28rem;
+    margin:0;
+    padding:0;
+    color:#333;
+}
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    position: relative;
+}
+.title img{
+    width:0.36rem;
+    height:0.36rem;
+    margin:0.22rem 0 0 0.5rem;
+}
+.title span{
+    display:inline-block;
+    text-align: center;
+    line-height: 0.8rem;
+    height:0.8rem;
+    position: absolute;
+    top:0;
+    left:2.3rem;
+}
+.wxpay{
+    width:2rem;
+    height:0.5rem;
+    position: relative;
+}
+.wxpay img{
+    width: 0.66rem;
+    height: 0.66rem;
+    position: absolute;
+    top:0.13rem;
+    left:0.2rem;
+}
+.wxpay span{
+    position: absolute;
+    left:0.8rem;
+    top:0.3rem;
+    display:inline-block;
+    width:2rem;
+}
+.exchange_card{
+    margin:0.4rem 0.6rem;
+    font-size: 14px;
+    color: #333333;
 }
 .d_back {
     width: 1.5rem;
-    /* border: solid 0.01rem gray;*/
 }
 table {
-    margin-top: 0.2rem;
+    margin: 0.2rem 0 0 0.5rem;
+}
+#table_buy {
+    margin: 0.2rem 0 0 0.15rem;
 }
 .tr{
     width: 2rem;
@@ -16,15 +66,14 @@ table {
     margin:0 0 0.2rem 0.25rem;
 }
 .btn {
-    width: 1.7rem;
-    height: 0.54rem;
-    border-radius: 4px;
-    color: rgba(16, 16, 16, 1);
+    width: 0.9rem;
+    height: 0.42rem;
+    color: #fff;
     text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background-color: #fff;
-    line-height: 0.54rem;
+    line-height: 0.42rem;
     margin:0.1rem auto 0 auto;
+    background: #F34235;
+    border-radius: 10px;
 }
 a {
     text-decoration: none;
@@ -34,73 +83,120 @@ a .btn {
     height: 0.54rem;
 }
 span:nth-child(2){
-    margin-left: 0.4rem;
+    margin-left: 0.2rem;
 }
 span:nth-child(3){
-    margin-left: 0.1rem;
+    margin-left: 0.3rem;
+    color:#4A90E2;
 }
 .d_goods {
     width: 2rem;
-    height: 3rem;
-    border: solid 0.001rem gray;
-    line-height: 0.5rem;
+    height: 2.4rem;
     display:inline-block;
+    background: #FAFAFA;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 #B3BECB;
 }
 .i_img {
-    margin-top: 0.4rem;
-    width: 1rem;
-    height: 1rem;
-    margin-left:0.5rem;
+    margin: 0.2rem 0 0 0.6rem;
+    width: 0.8rem;
+    height: 1.08rem;
 }
-.Donation {
+.mask,
+.mask1,
+.mask2{
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.3);
+    width:100%;
+    height:100%;
+    display: none;
+}
+.Donation,
+.examples_of_successful,
+.for_failure{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background-color: #fff;
-    display: none;
-    width: 6.42rem;
-    height: 4.1rem;
+    width: 6.22rem;
+    height: 4.8rem;
 }
-.Donation .headline {
-    height: 1rem;
-    margin-top: 1rem;
+.Donation{
+    background: url('../img/Group 2.png') no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.headline{
+    font-size: 0.32rem;
+    color: #333333;
+}
+.Donation .headline,
+.examples_of_successful .headline{
+    width: 5.32rem;
+    text-align: center;
+    margin: 0.35rem auto 0.3rem auto;
+}
+.Donation img,
+.examples_of_successful img{
+    width:1.02rem;
+    height:1.26rem;
+}
+.Donation .headline_content,
+.examples_of_successful .headline_content{
+    margin-top:0.1rem;
+    font-size: 0.32rem;
+    color: #333333;
+}
+.querycard{
+    margin-top:0.7rem;
 }
 .querycard span,
 .querycard a {
     display: inline-block;
-    width: 1.8rem;
+    width: 1.6rem;
     height: 0.6rem;
     line-height: 0.6rem;
     border-radius: 4px;
-    color: rgba(16, 16, 16, 1);
+    color: #fff;
     text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
 }
-.querycard {
-    width: 6rem;
-    margin: 0 auto;
+.querycard span:nth-child(1),
+.querycard a:nth-child(1){
+    background: #666666;
+    border-radius: 15px;
 }
-.Donation,
-.examples_of_successful {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background-color: #fff;
-    display: none;
-    width: 6.22rem;
+.querycard span:nth-child(2),
+.querycard a:nth-child(2) {
+    margin-left: 0.8rem;
+    background: #F34235;
+    border-radius: 15px;
 }
-
-.headline {
-    width: 5.32rem;
-    height: 1.26rem;
-    color: rgba(16, 16, 16, 1);
-    font-size: 0.4rem;
-    text-align: center;
-    margin: 0.5rem auto;
+.examples_of_successful{
+    background: url('../img/tanchuang2.png') no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.examples_of_successful .mess{
+    margin-top:0.5rem;
+    font-size: 10px;
+    color: #333333;
+}
+.examples_of_successful .querycard{
+    margin-top:0.15rem;
+}
+.for_failure{
+    background: url('../img/tanchuang3.png') no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.for_failure .headline{
+    margin-top:0.5rem;
+}
+.for_failure img{
+    width:1.2rem;
+    height:1.2rem;
+    margin-top:0.5rem;
+}
+.for_failure .querycard{
+    margin-top:1rem;
 }
