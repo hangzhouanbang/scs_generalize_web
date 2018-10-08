@@ -10,21 +10,15 @@ body {
     height:0.8rem;
     background-color: #4A90E2;
     color:#fff;
-    position: relative;
-}
-.title img{
-    width:0.36rem;
-    height:0.36rem;
-    margin:0.22rem 0 0 0.5rem;
-}
-.title span{
-    display:inline-block;
     text-align: center;
     line-height: 0.8rem;
-    height:0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
     position: absolute;
-    top:0;
-    left:2.3rem;
+    top:0.22rem;
+    left:0.5rem;
 }
 .wxpay{
     width:2rem;
@@ -87,7 +81,7 @@ span:nth-child(2){
 }
 span:nth-child(3){
     margin-left: 0.3rem;
-    color:#4A90E2;
+    /*color:#4A90E2;*/
 }
 .d_goods {
     width: 2rem;
@@ -96,6 +90,13 @@ span:nth-child(3){
     background: #FAFAFA;
     border-radius: 2px;
     box-shadow: 0 1px 1px 0 #B3BECB;
+}
+.d_goods .select{
+    width: 1.6rem;
+    margin:0 0.2rem;
+}
+.d_goods .select span:nth-child(2){
+    color:#4A90E2;
 }
 .i_img {
     margin: 0.2rem 0 0 0.6rem;

@@ -9,24 +9,18 @@
 <body>
 <img src="../img/logo.png" alt="" class="logo">
 <div class="matter">
-    <p><a onclick="getToken()">点击进入推广员界面</a></p>
-    <p><a onclick="judge()">申请成为推广员</a></p>
+    <p><a onclick="getToken(event)">点击进入推广员界面</a></p>
+    <p><a onclick="judge(event)">申请成为推广员</a></p>
 </div>
 <script src="../js/public.js"></script>
 <script>
     var token = window.location.href.slice(window.location.href.indexOf('token=')+6);
     localStorage.setItem('token',token)
-    function getToken(){
-        window.location.href = 'first_index.html?token='+token;
+    function getToken(e){
+        e.target.href = map.localurl +map.verify +'?token='+token
     }
-    function judge(){
-        ajax_method(map.localurl+map.applyinfo,'token='+token,'post',function successCallBack(a){
-            if(JSON.parse(a).success){
-                window.location.href = 'application_form.html';
-            }else{
-                window.location.href = 'login_limit.html';
-            }
-        })
+    function judge(e){
+        e.target.href = map.localurl +map.applyinfo +'?token='+token
     }
 </script>
 </body>

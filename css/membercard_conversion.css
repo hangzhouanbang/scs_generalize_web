@@ -62,26 +62,31 @@ span:nth-child(3) {
     background: #FAFAFA;
     border-radius: 2px;
 }
+.d_goods .select{
+    width:2.3rem;
+    margin:0 0.2rem;
+    overflow: hidden;
+}
 .d_goods span{
     display:inline-block;
     font-size: 14px;
 }
-.d_goods span:nth-child(1){
+.d_goods #sp1{
     color: #333;
     margin:0.2rem 0 0 0.2rem;
 }
-.d_goods span:nth-child(3){
+.d_goods .select span:nth-child(1){
     color: #4A90E2;
-    margin:0.1rem 0 0 0.2rem;
+    float:left;
+    margin-top:0.1rem;
 }
-.d_goods span:nth-child(4){
-    margin-left:0.6rem;
+.d_goods .select span:nth-child(2){
+    float:right;
+    margin-left: 0;
+    color:#fff;
 }
 .i_img {
     width: 0.8rem;
     height: 1.08rem;
     margin:0 0 0 0.95rem;
-}
-.table_integral tr{
-
 }

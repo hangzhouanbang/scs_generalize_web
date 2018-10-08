@@ -5,13 +5,12 @@
     <title>推广员申请表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../css/application_form.css">
+    <link rel="stylesheet" href="../css/LArea.css">
 </head>
 <body>
 <div class="content">
-    <div class="title">
-        <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);">
-        <span>推广员申请表</span>
-    </div>
+    <div class="title">推广员申请表</div>
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
     <div class="phone">
         <img src="../img/icon_phone.png" alt="">
         <input type="text" placeholder="请输入您的手机号" id="phone">
@@ -20,27 +19,24 @@
         <img src="../img/icon_person.png" alt="">
         <input type="text" placeholder="请输入您的姓名" id="name">
     </div>
-    <div class="ID_card">
-        <img src="../img/icon_cad.png" alt="">
-        <input type="text" placeholder="请输入您的身份证号码" id="idCard">
+    <div class="location">
+        <img src="../img/icon_weizhi.png" alt="">
+        <input type="text" placeholder="选择您所在的地区" id="place">
+        <img src="../img/icon_xia.png" alt="" class="below">
     </div>
-    <div class="img">
-        <p class="photo">请上传您的身份证照片（正反照）</p>
-        <img src="../img/img_add.png" alt="" class="uploadimg" onclick="upload()">
-        <img src="../img/img_add.png" alt="" class="uploadimg uploadimg1">
-        <span id="IMg">
-            <!--<div>-->
-                <!--<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src='../img/u15.png'>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src='../img/u15.png'>-->
-            <!--</div>-->
-        </span>
+    <div class="remark">
+        <input id="comment" placeholder="备注">
+    </div>
+    <div class="deal">
+        申请即同意
+        <a href="protocol.html">《3财神茶苑推广员合作协议》</a>
     </div>
     <div class="submit" onclick="apply()">提交申请</div>
 </div>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js"></script>
+<script src="../js/LAreaData1.js"></script>
+<script src="../js/LArea.js"></script>
 <script src="../js/application_form.js"></script>
 </body>
 </html>

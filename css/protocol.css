@@ -1,0 +1,29 @@
+body {
+    font-family: PingFangSC-Medium;
+    font-size: 0.28rem;
+    margin:0;
+    padding:0;
+    color:#333;
+}
+.select_code{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
+    position: absolute;
+    top:0.22rem;
+    left:0.5rem;
+}
+.content{
+    margin:0 0.3rem;
+}
+.content .title{
+    font-size:0.32rem;
+    font-weight: bold;
+}

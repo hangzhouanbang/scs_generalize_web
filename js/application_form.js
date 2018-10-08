@@ -1,120 +1,52 @@
-//上传图片
-var img,img1;
-var flag = 0;
-
-ajax_method(map.localurl+map.getconfig,'url='+location.href.split('#')[0], 'post',function successCallBack(a){
-    var data = JSON.parse(a)
-    console.log(data.data)
-    if(data.success){
-        wx.config({
-            debug: false, // 因为在手机上测试没法打印，当debug为true时，所有的返回值都会在手机上alert出来
-            appId: data.data.appId, // 必填，公众号唯一标识
-            timestamp: data.data.timestamp, // 必填，生成签名的时间戳
-            nonceStr: data.data.noncestr, // 必填，生成签名的随机串
-            signature: data.data.signature,// 必填，签名
-            jsApiList: ['chooseImage','uploadImage','getLocalImgData'] // 必填，需要使用的JS接口列表，需要用到什么接口就去开发者文档查看相应的字段名
-        });
-    }
-})
-var images = {
-    localId: [],
-    serverId: []
-};
-var arrayImgs = new Array();
-function upload(){
-    wx.ready(function(){
-        wx.chooseImage({
-            count: 2, // 默认9
-            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-            success: function (res) {
-                images.localId = res.localIds;
-                alert('已选择 ' + res.localIds.length + ' 张图片'); // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-                var localIds  = res.localIds;
-                console.log(localIds)
-                document.getElementsByClassName('img')[0].style.height = '180px';
-                if(window.__wxjs_is_wkwebview){
-                    //alert(localIds[0])
-                    for (var i = 0;i <localIds.length;i++ ) {
-                        wx.getLocalImgData({
-                            localId: localIds[i],
-                            success: function (res) {
-                                var localData = res.localData;
-                                console.log(localData)
-                                localData = localData.replace('jgp', 'jpeg');
-                                var uploadimg1 = document.getElementsByClassName('uploadimg')[0];
-                                uploadimg1.style.display = 'none';
-                                var div = document.createElement('div');
-                                div.innerHTML = '<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src="'+localData+'">';
-                                document.getElementById('IMg').appendChild(div);
-                            },
-                            fail:function(res){
-                                alert(res.errMsg);
-                            }
-                        });
-                    }
-                }else{
-                    //遍历数组
-                    console.log(localIds)
-                    var uploadimg1 = document.getElementsByClassName('uploadimg')[0];
-                    uploadimg1.style.display = 'none';
-                    for(var i = 0;i < localIds.length;i++){
-                        console.log(localIds[i])
-                        var div = document.createElement('div');
-                        div.innerHTML = '<img style="width:1.56rem;height:1.56rem;margin-left:0.3rem;" src="'+localIds[i]+'">';
-                        document.getElementById('IMg').appendChild(div);
-                    }
-                }
-                if (images.localId.length == 0) {
-                    alert('请先选择图片');
-                    return;
-                }
-                var i = 0, length = images.localId.length;
-                images.serverId = [];
-                function upload() {
-                    wx.uploadImage({
-                        localId: images.localId[i],
-                        success: function (res) {
-                            arrayImgs[i] = res.serverId
-                            console.log(typeof(arrayImgs))
-                            i++;
-                            //alert('已上传：' + i + '/' + length);
-                            images.serverId.push(res.serverId);
-                            if (i < length) {
-                                upload();
-                            }else{
-                                // 循环结束
-                                console.log(arrayImgs)
-                                // document.getElementById('upload').style.display = 'none';
-                                // document.getElementById('IMg').style.margin = '0.3rem 0 0 0.2rem';
-                            }
-                        },
-                        fail: function (res) {
-                            alert(JSON.stringify(res));
-                        }
-                    });
-                }
-                upload();
-            }
-        });
-    });
-
-}
-
+var area1 = new LArea();
+area1.init({
+    'trigger': '#place', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+    'valueTo': '', //选择完毕后id属性输出到该位置
+    'keys': {
+        id: 'id',
+        name: 'name'
+    }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+    'type': 1, //数据源类型
+    'data': LAreaData //数据源
+});
 //提交申请
 function apply(){
-    console.log(images.serverId)
-    ajax_method(map.localurl+map.agentapply,
-        'token='+localStorage.getItem('token')+
-        '&phone='+document.getElementById('phone').value+
-        '&userName='+document.getElementById('name').value+
-        '&idCard='+document.getElementById('idCard').value+
-        '&frontUrl='+images.serverId[0]+
-        '&reverseUrl='+images.serverId[1],
-        'post',function successCallBack(a){
-        data = JSON.parse(a)
+    var phone = document.getElementById('phone').value;
+    var userName = document.getElementById('name').value;
+    var area = document.getElementById('place').value;
+    var reg = "^1[3|4|5|8][0-9]\\d{8}$";
+    var re = new RegExp(reg);
+    if(phone == ''){
+        alert('手机号不能为空');
+        return;
+    }else if(!re.test(phone)){
+        alert('手机号码格式不正确');
+        return;
+    }
+    if(userName == ''){
+        alert('姓名不能为空');
+        return;
+    }
+    if(area == ''){
+        alert('地区不能为空');
+        return;
+    }
+
+    var ajax = new XMLHttpRequest();
+    ajax.open('post',map.localurl+map.agentapply);
+    ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    ajax.send('token='+localStorage.getItem('token')+
+        '&phone='+phone+
+        '&userName='+userName+
+        '&area='+area+
+        '&desc='+document.getElementById('comment').value);
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState==4&&ajax.status==200) {
+            console.log(ajax.responseText);
+            var data = JSON.parse(ajax.responseText)
             if(data.success){
                 window.location.href='login_limit.html'
             }
-    })
+        }
+    }
 }

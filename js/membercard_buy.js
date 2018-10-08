@@ -12,7 +12,7 @@ function hide(dom) {
 //初始化数据
 function init() {
     ajax_method(map.localurl + map.queryagentclubcard, 'token=' + localStorage.getItem('token') + '&payType=微信', 'post', function successCallBack(a) {
-        var data = JSON.parse(a).data.items
+        var data = JSON.parse(a).data.list.items
         console.log(data)
         for (var i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
@@ -22,11 +22,13 @@ function init() {
                 '        <td>' +
                 '            <div class="d_goods" id="">\n' +
                 '                <div><img src="' + data[i].productPic + '" class="i_img"></div>\n' +
-                '                <span>' + data[i].number + '张</span>\n' +
-                '                <span>' + data[i].price + '元</span>\n' +
+                '                <div class="select">' +
+                '                   <span>' + data[i].number + '张</span>\n' +
+                '                   <span>' + data[i].price + '元</span>\n' +
+                '                </div>\n' +
                 '                <span style="display: none"> </span>\n' +
                 '                <div class="btn"\n' +
-                '                     onclick="buy(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\',\''+ data[i].img +'\')">\n' +
+                '                     onclick="buy(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\',\''+ data[i].productPic +'\')">\n' +
                 '                    购买\n' +
                 '                </div>\n' +
                 '            </div>\n' +
@@ -37,11 +39,11 @@ function init() {
 }
 init();
 
-function buy(number,price,id,product,img) {
+function buy(number,price,id,product,productPic) {
     document.getElementsByClassName('mask')[0].style.display = 'block'
 
     var html2 = ' <div class="headline">请确认购买内容</div>\n' +
-        '<img src="\''+ img +'\'">'+
+        '<img src="'+ productPic +'">'+
         '<div class="headline_content">以' + price + '元购买' + number + '张会员'+ product+'</div>\n'+
         '    <div class="querycard">\n' +
         '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'mask\'))">我再想想</a>\n' +

@@ -127,7 +127,8 @@ var map = {
     getconfig:'/access/getconfig',
     downloadimg:'/apply/downloadimg',
     queryaccount:'/agent/queryaccount',
-    applyinfo:'/apply/applyinfo'
+    applyinfo:'/apply/applyinfo',
+    verify:'/thirdauth/verify'
 };
 map.localurl = "http://scs.3cscy.com";
 

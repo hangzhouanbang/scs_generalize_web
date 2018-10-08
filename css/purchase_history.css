@@ -10,21 +10,15 @@ body {
     height:0.8rem;
     background-color: #4A90E2;
     color:#fff;
-    position: relative;
-}
-.select_code img{
-    width:0.36rem;
-    height:0.36rem;
-    margin:0.22rem 0 0 0.5rem;
-}
-.select_code span{
-    display:inline-block;
     text-align: center;
     line-height: 0.8rem;
-    height:0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
     position: absolute;
-    top:0;
-    left:2.9rem;
+    top:0.22rem;
+    left:0.5rem;
 }
 .title{
     color:#333;

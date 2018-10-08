@@ -12,21 +12,27 @@ function hide(dom) {
 //初始化数据
 function init() {
     ajax_method(map.localurl + map.queryagentclubcard, 'token='+localStorage.getItem('token') + '&payType=积分', 'post', function successCallBack(a) {
-        var data = JSON.parse(a)
-        for (var i = 0; i < data.data.items.length; i++) {
+        document.getElementsByClassName('generalization')[0].innerHTML =
+            ' <span>我的推广积分</span>\n' +
+            '    <br>\n' +
+            '    <span>'+JSON.parse(a).data.score+'</span>';
+        var data = JSON.parse(a).data.list.items
+        for (var i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
             //console.log(data.data.items[i].price)
             tr.className = 'tr'
             tr.innerHTML =
                 '        <td>\n' +
                 '            <div class="d_goods">\n' +
-                '                <span id="sp1">' + data.data.items[i].number + '张</span>\n' +
-                '                <div><img src="' + data.data.items[i].productPic + '" class="i_img"></div>\n' +
-                '                <span>' + data.data.items[i].price + '积分</span>\n' +
-                '                <span class="btn"\n' +
-                '                     onclick="conversion(\''+ data.data.items[i].number+'\',\''+ data.data.items[i].price +'\',\''+ data.data.items[i].id +'\',\''+ data.data.items[i].product+'\',\''+ data.data.items[i].img+'\')">\n' +
+                '                <span id="sp1">' + data[i].number + '张</span>\n' +
+                '                <div><img src="' + data[i].productPic + '" class="i_img"></div>\n' +
+                '                <div class="select">' +
+                '                   <span>' + data[i].price + '积分</span>\n' +
+                '                   <span class="btn"\n' +
+                '                     onclick="conversion(\''+ data[i].number+'\',\''+ data[i].price +'\',\''+ data[i].id +'\',\''+ data[i].product+'\',\''+ data[i].productPic+'\')">\n' +
                 '                    兑换\n' +
-                '                </span>\n' +
+                '                   </span>\n' +
+                '                </div>\n' +
                 '            </div>\n' +
                 '        </td>';
             document.getElementById('table_integral').appendChild(tr);
@@ -36,10 +42,10 @@ function init() {
 
 init();
 
-function conversion(number,price,id,product,img) {
+function conversion(number,price,id,product,productPic) {
     document.getElementsByClassName('mask')[0].style.display = 'block'
     var html2 = '<div class="headline">请确认兑换内容</div>\n' +
-        '        <img src="\''+ img +'\'">\n' +
+        '        <img src="'+ productPic +'">\n' +
         '        <div class="headline_content">消耗' + price + '礼券兑换' + number + '张月卡</div>\n' +
         '        <div class="querycard">\n' +
         '            <a href="membercard_conversion.html" onclick="hide(document.getElementsByClassName(\'mask\'))">我再想想</a>\n' +

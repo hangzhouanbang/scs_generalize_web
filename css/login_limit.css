@@ -7,10 +7,10 @@ body{
 .logo{
     width:2rem;
     height:2rem;
-    margin:2rem 0 0 2.55rem;
+    margin:2rem 0 0 2.75rem;
 }
 .matter{
-    margin:5rem auto 0 auto;
+    margin:4rem auto 0 auto;
     width:6.5rem;
     font-size:0.32rem;
     text-align: center;
@@ -26,28 +26,23 @@ a{
     background-color: #4A90E2;
     color:#fff;
     position: relative;
-}
-.title img{
-    width:0.36rem;
-    height:0.36rem;
-    margin:0.22rem 0 0 0.5rem;
-}
-.title span{
-    display:inline-block;
     text-align: center;
     line-height: 0.8rem;
-    height:0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
     position: absolute;
-    top:0;
-    left:3rem;
+    top:0.22rem;
+    left:0.5rem;
 }
 .content{
-    margin-bottom:2.5rem;
+    margin-bottom:2rem;
 }
 .content img{
     width:1.2rem;
     height:1.2rem;
-    margin:1.2rem 0 0 3rem;
+    margin:1.2rem 0 0 3.15rem;
 }
 .content p,
 .wxm p{
@@ -67,5 +62,5 @@ a{
 .wxm img{
     width:2rem;
     height:2rem;
-    margin:0.1rem 0 0 2.6rem;
+    margin:0.1rem 0 0 2.75rem;
 }
