@@ -11,7 +11,7 @@ function hide(dom) {
 
 //初始化数据
 function init() {
-    ajax_method(map.localurl + map.queryagentclubcard, 'token=' + localStorage.getItem('token') + '&payType=微信', 'post', function successCallBack(a) {
+    ajax_method(map.localurl + map.queryagentclubcard, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(a) {
         var data = JSON.parse(a).data.list.items
         console.log(data)
         for (var i = 0; i < data.length; i++) {

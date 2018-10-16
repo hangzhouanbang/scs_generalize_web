@@ -128,9 +128,14 @@ var map = {
     downloadimg:'/apply/downloadimg',
     queryaccount:'/agent/queryaccount',
     applyinfo:'/apply/applyinfo',
-    verify:'/thirdauth/verify'
+    verify:'/thirdauth/verify',
+    qrcode:'/image/qrcode',
+    generateImag:'/image/generateimag',
+    queryscoreclubcard:'/clubcard/queryscoreclubcard',
+    queryimage:'/image/queryimage'
 };
 map.localurl = "http://scs.3cscy.com";
+// map.localurl = "http://192.168.0.116:96";
 
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'

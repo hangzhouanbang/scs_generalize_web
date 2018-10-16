@@ -128,9 +128,19 @@ function sure(){
 }
 //第二次确认充值
 function sure1(){
+    var card = document.getElementById("Card").value;
+    if(card == '周卡'){
+        card = 'zhou'
+    }
+    if(card == '月卡'){
+        card = 'yue'
+    }
+    if(card == '季卡'){
+        card = 'ji'
+    }
     ajax_method(map.localurl+map.recharge,'token='+localStorage.getItem('token')+'&memberId='+
         document.getElementById("playerID").value+
-        '&card='+document.getElementById("Card").value+
+        '&card='+card+
         '&number='+document.getElementById("number").value,'post',function successCallBack(a){
         var sure = JSON.parse(a);
         if(sure.success){
@@ -167,9 +177,19 @@ function Donation1(){
 }
 //转赠
 function Donation2(){
+    var card = document.getElementById("Card1").value;
+    if(card == '周卡'){
+        card = 'zhou'
+    }
+    if(card == '月卡'){
+        card = 'yue'
+    }
+    if(card == '季卡'){
+        card = 'ji'
+    }
     ajax_method(map.localurl+map.giveclubcard,'token='+localStorage.getItem('token')+'&receiverId='+
         document.getElementById("ID").value+
-        '&card='+document.getElementById("Card1").value+
+        '&card='+card+
         '&number='+document.getElementById("num").value,'post',function successCallBack(a){
         var sure = JSON.parse(a);
         if(sure.success){
@@ -177,7 +197,7 @@ function Donation2(){
             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
                 var html6 = '<div class="headline">转赠成功！</div>\n' +
                     '        <img src="../img/icon_success.png" alt="">\n' +
-                    '        <div class="message">目前会员周卡：\'+JSON.parse(c).clubCardZhou+\'张，月卡：\'+JSON.parse(c).clubCardYue+\'张，季卡：\'+JSON.parse(c).clubCardJi+\'张</div>\n' +
+                    '        <div class="message">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                     '        <div class="querycard">\n' +
                     '            <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'mask5\'))">返回首页</a>\n' +
                     '            <a href="examples_record.html">转赠记录</a>\n' +

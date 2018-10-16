@@ -25,18 +25,61 @@
     background: url('../img/img_bar.png') no-repeat 0 0;
     background-size: 100% 100%;
 }
-.generalization span{
-    width:100%;
-    text-align: center;
-    color:#fff;
+.generalization .myCode,
+.generalization .QR{
+    float:left;
+}
+.generalization .myCode{
+    margin-left:0.5rem;
+}
+.generalization .myCode .my{
+    font-size: 0.24rem;
+    color: #FFFFFF;
+    margin-top:0.1rem;
+}
+.generalization .myCode .code{
+    margin:0.05rem 0 0 0.6rem;
+}
+.generalization .myCode .code span:nth-child(1){
     display:inline-block;
-}
-.generalization span:nth-child(1){
-    font-size:0.24rem;
-    margin:0.25rem 0 0.1rem 0;
-}
-.generalization span:nth-child(3){
+    width:2rem;
+    height:0.5rem;
+    background: url("../img/codeBG.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 0.5rem;
     font-size:0.4rem;
+}
+.generalization .myCode .code span:nth-child(3){
+    display:inline-block;
+    color:#fff;
+    font-size:0.2rem;
+    -webkit-transform:scale(0.8);
+    width:2rem;
+    text-align: center;
+}
+.generalization .QR{
+    background: #F34235;
+    border-radius: 15px;
+    width:2rem;
+    height:0.5rem;
+    margin:0.5rem 0 0 1.5rem;
+    position: relative;
+}
+.generalization .QR img{
+    width:0.3rem;
+    height:0.3rem;
+    position: absolute;
+    top:0.1rem;
+    left:0.15rem;
+}
+.generalization .QR span{
+    font-size: 0.24rem;
+    color: #FFFFFF;
+    position: absolute;
+    top:0.07rem;
+    right:0.15rem;
 }
 .invited_record{
     text-align: center;

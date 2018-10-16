@@ -12,16 +12,24 @@
 <div class="select_code">推广码查询</div>
 <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
 <div class="generalization">
-    <span>我的邀请码</span>
-    <br>
-    <span>DGDRHGYIUIKUOIIJHKJKHJ</span>
+    <div class="myCode">
+        <div class="my">我的邀请码</div>
+        <div class="code">
+            <!--<span>WF3456</span><br>-->
+            <!--<span>长按复制邀请码</span>-->
+        </div>
+    </div>
+    <div class="QR" onclick="javascript:window.location.href = 'myCode.html'">
+        <img src="../img/icon-2ma.png" alt="">
+        <span>查看二维码</span>
+    </div>
 </div>
 <div class="invited_record">我的邀请记录</div>
 <table id="table">
     <tr>
         <th>绑定时间</th>
         <th>绑定ID</th>
-        <th>绑定记录</th>
+        <th>玩家昵称</th>
         <th>积分</th>
     </tr>
     <div class="loadmore">

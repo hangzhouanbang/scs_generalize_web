@@ -6,7 +6,7 @@ function back() {
 var html=[];
 var data,tr,judge;
 function init(page){
-    ajax_method(map.localurl+map.queryscorerecord,'token='+localStorage.getItem('token')+'&type=兑换&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryscorerecord,'token='+localStorage.getItem('token')+'&type=exchange&page='+page+'&size=15','post',function successCallBack(a){
         data = JSON.parse(a).data.listPage.items
         judge = JSON.parse(a).data
         var html = ' <span>当前推广积分：'+judge.score+'</span>\n' +
@@ -16,7 +16,7 @@ function init(page){
             tr = document.createElement('tr')
             data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
             tr.innerHTML =
-                '<td>'+data[i].summary.text+'</td>\n' +
+                '<td>'+data[i].product+'</td>\n' +
                 '<td>'+data[i].accountingTime+'</td>\n' +
                 '<td>'+data[i].balanceAfter+'</td>\n'
             document.getElementById('table').appendChild(tr)

@@ -11,7 +11,7 @@ function hide(dom) {
 
 //初始化数据
 function init() {
-    ajax_method(map.localurl + map.queryagentclubcard, 'token='+localStorage.getItem('token') + '&payType=积分', 'post', function successCallBack(a) {
+    ajax_method(map.localurl + map.queryscoreclubcard, 'token='+localStorage.getItem('token'), 'post', function successCallBack(a) {
         document.getElementsByClassName('generalization')[0].innerHTML =
             ' <span>我的推广积分</span>\n' +
             '    <br>\n' +

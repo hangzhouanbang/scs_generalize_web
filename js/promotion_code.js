@@ -6,21 +6,26 @@ var html=[];
 var data,tr,score;
 function init(page){
     ajax_method(map.localurl+map.queryinvitation,'token='+localStorage.getItem('token')+'&page='+page+'&size=15','post',function successCallBack(a){
-        data = JSON.parse(a).data.items
+        data = JSON.parse(a).data.listPage.items
         score = JSON.parse(a).data
-        var html1 = '<span>我的邀请码</span>\n' +
-            '    <br>\n' +
-            '    <span>'+score.invitationCode+'</span>'
-        document.getElementsByClassName('generalization')[0].innerHTML = html1;
+        var html1 = '<span>'+score.invitationCode+'</span><br>\n' +
+            '            <span>长按复制邀请码</span>'
+        document.getElementsByClassName('code')[0].innerHTML = html1;
         for(var i = 0;i < data.length;i++){
             tr = document.createElement('tr')
             data[i].createTime = formatDate(new Date(data[i].createTime))
             tr.innerHTML =
                 '<td>'+data[i].createTime+'</td>\n' +
                 '<td>'+data[i].memberId+'</td>\n' +
-                '<td>'+data[i].record+'</td>\n' +
+                '<td class="record">'+data[i].nickname+'</td>\n' +
                 '<td>'+data[i].score+'</td>\n'
             document.getElementById('table').appendChild(tr)
+            if(data[i].record == '成功'){
+                document.getElementsByClassName('record')[0].style.color = '#17BC4D';
+            }
+            if(data[i].record == '失败'){
+                document.getElementsByClassName('record')[0].style.color = '#FF6257';
+            }
         }
     })
 }
