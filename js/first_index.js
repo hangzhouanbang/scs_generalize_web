@@ -46,6 +46,16 @@ function init(){
             '        <td>操作</td>\n' +
             '    </tr>\n' +
             '    <tr>\n' +
+            '        <td><img src="../img/icon_rika.png" style="width: 0.66rem;height:0.9rem;"></td>\n' +
+            '        <td>'+data.clubCardRi+'</td>\n' +
+            '        <td>\n' +
+            '            <input type="button" value="充值账号" class="btn1 recharge" id="ri"\n' +
+            '                   onclick="recharge(this)"/><br/>\n' +
+            '            <input type="button" value="转赠"  class="btn1 donation zeng" id="ri1"\n' +
+            '                   onclick="pass_on(this)"/>\n' +
+            '        </td>\n' +
+            '    </tr>\n' +
+            '    <tr>\n' +
             '        <td><img src="../img/icon_zhouka.png" style="width: 0.66rem;height:0.9rem;"></td>\n' +
             '        <td>'+data.clubCardZhou+'</td>\n' +
             '        <td>\n' +
@@ -78,7 +88,11 @@ function init(){
         document.getElementById('table1').innerHTML = html;
         document.getElementById('table2').innerHTML = html2;
         document.getElementById('table3').innerHTML = html3;
+        if(data.agent.level == 1) {
+            document.getElementsByClassName('title')[0].innerHTML = '一级推广员'
+        }
         if(data.agent.level == 2){
+            document.getElementsByClassName('title')[0].innerHTML = '二级推广员'
             document.getElementById('hide').style.display = 'none'
             document.getElementById('hide1').style.display = 'none'
             for(var i = 0;i < document.getElementsByClassName('zeng').length;i++){
@@ -91,7 +105,9 @@ init();
 function recharge(e){
     show(document.getElementsByClassName('mask'),document.getElementsByClassName('mask1'));
     var input = document.getElementById('Card')
-    if(e.id == 'zhou'){
+    if(e.id == 'ri') {
+        input.value = '日卡'
+    }else if(e.id == 'zhou'){
         input.value = '周卡'
     }else if(e.id == 'yue'){
         input.value = '月卡'
@@ -102,7 +118,9 @@ function recharge(e){
 function pass_on(e){
     show(document.getElementsByClassName('mask3'),document.getElementsByClassName('mask5'))
     var input = document.getElementById('Card1')
-    if(e.id == 'zhou1'){
+    if(e.id == 'ri1'){
+        input.value = '日卡'
+    }else if(e.id == 'zhou1'){
         input.value = '周卡'
     }else if(e.id == 'yue1'){
         input.value = '月卡'
@@ -129,6 +147,9 @@ function sure(){
 //第二次确认充值
 function sure1(){
     var card = document.getElementById("Card").value;
+    if(card == '日卡'){
+        card = 'ri'
+    }
     if(card == '周卡'){
         card = 'zhou'
     }
@@ -148,7 +169,7 @@ function sure1(){
             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
                 var html7 = '<div class="headline">充值成功！</div>\n' +
                     '        <img src="../img/icon_success.png" alt="">\n' +
-                    '        <div class="mess">'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
+                    '        <div class="message">目前会员日卡：'+JSON.parse(c).clubCardRi+'张，周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                     '        <div class="querycard">\n' +
                     '            <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'mask2\'))">返回首页</a>\n' +
                     '            <a href="recharge_record.html">充值记录</a>\n' +
@@ -178,6 +199,9 @@ function Donation1(){
 //转赠
 function Donation2(){
     var card = document.getElementById("Card1").value;
+    if(card == '日卡'){
+        card = 'ri'
+    }
     if(card == '周卡'){
         card = 'zhou'
     }
@@ -197,10 +221,10 @@ function Donation2(){
             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
                 var html6 = '<div class="headline">转赠成功！</div>\n' +
                     '        <img src="../img/icon_success.png" alt="">\n' +
-                    '        <div class="message">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
+                    '        <div class="message">目前会员日卡：'+JSON.parse(c).clubCardRi+'张，周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                     '        <div class="querycard">\n' +
                     '            <a href="first_index.html" onclick="hide(document.getElementsByClassName(\'mask5\'))">返回首页</a>\n' +
-                    '            <a href="examples_record.html">转赠记录</a>\n' +
+                    '            <a href="examples_record.html?id='+document.getElementById("ID").value+'">转赠记录</a>\n' +
                     '        </div>'
                 document.getElementsByClassName('examples_of_successful')[0].innerHTML = html6;
             })

@@ -1,6 +1,9 @@
 function back() {
     window.location.href = 'first_index.html?token='+localStorage.getItem('token')
 }
+function zz(e){
+    window.location.href='examples_record.html?id='+e.srcElement.id
+}
 //初始化数据
 var html=[];
 var data,tr;
@@ -15,7 +18,7 @@ function init(page){
                 ' <td>'+data[i].nickname+'</td>\n' +
                 ' <td>'+data[i].id+'</td>\n' +
                 ' <td>\n' +
-                '    <span>转赠记录</span>\n' +
+                '   <span onclick="zz(event)" id="'+data[i].id+'">转赠记录</span>' +
                 ' </td>';
             document.getElementById('table').appendChild(tr)
         }

@@ -199,16 +199,17 @@ hr {
 }
 .recharged_successfully .headline,
 .examples_of_successful .headline{
-    margin:0.5rem auto 0 auto;
+    margin:0.3rem auto 0 auto;
 }
 .recharged_successfully img,
 .examples_of_successful img{
-    width:1.26rem;
-    height:1.26rem;
+    width:1.1rem;
+    height:1.1rem;
 }
 .recharged_successfully .message,
 .examples_of_successful .message{
-    font-size:0.24rem;
+    font-size: 0.24rem;
+    margin: 0 0.1rem;
 }
 .recharged_successfully .querycard,
 .examples_of_successful .querycard{

@@ -1,11 +1,15 @@
 function back() {
     window.location.href = 'first_index.html?token='+localStorage.getItem('token')
 }
+var receiverId;
+if(window.location.href.indexOf('id')){
+    receiverId = window.location.href.slice(window.location.href.indexOf('id=')+3)
+}
 //初始化数据
 var html=[];
 var data,tr;
 function init(page){
-    ajax_method(map.localurl+map.queryclubcardrecord,'token='+localStorage.getItem('token')+'&type=give&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryclubcardrecord,'token='+localStorage.getItem('token')+'&type=give&page='+page+'&size=15&receiverId='+receiverId,'post',function successCallBack(a){
         data = JSON.parse(a).data.items
         console.log(data)
         for(var i = 0;i < data.length;i++){
@@ -27,7 +31,7 @@ init(1);
 window.onscroll = function() {
     if(getScrollTop() + getClientHeight() == getScrollHeight()) {
         vid++;
-        ajax_method(map.localurl+map.queryclubcardrecord,'token='+localStorage.getItem('token')+'&type=give&page='+vid+'&size=15','post',function successCallBack(a){
+        ajax_method(map.localurl+map.queryclubcardrecord,'token='+localStorage.getItem('token')+'&type=give&page='+vid+'&size=15&receiverId='+receiverId,'post',function successCallBack(a){
             data = JSON.parse(a).data.items;
             if(vid > JSON.parse(a).data.pageCount){
                 document.getElementsByClassName('loadmore')[0].style.display='block';
