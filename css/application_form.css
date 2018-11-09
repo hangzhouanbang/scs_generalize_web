@@ -24,20 +24,31 @@ body{
 .content .phone,
 .content .name,
 .content .location,
-.content .remark{
+.content .remark,
+.content .Invitation{
     width:6.5rem;
     height:0.7rem;
     margin:20px auto;
     font-size:0.28rem;
     position: relative;
 }
-.content .phone img,
-.content .name img,
-.content .location img{
+.content .phone img:nth-child(1),
+.content .name img:nth-child(1),
+.content .location img,
+.content .Invitation img:nth-child(1){
     position: absolute;
     top:0.09rem;
     width:0.6rem;
     height:0.6rem;
+}
+.content .phone img:nth-child(3),
+.content .name img:nth-child(3),
+.content .location img:nth-child(4){
+    width:0.2rem;
+    height:0.2rem;
+    position: absolute;
+    right:-0.3rem;
+    top:0.3rem;
 }
 .content .location img.below{
     right:0.2rem;
@@ -48,7 +59,8 @@ body{
 .content .phone input,
 .content .name input,
 .content .location input,
-.content .remark input{
+.content .remark input,
+.content .Invitation input{
     float:right;
     height:100%;
     padding-left:0.8rem;

@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>生成推广图</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../css/generalize.css">
 </head>
 <body>
-    <div class="select_code">生成推广图</div>
+    <div class="select_code">长按下图可保存和分享</div>
     <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
     <div class="img">
+        <!--<p>长按下图可保存和分享</p>-->
         <img src="" alt="" class="tgimg">
-        <p>长按图片保存至相册</p>
     </div>
 </body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js"></script>
 <script>
-    var order = window.location.href.slice(window.location.href.indexOf('order=')+6)
-    console.log(order)
-    document.getElementsByClassName('tgimg')[0].src=map.localurl+map.generateImag+'?token='+localStorage.getItem('token')+'&imageId='+order
+    var src = window.location.href.slice(window.location.href.indexOf('src=')+4)
+    console.log(src)
+    document.getElementsByClassName('tgimg')[0].src=src;
 </script>
 </html>

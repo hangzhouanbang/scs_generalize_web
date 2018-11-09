@@ -1,0 +1,130 @@
+body {
+    font-family: PingFangSC-Medium;
+    font-size: 0.28rem;
+    margin:0;
+    padding:0;
+}
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
+    position: absolute;
+    top:0.22rem;
+    left:0.5rem;
+}
+.rebate{
+    background-color: #4A90E2;
+    width:100%;
+    height:2rem;
+}
+.rebate .today{
+    float:left;
+}
+.rebate .today{
+    margin:0.2rem 0 0 1.3rem;
+}
+.rebate .today p:nth-child(1){
+    font-size: 12px;
+    color: #DFEEFF;
+}
+.rebate .today{
+    margin-left:0.5rem;
+}
+.rebate .today p{
+    padding:0;
+    margin:0;
+}
+.rebate .today p:nth-child(2){
+    font-size: 0.8rem;
+    color:#fff;
+}
+.tixian{
+    background: #1B69C5;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    width:1.8rem;
+    height:0.72rem;
+    font-size:0.4rem;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0.72rem;
+    float:left;
+    margin:1rem 0 0 2rem;
+}
+ul,li{
+    list-style: none;
+}
+ul{
+    width:6.82rem;
+    margin:0 0.34rem;
+    padding:0;
+}
+ul li{
+    border-bottom:1px solid #979797;
+    overflow: hidden;
+}
+ul li:nth-child(1){
+    font-size: 0.28rem;
+    color: #333333;
+    margin:0.3rem 0 0 0;
+    padding-bottom:0.1rem;
+}
+ul li:not(:first-child) .left{
+    float:left;
+}
+ul li:not(:first-child) .left p{
+    margin:0;
+    padding:0;
+}
+ul li:not(:first-child) .left p:nth-child(1){
+    font-size: 0.24rem;
+    color: #666666;
+    margin-top:0.2rem;
+}
+ul li:not(:first-child) .left p:nth-child(2){
+    margin-bottom:0.2rem;
+}
+ul li:not(:first-child) .left p:nth-child(2) span:nth-child(1){
+    font-size: 0.24rem;
+    color: #333333;
+}
+ul li:not(:first-child) .left p:nth-child(2) span:nth-child(2){
+    font-size: 0.4rem;
+    color: #F34235;
+}
+ul li:not(:first-child) .right{
+    float:right;
+    margin-top:0.45rem;
+}
+ul li:not(:first-child) .right{
+    font-size: 0.24rem;
+}
+.APPLYING{
+    color: #FE7421;
+}
+.SUCCESS{
+    color: #17BC4D;
+}
+.FAIL{
+    color: #9D9D9D;
+}
+.no_data{
+    width:7.2rem;
+    height:1.26rem;
+    background: #FAFAFA;
+    box-shadow: 0 1px 1px 0 #B3BECB;
+    border-radius: 2px;
+    margin:0 0.15rem;
+    text-align: center;
+    line-height: 1.26rem;
+    color: #F34235;
+    font-size:0.28rem;
+    display:none;
+}

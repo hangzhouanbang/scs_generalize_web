@@ -1,0 +1,51 @@
+body {
+    font-family: PingFangSC-Medium;
+    font-size: 0.28rem;
+    margin:0;
+    padding:0;
+}
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
+    position: absolute;
+    top:0.22rem;
+    left:0.5rem;
+}
+.main img{
+    width:2.56rem;
+    height:2.56rem;
+    margin:0.5rem 2.47rem 0.2rem;
+}
+.main p{
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+.main p:nth-child(2){
+    font-size: 0.4rem;
+    color: #333333;
+}
+.main p:nth-child(3){
+    font-size: 0.28rem;
+    color: #666666;
+    margin-top:0.1rem;
+}
+.fanhui{
+    background: #17BC4D;
+    border-radius: 6px;
+    width:6.8rem;
+    height:0.8rem;
+    margin:0.5rem 0.35rem;
+    text-align: center;
+    line-height: 0.8rem;
+    color:#fff;
+    font-size: 0.36rem;
+}

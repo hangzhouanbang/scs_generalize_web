@@ -14,7 +14,7 @@ ajax_method(map.localurl+map.queryreward,'token='+localStorage.getItem('token'),
 //我的玩家
 var vid = 1;
 function init(page){
-    ajax_method(map.localurl+map.querymemberreward,'token='+localStorage.getItem('token')+'&page='+page+'&size=10','post',function successCallBack(a) {
+    ajax_method(map.localurl+map.queryagentreward,'token='+localStorage.getItem('token')+'&page='+page+'&size=10','post',function successCallBack(a) {
         var data = JSON.parse(a).data.items
         console.log(data)
         if(data == []){
@@ -27,25 +27,22 @@ function init(page){
         }
         for(var i = 0;i < data.length;i++){
             var li = document.createElement('li');
-            data[i].inviteTime = formatDate(new Date(data[i].inviteTime))
-            li.innerHTML = ' <div class="left">\n' +
-                '                <img src="'+data[i].headimgurl+'" alt="">\n' +
+            li.innerHTML = '<div class="left">\n' +
+                '            <img src="'+data[i].headimgurl+'" alt="">\n' +
+                '        </div>\n' +
+                '        <div class="center">\n' +
+                '            <div class="top">\n' +
+                '                <span>代理昵称：'+data[i].agentName+'</span>\n' +
                 '            </div>\n' +
-                '            <div class="center">\n' +
-                '                <div class="top">\n' +
-                '                    <p>玩家昵称：'+data[i].nickname+'</p>\n' +
-                '                    <p>玩家ID：'+data[i].id+'</p>\n' +
-                '                </div>\n' +
-                '                <p>绑定时间：'+data[i].inviteTime+'</p>\n' +
-                '                <div class="bottom">\n' +
-                '                    <span>今日消费'+data[i].totalamount+'</span>\n' +
-                '                    <span>返'+data[i].agentReward+'</span>\n' +
-                '                </div>\n' +
+                '            <p>代理ID：'+data[i].agentId+'</p>\n' +
+                '            <div class="bottom">\n' +
+                '                <span>今日返利'+data[i].agentReward+'</span>\n' +
                 '            </div>\n' +
-                '            <div class="right">\n' +
-                '                <p onclick="javascript :window.location.href=\'player_details.html?id='+data[i].id+'\'">详 <br> 情</p>\n' +
-                '            </div>'
-            document.getElementById('my_players').appendChild(li)
+                '        </div>\n' +
+                '        <div class="right">\n' +
+                '            <p onclick="javascript :window.location.href=\'agent_player.html?id='+data[i].agentId+'\'">查 <br> 看</p>\n' +
+                '        </div>'
+            document.getElementById('recruitment_agents').appendChild(li)
         }
     })
 }

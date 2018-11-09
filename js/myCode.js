@@ -26,5 +26,14 @@ ajax_method(map.localurl+map.queryimage,'token='+localStorage.getItem('token'),'
 })
 document.getElementsByClassName('erweima')[0].src = map.localurl+map.qrcode+'?token='+localStorage.getItem('token')
 document.getElementsByClassName('btn')[0].onclick = function(){
-    window.location.href='generalize.html?order='+order;
+    ajax_method(map.localurl+map.generateImag,
+        'token='+localStorage.getItem('token')+'&imageId='+order,
+        'post',function successCallBack(a) {
+        console.log(JSON.parse(a).data.fileUrl)
+            if(JSON.parse(a).success){
+                window.location.href = 'generalize.html?src='+ JSON.parse(a).data.fileUrl;
+            }else{
+                alert('系统错误，请重试！')
+            }
+    })
 }

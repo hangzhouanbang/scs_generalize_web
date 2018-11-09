@@ -8,18 +8,62 @@
     <link rel="stylesheet" type="text/css" href="../css/earnings.css">
 </head>
 <body>
-    <div class="title"></div>
+    <div class="title">查看收益</div>
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
     <div class="rebate">
-        <div class="today">
-            <p>今日返利（元)</p>
-            <p>245.00</p>
-        </div>
-        <div class="current">
-            <p>当月返利（元)</p>
-            <p>245.00</p>
-        </div>
+
+    </div>
+    <div class="my_players">
+        <span class="active" id="players" onclick="javascript:window.location.href = 'earnings.html'">我的玩家</span>
+        <span id="agents" onclick="javascript:window.location.href = 'recruitment_Agents.html'">下级代理</span>
+    </div>
+    <ul id="my_players">
+        <!--<li>-->
+            <!--<div class="left">-->
+                <!--<img src="../img/logo.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="center">-->
+                <!--<div class="top">-->
+                    <!--<p>玩家昵称：徐小姐</p>-->
+                    <!--<p>玩家ID：654321</p>-->
+                <!--</div>-->
+                <!--<p>绑定时间：2018-10-17 18:21:15</p>-->
+                <!--<div class="bottom">-->
+                    <!--<span>今日消费50.00</span>-->
+                    <!--<span>返20.00</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="right">-->
+                <!--<p onclick="javascript :window.location.href='player_details.html'">详 <br> 情</p>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="left">-->
+                <!--<img src="../img/logo.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="center">-->
+                <!--<div class="top">-->
+                    <!--<p>玩家昵称：徐小姐啊啊啊啊啊啊啊</p>-->
+                    <!--<p>玩家ID：654321</p>-->
+                <!--</div>-->
+                <!--<p>绑定时间：2018-10-17 18:21:15</p>-->
+                <!--<div class="bottom">-->
+                    <!--<span>今日消费50.00</span>-->
+                    <!--<span>返20.00</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="right">-->
+                <!--<p onclick="javascript :window.location.href='player_details.html'">详 <br> 情</p>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+
+    <div class="no_data">没有数据！</div>
+    <div class="loadmore">
+        已全部加载
     </div>
 </body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js"></script>
 <script src="../js/earnings.js"></script>
 </html>

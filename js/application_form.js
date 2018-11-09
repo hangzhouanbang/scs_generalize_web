@@ -14,7 +14,7 @@ function apply(){
     var phone = document.getElementById('phone').value;
     var userName = document.getElementById('name').value;
     var area = document.getElementById('place').value;
-    var reg = "^1[3|4|5|8][0-9]\\d{8}$";
+    var reg = "^1[3|4|5|7|8|9][0-9]\\d{8}$";
     var re = new RegExp(reg);
     if(phone == ''){
         alert('手机号不能为空');
@@ -39,6 +39,7 @@ function apply(){
         '&phone='+phone+
         '&userName='+userName+
         '&area='+area+
+        '&bossId='+document.getElementById('code').value+
         '&desc='+document.getElementById('comment').value);
     ajax.onreadystatechange = function () {
         if (ajax.readyState==4&&ajax.status==200) {

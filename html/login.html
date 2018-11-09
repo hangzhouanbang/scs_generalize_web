@@ -10,12 +10,23 @@
 <img src="../img/logo.png" alt="" class="logo">
 <div class="matter">
     <p><a onclick="getToken(event)">点击进入推广员界面</a></p>
-    <p><a onclick="judge(event)">申请成为推广员</a></p>
+    <p class="hide"><a onclick="judge(event)">申请成为推广员</a></p>
 </div>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js"></script>
 <script>
     var token = window.location.href.slice(window.location.href.indexOf('token=')+6);
     localStorage.setItem('token',token)
+    ajax_method(map.localurl+map.agentverify,
+        'token='+token,
+        'post',function successCallBack(a) {
+            console.log(JSON.parse(a))
+            if(JSON.parse(a).success){
+                document.getElementsByClassName('hide')[0].style.display = 'none'
+            }else{
+                document.getElementsByClassName('hide')[0].style.display = 'block'
+            }
+        })
     function getToken(e){
         e.target.href = map.localurl +map.verify +'?token='+token
     }

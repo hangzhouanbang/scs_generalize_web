@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提现</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/withdraw.css">
+</head>
+<body>
+    <div class="title">提现</div>
+    <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
+    <div class="main">
+        <div class="account">
+            <span>到账</span>
+            <span>
+                <img src="../img/icon_weinxinpay.png" alt="">
+                微信钱包
+            </span>
+        </div>
+        <div class="amount">提现金额</div>
+        <div class="money">
+            <span>￥</span>
+            <input type="number" id="jine" pattern="[0-9]*">
+        </div>
+        <div class="sure">
+            <!--<span>可提现金额￥245.00</span>-->
+            <!--<span>全部提现</span>-->
+        </div>
+        <div class="tx">提现</div>
+    </div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/withdraw.js"></script>
+</html>

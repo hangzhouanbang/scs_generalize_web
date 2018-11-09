@@ -109,6 +109,21 @@ Array.prototype.distinct = function(){
     return result;
 }
 
+//禁止分享
+function onBridgeReady() {
+    WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined") {
+    if (document.addEventListener) {
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+} else {
+    onBridgeReady();
+}
 
 
 var map = {
@@ -132,10 +147,18 @@ var map = {
     qrcode:'/image/qrcode',
     generateImag:'/image/generateimag',
     queryscoreclubcard:'/clubcard/queryscoreclubcard',
-    queryimage:'/image/queryimage'
+    queryimage:'/image/queryimage',
+    queryreward:'/agent/queryreward',
+    querymemberreward:'/agent/querymemberreward',
+    queryagentreward:'/agent/queryagentreward',
+    querymemberrewarddetail:'/agent/querymemberrewarddetail',
+    queryagent_member_reward:'/agent/queryagent_member_reward',
+    queryapply:'/reward/queryapply',
+    applyreward:'/reward/applyreward',
+    agentverify:'/agent/verify'
 };
 map.localurl = "http://scs.3cscy.com";
-// map.localurl = "http://192.168.0.116:96";
+// map.localurl = "http://192.168.0.134:96";
 
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'

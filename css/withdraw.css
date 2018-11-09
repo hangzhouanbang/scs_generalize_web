@@ -1,0 +1,94 @@
+body {
+    font-family: PingFangSC-Medium;
+    font-size: 0.28rem;
+    margin:0;
+    padding:0;
+}
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
+    position: absolute;
+    top:0.22rem;
+    left:0.5rem;
+}
+.main{
+    width:7.2rem;
+    height:4.96rem;
+    margin:0.3rem 0.15rem;
+    background: #FAFAFA;
+    box-shadow: 0 1px 1px 0 #B3BECB;
+    border-radius: 2px;
+}
+.main .account{
+    margin-left:0.4rem;
+    padding-top:0.4rem;
+}
+.main .account span:nth-child(2){
+    margin-left:0.8rem;
+    position: relative;
+}
+.main .account img{
+    width:0.4rem;
+    height:0.4rem;
+    position: absolute;
+    top:0;
+    left:-0.5rem;
+}
+.main .amount{
+    margin:0.4rem;
+}
+.main .money{
+    margin:0 0.4rem;
+    position: relative;
+    border-bottom: 1px solid #979797;
+}
+.main .money input{
+    width:5.8rem;
+    height:0.7rem;
+    border:none;
+    background-color: #fafafa;
+    outline:none;
+    margin-left:0.6rem;
+    font-size: 0.8rem;
+    margin-top:-0.1rem;
+}
+.main .money span{
+    position: absolute;
+    left:-0.15rem;
+    top:-0.3rem;
+    font-size: 0.8rem;
+    color: #333333;
+}
+.main .sure{
+    margin:0.2rem 0.4rem 0.6rem;
+}
+.main .sure span{
+    font-size: 0.2rem;
+    -webkit-transform: scale(0.8);
+}
+.main .sure span:nth-child(1){
+    color: #666666;
+}
+.main .sure span:nth-child(2){
+    color: #3E5FB4;
+    margin-left:0.2rem;
+}
+.main .tx{
+    background: #83D59E;
+    border-radius: 6px;
+    width:6.8rem;
+    height:0.8rem;
+    margin:0 0.2rem;
+    text-align: center;
+    line-height: 0.8rem;
+    color:#fff;
+    font-size: 0.36rem;
+}
