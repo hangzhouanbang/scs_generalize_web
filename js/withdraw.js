@@ -11,7 +11,7 @@ jine.oninput = function(){
     }
 }
 var html = ' <span>可提现金额￥'+amount+'</span>\n' +
-    '            <span>全部提现</span>'
+    '            <span onclick="AllWithdrawal()">全部提现</span>'
 document.getElementsByClassName('sure')[0].innerHTML = html
 
 var tx = document.getElementsByClassName('tx')[0];
@@ -26,3 +26,7 @@ tx.onclick = function(){
         })
 }
 
+function AllWithdrawal(){
+    jine.value = amount;
+    document.getElementsByClassName('tx')[0].style.background='#17BC4D';
+}

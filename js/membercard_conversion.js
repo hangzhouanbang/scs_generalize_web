@@ -46,15 +46,15 @@ function conversion(number,price,id,product,productPic) {
     document.getElementsByClassName('mask')[0].style.display = 'block'
     var html2 = '<div class="headline">请确认兑换内容</div>\n' +
         '        <img src="'+ productPic +'">\n' +
-        '        <div class="headline_content">消耗' + price + '礼券兑换' + number + '张月卡</div>\n' +
+        '        <div class="headline_content">消耗' + price + '礼券兑换' + number + '张'+product+'</div>\n' +
         '        <div class="querycard">\n' +
         '            <a href="membercard_conversion.html" onclick="hide(document.getElementsByClassName(\'mask\'))">我再想想</a>\n' +
-        '            <span  onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\')">确认兑换</span>\n' +
+        '            <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\',\''+productPic+'\')">确认兑换</span>\n' +
         '        </div>'
     document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
 
-function qr(id,number,product) {
+function qr(id,number,product,productPic) {
     ajax_method(map.localurl + map.buyscoreclubcard,
         'token=' + localStorage.getItem('token') + '&cardId=' + id, 'post', function successCallBack(a) {
         var data = JSON.parse(a);
@@ -63,7 +63,7 @@ function qr(id,number,product) {
             document.getElementsByClassName('mask')[0].style.display = 'none'
             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
                 var html3 = '  <div class="headline">恭喜您兑换成功</div>\n' +
-                    '        <img src="../img/icon_jika.png" alt="">\n' +
+                    '        <img src="'+productPic+'" alt="">\n' +
                     '        <div class="headline_content">'+ number +'张'+product+'</div>\n' +
                     '        <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                     '        <div class="querycard">\n' +

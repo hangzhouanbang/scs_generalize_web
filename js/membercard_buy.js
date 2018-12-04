@@ -47,12 +47,12 @@ function buy(number,price,id,product,productPic) {
         '<div class="headline_content">以' + price + '元购买' + number + '张会员'+ product+'</div>\n'+
         '    <div class="querycard">\n' +
         '        <a href="membercard_buy.html" onclick="hide(document.getElementsByClassName(\'mask\'))">我再想想</a>\n' +
-        '        <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\')">确认购买</span>\n' +
+        '        <span onclick="qr(\''+id+'\',\''+number+'\',\''+product+'\',\''+productPic+'\')">确认购买</span>\n' +
         '    </div>';
     document.getElementsByClassName('Donation')[0].innerHTML = html2;
 }
 
-function qr(id,number,product) {
+function qr(id,number,product,productPic) {
     ajax_method(map.localurl + map.buycostclubcard, 'token=' + localStorage.getItem('token') + '&cardId=' + id, 'post', function successCallBack(a) {
         var data = JSON.parse(a);
         if (data.success ==true) {
@@ -72,7 +72,7 @@ function qr(id,number,product) {
                             document.getElementsByClassName('mask')[0].style.display = 'none'
                             ajax_method(map.localurl + map.queryaccount, 'token=' + localStorage.getItem('token'), 'post', function successCallBack(c){
                                 var html3 = '<div class="headline">恭喜您购买成功</div>\n' +
-                                    '        <img src="../img/icon_jika.png" alt="">\n' +
+                                    '        <img src="'+productPic+'" alt="">\n' +
                                     '        <div class="headline_content">'+ number +'张会员'+ product +'卡</div>\n' +
                                     '        <div class="mess">目前会员周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张</div>\n' +
                                     '        <div class="querycard">\n' +

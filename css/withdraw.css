@@ -3,6 +3,7 @@ body {
     font-size: 0.28rem;
     margin:0;
     padding:0;
+    overflow: hidden;
 }
 .title{
     font-size:0.32rem;
@@ -51,14 +52,13 @@ body {
     border-bottom: 1px solid #979797;
 }
 .main .money input{
-    width:5.8rem;
+    width:5rem;
     height:0.7rem;
     border:none;
     background-color: #fafafa;
     outline:none;
-    margin-left:0.6rem;
     font-size: 0.8rem;
-    margin-top:-0.1rem;
+    margin:-0.1rem 0 0.1rem 0.6rem;
 }
 .main .money span{
     position: absolute;
@@ -68,7 +68,7 @@ body {
     color: #333333;
 }
 .main .sure{
-    margin:0.2rem 0.4rem 0.6rem;
+    margin:0.2rem 0.4rem;
 }
 .main .sure span{
     font-size: 0.2rem;
@@ -86,7 +86,7 @@ body {
     border-radius: 6px;
     width:6.8rem;
     height:0.8rem;
-    margin:0 0.2rem;
+    margin:0.2rem;
     text-align: center;
     line-height: 0.8rem;
     color:#fff;

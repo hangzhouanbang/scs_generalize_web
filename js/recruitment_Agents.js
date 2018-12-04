@@ -39,8 +39,7 @@ function init(page){
                 '                <span>今日返利'+data[i].agentReward+'</span>\n' +
                 '            </div>\n' +
                 '        </div>\n' +
-                '        <div class="right">\n' +
-                '            <p onclick="javascript :window.location.href=\'agent_player.html?id='+data[i].agentId+'\'">查 <br> 看</p>\n' +
+                '        <div class="right" style="background: #fff;">\n' +
                 '        </div>'
             document.getElementById('recruitment_agents').appendChild(li)
         }

@@ -2,59 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc7bd480-e811-400b-ac01-b6892522c3d2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/feedback.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/income_withdrawal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/membership_card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/player_details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/withdraw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/agent_player.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/feedback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/income_withdrawal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/membership_card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/player_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/recruitment_Agents.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/withdraw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_bangding.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_bitian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_duihuan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_huiyuanka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_shouyi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_success2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_tixian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icon_yaoqingma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/agent_player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/income_withdrawal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/membership_card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/player_details.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/recruitment_Agents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/withdraw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/application_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/application_form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/earnings.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/earnings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/generalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/generalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/withdraw.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/withdraw.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/abnormal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/abnormal_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/application_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/application_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/agent_player.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/agent_player.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/earnings.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/earnings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/examples_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/examples_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/first_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/first_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/for_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/for_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/generalize.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/generalize.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login_limit.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login_limit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/income_withdrawal.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/income_withdrawal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/membercard_buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membercard_buy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/membercard_conversion.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membercard_conversion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/membership_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/membership_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/myCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/myCode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/my_subordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/my_subordinates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/player_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/player_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/promotion_code.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/promotion_code.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/protocol.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/protocol.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/purchase_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/purchase_history.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/recharge_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/recharge_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/application_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/application_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/earnings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/earnings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/first_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/first_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/myCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/myCode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/public.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/recharge_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/recharge_record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/recruitment_Agents.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/recruitment_Agents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/withdraw.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/withdraw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/membercard_buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_buy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/membercard_conversion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/membercard_conversion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/recruitment_Agents.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/recruitment_Agents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/withdraw.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,89 +39,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="examples_record.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/examples_record.html">
+      <file leaf-file-name="withdraw.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/withdraw.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+            <state relative-caret-position="363">
+              <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="earnings.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/earnings.html">
+      <file leaf-file-name="promotion_code.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/promotion_code.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2145">
-              <caret line="65" column="69" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
+            <state relative-caret-position="396">
+              <caret line="12" column="99" selection-start-line="12" selection-start-column="99" selection-end-line="12" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/application_form.html">
+      <file leaf-file-name="protocol.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/protocol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="56" />
+            <state relative-caret-position="2277">
+              <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agent_player.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/agent_player.html">
+      <file leaf-file-name="purchase_history.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/purchase_history.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
+            <state relative-caret-position="330">
+              <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abnormal_account.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/abnormal_account.html">
+      <file leaf-file-name="recharge_record.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/recharge_record.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+            <state relative-caret-position="330">
+              <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="first_index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/first_index.js">
+      <file leaf-file-name="recruitment_Agents.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/recruitment_Agents.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="3" column="32" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="363">
+              <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membership_card.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/membership_card.js">
+      <file leaf-file-name="membercard_buy.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="199" column="24" lean-forward="true" selection-start-line="199" selection-start-column="24" selection-end-line="199" selection-end-column="24" />
+            <state relative-caret-position="33">
+              <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membership_card.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/membership_card.html">
+      <file leaf-file-name="membercard_conversion.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/membercard_conversion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4191">
-              <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+            <state relative-caret-position="1683">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="withdraw.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/withdraw.js">
+      <file leaf-file-name="membercard_conversion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/membercard_conversion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="396">
+              <caret line="12" selection-start-line="12" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="membercard_buy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -194,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/promotion_code.js" />
-        <option value="$PROJECT_DIR$/js/purchase_history.js" />
         <option value="$PROJECT_DIR$/css/membercard_buy.css" />
         <option value="$PROJECT_DIR$/js/for_record.js" />
         <option value="$PROJECT_DIR$/js/my_subordinates.js" />
@@ -204,14 +179,11 @@
         <option value="$PROJECT_DIR$/html/application_form.html" />
         <option value="$PROJECT_DIR$/css/application_form.css" />
         <option value="$PROJECT_DIR$/css/membership_card.css" />
-        <option value="$PROJECT_DIR$/css/withdraw.css" />
         <option value="$PROJECT_DIR$/css/feedback.css" />
         <option value="$PROJECT_DIR$/js/first_index.js" />
         <option value="$PROJECT_DIR$/js/recharge_record.js" />
         <option value="$PROJECT_DIR$/css/income_withdrawal.css" />
-        <option value="$PROJECT_DIR$/js/withdraw.js" />
         <option value="$PROJECT_DIR$/js/income_withdrawal.js" />
-        <option value="$PROJECT_DIR$/js/recruitment_Agents.js" />
         <option value="$PROJECT_DIR$/js/application_form.js" />
         <option value="$PROJECT_DIR$/css/earnings.css" />
         <option value="$PROJECT_DIR$/js/earnings.js" />
@@ -221,16 +193,22 @@
         <option value="$PROJECT_DIR$/js/myCode.js" />
         <option value="$PROJECT_DIR$/css/generalize.css" />
         <option value="$PROJECT_DIR$/js/public.js" />
+        <option value="$PROJECT_DIR$/html/first_index.html" />
+        <option value="$PROJECT_DIR$/html/generalize.html" />
+        <option value="$PROJECT_DIR$/html/login.html" />
+        <option value="$PROJECT_DIR$/html/login_limit.html" />
+        <option value="$PROJECT_DIR$/html/protocol.html" />
+        <option value="$PROJECT_DIR$/js/membership_card.js" />
+        <option value="$PROJECT_DIR$/css/withdraw.css" />
+        <option value="$PROJECT_DIR$/js/withdraw.js" />
+        <option value="$PROJECT_DIR$/js/recruitment_Agents.js" />
+        <option value="$PROJECT_DIR$/html/income_withdrawal.html" />
+        <option value="$PROJECT_DIR$/html/abnormal_account.html" />
         <option value="$PROJECT_DIR$/html/agent_player.html" />
         <option value="$PROJECT_DIR$/html/earnings.html" />
         <option value="$PROJECT_DIR$/html/examples_record.html" />
         <option value="$PROJECT_DIR$/html/feedback.html" />
-        <option value="$PROJECT_DIR$/html/first_index.html" />
         <option value="$PROJECT_DIR$/html/for_record.html" />
-        <option value="$PROJECT_DIR$/html/generalize.html" />
-        <option value="$PROJECT_DIR$/html/income_withdrawal.html" />
-        <option value="$PROJECT_DIR$/html/login.html" />
-        <option value="$PROJECT_DIR$/html/login_limit.html" />
         <option value="$PROJECT_DIR$/html/membercard_buy.html" />
         <option value="$PROJECT_DIR$/html/membercard_conversion.html" />
         <option value="$PROJECT_DIR$/html/membership_card.html" />
@@ -238,13 +216,12 @@
         <option value="$PROJECT_DIR$/html/myCode.html" />
         <option value="$PROJECT_DIR$/html/player_details.html" />
         <option value="$PROJECT_DIR$/html/promotion_code.html" />
-        <option value="$PROJECT_DIR$/html/protocol.html" />
         <option value="$PROJECT_DIR$/html/purchase_history.html" />
         <option value="$PROJECT_DIR$/html/recharge_record.html" />
-        <option value="$PROJECT_DIR$/html/recruitment_Agents.html" />
         <option value="$PROJECT_DIR$/html/withdraw.html" />
-        <option value="$PROJECT_DIR$/html/abnormal_account.html" />
-        <option value="$PROJECT_DIR$/js/membership_card.js" />
+        <option value="$PROJECT_DIR$/html/recruitment_Agents.html" />
+        <option value="$PROJECT_DIR$/js/membercard_buy.js" />
+        <option value="$PROJECT_DIR$/js/membercard_conversion.js" />
       </list>
     </option>
   </component>
@@ -268,17 +245,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="scs_generalize_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="scs_generalize_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scs_generalize_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scs_generalize_web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scs_generalize_web" type="b2602c69:ProjectViewProjectNode" />
@@ -294,14 +267,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="btn&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scs_admin_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -396,7 +368,18 @@
       <workItem from="1541465416886" duration="1943000" />
       <workItem from="1541552408407" duration="2575000" />
       <workItem from="1541638693663" duration="12427000" />
-      <workItem from="1541724417416" duration="1308000" />
+      <workItem from="1541724417416" duration="2659000" />
+      <workItem from="1541810563288" duration="1202000" />
+      <workItem from="1541984225575" duration="1252000" />
+      <workItem from="1542070931802" duration="1202000" />
+      <workItem from="1542157639166" duration="985000" />
+      <workItem from="1542243373241" duration="1204000" />
+      <workItem from="1542330165421" duration="1200000" />
+      <workItem from="1542588444876" duration="3525000" />
+      <workItem from="1542674413646" duration="9086000" />
+      <workItem from="1542784365495" duration="2317000" />
+      <workItem from="1542875910316" duration="2753000" />
+      <workItem from="1543281323239" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="新增项目文件">
       <created>1531374242603</created>
@@ -517,25 +500,32 @@
       <option name="project" value="LOCAL" />
       <updated>1539927647925</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="bug修复">
+      <created>1541730294515</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541730294515</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="481374000" />
+    <option name="totallyTimeSpent" value="508670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12170706" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.113804005" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32861805" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -548,19 +538,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13224447" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32861805" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -586,7 +576,8 @@
     <MESSAGE value="登录界面修改" />
     <MESSAGE value="功能修改" />
     <MESSAGE value="推广图" />
-    <option name="LAST_COMMIT_MESSAGE" value="推广图" />
+    <MESSAGE value="bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -594,13 +585,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5795">
-          <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/promotion_code.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1881">
@@ -643,20 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/withdraw.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/recruitment_Agents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/白色口哨.txt" />
     <entry file="file://$PROJECT_DIR$/js/earnings.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,13 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/earnings.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3828">
-          <caret line="116" column="24" lean-forward="true" selection-start-line="114" selection-start-column="3" selection-end-line="116" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -725,212 +688,233 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2344">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/public.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/withdraw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/recruitment_Agents.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/recharge_record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/purchase_history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/protocol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/promotion_code.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/player_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/myCode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/my_subordinates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/membercard_conversion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="51" column="69" selection-start-line="51" selection-end-line="51" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login_limit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/income_withdrawal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/generalize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/for_record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/first_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="64" column="69" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/examples_record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/earnings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="65" column="69" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/application_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/agent_player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/abnormal_account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/first_index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="3" selection-end-column="32" />
+          <caret line="3" column="32" selection-start-line="2" selection-start-column="3" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/membership_card.html">
+    <entry file="file://$USER_HOME$/Downloads/超渡.txt" />
+    <entry file="file://$PROJECT_DIR$/js/membership_card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4191">
-          <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+        <state relative-caret-position="6864">
+          <caret line="208" column="29" lean-forward="true" selection-start-line="208" selection-start-column="29" selection-end-line="208" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/withdraw.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/withdraw.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="363">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/超渡.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/membership_card.js">
+    <entry file="file://$PROJECT_DIR$/css/earnings.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="199" column="24" lean-forward="true" selection-start-line="199" selection-start-column="24" selection-end-line="199" selection-end-column="24" />
+        <state relative-caret-position="532">
+          <caret line="143" column="24" lean-forward="true" selection-start-line="143" selection-start-column="4" selection-end-line="143" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/recruitment_Agents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/abnormal_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/agent_player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/application_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/earnings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/examples_record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/first_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="64" column="69" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/for_record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="99" selection-start-line="12" selection-start-column="99" selection-end-line="12" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/generalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/income_withdrawal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/login_limit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/membership_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/my_subordinates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="13" column="99" selection-start-line="13" selection-start-column="99" selection-end-line="13" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/myCode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/player_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/promotion_code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="99" selection-start-line="12" selection-start-column="99" selection-end-line="12" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/protocol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2277">
+          <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/purchase_history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/recharge_record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="99" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/withdraw.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/recruitment_Agents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/membercard_conversion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/membercard_conversion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/membercard_buy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/membercard_buy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
