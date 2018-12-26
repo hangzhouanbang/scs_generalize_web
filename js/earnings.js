@@ -1,22 +1,47 @@
-//今日收益和本月收益
-ajax_method(map.localurl+map.queryreward,'token='+localStorage.getItem('token'),'post',function successCallBack(a) {
-    var data = JSON.parse(a)
-    var html = '<div class="today">\n' +
-        '            <p>今日返利（元)</p>\n' +
-        '            <p>'+data.data.dayReward+'</p>\n' +
-        '        </div>\n' +
-        '        <div class="current">\n' +
-        '            <p>当月返利（元)</p>\n' +
-        '            <p>'+data.data.monthReward+'</p>\n' +
-        '        </div>'
-    document.getElementsByClassName('rebate')[0].innerHTML = html
-})
+if(localStorage.getItem('type') == '推广经理'){
+    //推广经理
+    // 今日总消费和本月总消费
+    ajax_method(map.localurl+map.managequeryconsumer,'token='+localStorage.getItem('token'),'post',function successCallBack(a) {
+        var data = JSON.parse(a).data
+        console.log(data)
+        var html = '<p class="consumption_statistics">消费统计（元）</p>\n' +
+            '        <p class="consumption_statistics">\n' +
+            '            <span>今日玩家：'+data.todaySum.memberConsumer+'</span>\n' +
+            '            <span>当月玩家：'+data.monthSum.memberConsumer+'</span>\n' +
+            '        </p>\n' +
+            '        <p class="consumption_statistics">\n' +
+            '            <span>今日代理：'+data.todaySum.agentConsumer+'</span>\n' +
+            '            <span>当月代理：'+data.monthSum.agentConsumer+'</span>\n' +
+            '        </p>\n' +
+            '        <p class="consumption_statistics">\n' +
+            '            <span>今日总计：'+data.todaySum.total+'</span>\n' +
+            '            <span>当月总计：'+data.monthSum.total+'</span>\n' +
+            '        </p>'
+        document.getElementsByClassName('rebate')[0].innerHTML = html
+    })
+}else{
+    //今日收益和本月收益
+    ajax_method(map.localurl+map.queryreward,'token='+localStorage.getItem('token'),'post',function successCallBack(a) {
+        var data = JSON.parse(a)
+        var html = '<div class="today">\n' +
+            '            <p>今日返利（元)</p>\n' +
+            '            <p>'+data.data.dayReward+'</p>\n' +
+            '        </div>\n' +
+            '        <div class="current">\n' +
+            '            <p>当月返利（元)</p>\n' +
+            '            <p>'+data.data.monthReward+'</p>\n' +
+            '        </div>'
+        document.getElementsByClassName('rebate')[0].innerHTML = html
+    })
+}
+
 //我的玩家
 var vid = 1;
 function init(page){
     ajax_method(map.localurl+map.querymemberreward,'token='+localStorage.getItem('token')+'&page='+page+'&size=10','post',function successCallBack(a) {
         var data = JSON.parse(a).data.items
-        console.log(data)
+        var type = JSON.parse(a).data.type
+        console.log(type)
         if(data == []){
             document.getElementsByClassName('no_data')[0].style.display='block';
             return;
@@ -28,23 +53,43 @@ function init(page){
         for(var i = 0;i < data.length;i++){
             var li = document.createElement('li');
             data[i].inviteTime = formatDate(new Date(data[i].inviteTime))
-            li.innerHTML = ' <div class="left">\n' +
-                '                <img src="'+data[i].headimgurl+'" alt="">\n' +
-                '            </div>\n' +
-                '            <div class="center">\n' +
-                '                <div class="top">\n' +
-                '                    <p>玩家昵称：'+data[i].nickname+'</p>\n' +
-                '                    <p>玩家ID：'+data[i].id+'</p>\n' +
-                '                </div>\n' +
-                '                <p>绑定时间：'+data[i].inviteTime+'</p>\n' +
-                '                <div class="bottom">\n' +
-                '                    <span>今日消费'+data[i].totalamount+'</span>\n' +
-                '                    <span>返'+data[i].agentReward+'</span>\n' +
-                '                </div>\n' +
-                '            </div>\n' +
-                '            <div class="right">\n' +
-                '                <p onclick="javascript :window.location.href=\'player_details.html?id='+data[i].id+'\'">详 <br> 情</p>\n' +
-                '            </div>'
+            if(type == '推广经理'){
+                li.innerHTML = ' <div class="left">\n' +
+                    '                <img src="'+data[i].headimgurl+'" alt="">\n' +
+                    '            </div>\n' +
+                    '            <div class="center">\n' +
+                    '                <div class="top">\n' +
+                    '                    <p>玩家昵称：'+data[i].nickname+'</p>\n' +
+                    '                    <p>玩家ID：'+data[i].id+'</p>\n' +
+                    '                </div>\n' +
+                    '                <p>绑定时间：'+data[i].inviteTime+'</p>\n' +
+                    '                <div class="bottom">\n' +
+                    '                    <span>今日消费'+data[i].totalamount+'</span>\n' +
+                    '                    <span></span>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '            <div class="right">\n' +
+                    '                <p onclick="javascript :window.location.href=\'player_details.html?id='+data[i].id+'\'">详 <br> 情</p>\n' +
+                    '            </div>'
+            }else{
+                li.innerHTML = ' <div class="left">\n' +
+                    '                <img src="'+data[i].headimgurl+'" alt="">\n' +
+                    '            </div>\n' +
+                    '            <div class="center">\n' +
+                    '                <div class="top">\n' +
+                    '                    <p>玩家昵称：'+data[i].nickname+'</p>\n' +
+                    '                    <p>玩家ID：'+data[i].id+'</p>\n' +
+                    '                </div>\n' +
+                    '                <p>绑定时间：'+data[i].inviteTime+'</p>\n' +
+                    '                <div class="bottom">\n' +
+                    '                    <span>今日消费'+data[i].totalamount+'</span>\n' +
+                    '                    <span>返'+data[i].agentReward+'</span>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '            <div class="right">\n' +
+                    '                <p onclick="javascript :window.location.href=\'player_details.html?id='+data[i].id+'\'">详 <br> 情</p>\n' +
+                    '            </div>'
+            }
             document.getElementById('my_players').appendChild(li)
         }
     })

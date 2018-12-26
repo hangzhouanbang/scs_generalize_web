@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>查看收益</title>
+    <!--清除缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="../css/earnings.css">
+    <link rel="stylesheet" type="text/css" href="../css/earnings.css?v=1.0.1">
 </head>
 <body>
     <div class="title">查看收益</div>
     <img src="../img/icon_back.png" alt="" onclick="javascript :window.location.href='first_index.html'" class="back">
-    <div class="rebate">
-
+    <img src="../img/btn.png" alt="" onclick="javascript :window.location.href='historical_earnings.html'" class="xq">
+    <div class="rebate" style="display:block;">
+        <!--<p class="consumption_statistics">消费统计（元）</p>-->
+        <!--<p class="consumption_statistics">-->
+            <!--<span>今日玩家：0</span>-->
+            <!--<span>当月玩家：0</span>-->
+        <!--</p>-->
+        <!--<p class="consumption_statistics">-->
+            <!--<span>今日代理：0</span>-->
+            <!--<span>当月代理：0</span>-->
+        <!--</p>-->
+        <!--<p class="consumption_statistics">-->
+            <!--<span>今日总计：0</span>-->
+            <!--<span>当月总计：0</span>-->
+        <!--</p>-->
     </div>
     <div class="my_players">
         <span class="active" id="players" onclick="javascript:window.location.href = 'earnings.html'">我的玩家</span>
@@ -64,6 +81,6 @@
     </div>
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-<script src="../js/public.js"></script>
-<script src="../js/earnings.js"></script>
+<script src="../js/public.js?v=1.0.0"></script>
+<script src="../js/earnings.js?v=1.0.1"></script>
 </html>

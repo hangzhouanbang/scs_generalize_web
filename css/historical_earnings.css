@@ -1,0 +1,53 @@
+body {
+    font-family: PingFangSC-Medium;
+    font-size: 0.28rem;
+    margin:0;
+    padding:0;
+}
+.title{
+    font-size:0.32rem;
+    height:0.8rem;
+    background-color: #4A90E2;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.back{
+    width:0.36rem;
+    height:0.36rem;
+    position: absolute;
+    top:0.22rem;
+    left:0.5rem;
+}
+ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+li{
+    border-bottom: 1px solid #e0e0e0;
+    height:0.6rem;
+    margin:0 0.2rem;
+    line-height: 0.6rem;
+}
+li span.total_rebate{
+    margin-left:0.5rem;
+}
+.no_data{
+    width:7.2rem;
+    height:1.26rem;
+    background: #FAFAFA;
+    box-shadow: 0 1px 1px 0 #B3BECB;
+    border-radius: 2px;
+    margin:0.2rem 0.15rem;
+    text-align: center;
+    line-height: 1.26rem;
+    color: #F34235;
+    font-size:0.28rem;
+    display:none;
+}
+.loadmore{
+    display:none;
+    font-size:0.32rem;
+    text-align: center;
+}

@@ -155,7 +155,10 @@ var map = {
     queryagent_member_reward:'/agent/queryagent_member_reward',
     queryapply:'/reward/queryapply',
     applyreward:'/reward/applyreward',
-    agentverify:'/agent/verify'
+    agentverify:'/agent/verify',
+    managequeryconsumer:'/agent/managequeryconsumer',
+    confirm:'/clubcard/confirm',
+    findagenthistory:'/history/findagenthistory'
 };
 map.localurl = "http://scs.3cscy.com";
 // map.localurl = "http://192.168.0.134:96";

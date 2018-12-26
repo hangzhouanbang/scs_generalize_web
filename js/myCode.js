@@ -1,5 +1,6 @@
 var order;
-ajax_method(map.localurl+map.queryimage,'token='+localStorage.getItem('token'),'post',function successCallBack(a){
+ajax_method(map.localurl+map.queryimage,
+    'token='+localStorage.getItem('token'),'post',function successCallBack(a){
     console.log(JSON.parse(a))
     var imgList = JSON.parse(a).data.imageList;
     for(var i = 0;i <imgList.length;i++){

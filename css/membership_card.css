@@ -43,21 +43,6 @@ body {
 .t_table td {
     width:2.5rem;
 }
-
-/*.tpti{*/
-    /*color:#4A90E2;*/
-    /*padding-left: 0.4rem;*/
-/*}*/
-/*hr {*/
-    /*background: gray;*/
-    /*width: 7rem;*/
-    /*margin: 0 auto 0.2rem auto;*/
-/*}*/
-
-/*.td_message {*/
-    /*text-align: left;*/
-/*}*/
-
 .btn,
 .btn1{
     border-radius: 4px;
@@ -110,7 +95,10 @@ body {
 .mask2,
 .mask3,
 .mask4,
-.mask5{
+.mask5,
+.mask6,
+.mask7,
+.mask8{
     position: fixed;
     top:0.8rem;
     left:0;
@@ -122,9 +110,11 @@ body {
 .GAME_GUIDE,
 .confirm_prepaid_phone,
 .recharged_successfully,
+.top-up-failure,
 .zhuanzeng,
 .Donation,
-.examples_of_successful {
+.examples_of_successful,
+.examples-of-failure{
     position: absolute;
     top: 26%;
     left: 50%;
@@ -148,39 +138,60 @@ body {
     height:4.8rem;
 }
 .recharged_successfully,
-.examples_of_successful{
+.top-up-failure,
+.examples_of_successful,
+.examples-of-failure{
     background: url('../img/tanchuang2.png') no-repeat 0 0;
     background-size:100% 100%;
     height:4.8rem;
 }
 .recharged_successfully .headline,
-.examples_of_successful .headline{
+.top-up-failure .headline,
+.examples-of-failure .headline{
     margin:0.3rem auto 0 auto;
+}
+.recharged_successfully .headline,
+.examples_of_successful .headline{
+    margin:0.2rem auto 0 auto;
+}
+.recharged_successfully img,
+.top-up-failure img,
+.examples-of-failure img{
+    width:1.1rem;
+    height:1.1rem;
 }
 .recharged_successfully img,
 .examples_of_successful img{
-    width:1.1rem;
-    height:1.1rem;
+    width:0.8rem;
+    height:0.8rem;
 }
 .recharged_successfully .message,
 .examples_of_successful .message{
     font-size: 0.24rem;
-    margin: 0 0.1rem;
+    margin:0 0.9rem;
+}
+.top-up-failure .querycard,
+.examples-of-failure .querycard{
+    margin-top:0.7rem;
 }
 .recharged_successfully .querycard,
 .examples_of_successful .querycard{
-    margin-top:0.7rem;
+    margin-top:0.6rem;
 }
 .player,
 .categories,
 .number,
-.querycard {
+.GAME_GUIDE .querycard ,
+.zhuanzeng .querycard {
     width: 5.6rem;
     margin: 0.3rem auto 0 auto;
     position: relative;
 }
 .player {
     margin-top: 0.4rem;
+}
+.querycard{
+    margin:1.9rem auto 0 auto;
 }
 .player img,
 .categories img,
@@ -254,22 +265,35 @@ body {
     color: rgba(16, 16, 16, 1);
     font-size: 0.4rem;
     text-align: center;
-    margin:1.2rem auto;
+    margin:0.5rem auto;
+}
+.headline p{
+    margin:0;
+    font-size:0.32rem;
 }
 /*充值成功*/
 .recharged_successfully .headline,
 .examples_of_successful .headline {
     height: 0.7rem;
 }
-
+.top-up-failure .headline,
+.examples-of-failure .headline{
+    margin-top:0.6rem;
+    height:1rem;
+}
+.top-up-failure .querycard,
+.examples-of-failure .querycard{
+    margin-top:0.85rem;
+}
 .recharged_successfully .querycard a,
+.top-up-failure .querycard a,
 .Donation .querycard a,
-.examples_of_successful .querycard a {
+.examples_of_successful .querycard a ,
+.examples-of-failure .querycard a {
     width: 1.8rem;
     text-decoration: none;
 }
 /*转赠成功*/
-
 .mess{
     width:6.3rem;
     margin:0 auto;

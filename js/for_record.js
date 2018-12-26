@@ -6,7 +6,9 @@ function back() {
 var html=[];
 var data,tr,judge;
 function init(page){
-    ajax_method(map.localurl+map.queryscorerecord,'token='+localStorage.getItem('token')+'&type=exchange&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryscorerecord,
+        'token='+localStorage.getItem('token')+'&type=exchange&page='+page+'&size=15',
+        'post',function successCallBack(a){
         data = JSON.parse(a).data.listPage.items
         judge = JSON.parse(a).data
         var html = ' <span>当前推广积分：'+judge.score+'</span>\n' +
@@ -16,7 +18,7 @@ function init(page){
             tr = document.createElement('tr')
             data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
             tr.innerHTML =
-                '<td>'+data[i].product+'</td>\n' +
+                '<td>'+data[i].summary.text+'</td>\n' +
                 '<td>'+data[i].accountingTime+'</td>\n' +
                 '<td>'+data[i].balanceAfter+'</td>\n'
             document.getElementById('table').appendChild(tr)
@@ -29,9 +31,11 @@ init(1);
 window.onscroll = function() {
     if(getScrollTop() + getClientHeight() == getScrollHeight()) {
         vid++;
-        ajax_method(map.localurl+map.queryscorerecord,'token='+localStorage.getItem('token')+'&type=兑换&page='+vid+'&size=15','post',function successCallBack(a){
-            data = JSON.parse(a).data.items;
-            if(vid > JSON.parse(a).data.pageCount){
+        ajax_method(map.localurl+map.queryscorerecord,
+            'token='+localStorage.getItem('token')+'&type=exchange&page='+vid+'&size=15',
+            'post',function successCallBack(a){
+            data = JSON.parse(a).data.listPage.items;
+            if(vid > JSON.parse(a).data.listPage.pageCount){
                 document.getElementsByClassName('loadmore')[0].style.display='block';
                 return;
             }

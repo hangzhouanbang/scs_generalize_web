@@ -19,6 +19,13 @@ body {
     top:0.22rem;
     left:0.5rem;
 }
+.xq{
+    width:0.6rem;
+    height:0.5rem;
+    position: absolute;
+    top:0.15rem;
+    right:0.5rem;
+}
 .rebate{
     background-color: #4A90E2;
     width:100%;
@@ -41,6 +48,20 @@ body {
 .rebate .current p:nth-child(2){
     font-size: 14px;
     color: #FFFFFF;
+}
+.consumption_statistics{
+    margin:0 1rem;
+    color:#fff;
+    overflow: hidden;
+}
+.consumption_statistics:nth-child(1){
+    padding-top:0.15rem;
+}
+.consumption_statistics span:nth-child(1){
+    float:left;
+}
+.consumption_statistics span:nth-child(2){
+    float:right;
 }
 .my_players{
     margin:0.5rem 0 0.5rem 0.9rem;
@@ -132,7 +153,7 @@ li .center .bottom span{
     -webkit-transform:scale(0.8);
     color: #666666;
     position: absolute;
-    top:-0.02rem;
+    top:0.005rem;
 }
 li .center .bottom span:nth-child(1){
     left:0.3rem;

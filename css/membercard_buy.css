@@ -85,7 +85,7 @@ span:nth-child(3){
 }
 .d_goods {
     width: 2rem;
-    height: 2.4rem;
+    height: 2.9rem;
     display:inline-block;
     background: #FAFAFA;
     border-radius: 2px;
@@ -96,12 +96,13 @@ span:nth-child(3){
     margin:0 0.1rem;
     overflow: hidden;
 }
-.d_goods .select span:nth-child(1){
-    float:left;
+.d_goods .select p{
+    padding:0;
+    margin:0;
+    text-align: center;
 }
-.d_goods .select span:nth-child(2){
+.d_goods .select p:nth-child(2){
     color:#4A90E2;
-    float:right;
 }
 .i_img {
     margin: 0.2rem 0 0 0.6rem;

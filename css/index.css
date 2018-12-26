@@ -139,12 +139,20 @@ hr {
 #table3 td {
     width:2.5rem;
 }
-#table4 tr td{
+
+ul{
+    list-style: none;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+}
+ul li{
     width:2.3rem;
     color:#666;
     font-size: 12px;
+    float:left;
 }
-#table4 tr td img{
+ul li img{
     width:0.8rem;
     height:0.8rem;
 }

@@ -8,7 +8,9 @@ function zz(e){
 var html=[];
 var data,tr;
 function init(page){
-    ajax_method(map.localurl+map.queryjunior,'token='+localStorage.getItem('token')+'&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryjunior,
+        'token='+localStorage.getItem('token')+'&page='+page+'&size=15',
+        'post',function successCallBack(a){
         data = JSON.parse(a).data.items
         console.log(data)
         for(var i = 0;i < data.length;i++){
@@ -30,7 +32,9 @@ init(1);
 window.onscroll = function() {
     if(getScrollTop() + getClientHeight() == getScrollHeight()) {
         vid++;
-        ajax_method(map.localurl+map.queryjunior,'token='+localStorage.getItem('token')+'&page='+vid+'&size=15','post',function successCallBack(a){
+        ajax_method(map.localurl+map.queryjunior,
+            'token='+localStorage.getItem('token')+'&page='+vid+'&size=15',
+            'post',function successCallBack(a){
             data = JSON.parse(a).data.items;
             if(vid > JSON.parse(a).data.pageCount){
                 document.getElementsByClassName('loadmore')[0].style.display='block';
@@ -43,7 +47,7 @@ window.onscroll = function() {
                     ' <td>'+data[i].nickname+'</td>\n' +
                     ' <td>'+data[i].id+'</td>\n' +
                     ' <td>\n' +
-                    '    <span>转赠记录</span>\n' +
+                    '   <span onclick="zz(event)" id="'+data[i].id+'">转赠记录</span>' +
                     ' </td>';
                 document.getElementById('table').appendChild(tr)
             }

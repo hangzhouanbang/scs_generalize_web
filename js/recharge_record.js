@@ -5,7 +5,9 @@ function back() {
 var html=[];
 var data,tr;
 function init(page){
-    ajax_method(map.localurl+map.queryclubcardrecord,'token='+localStorage.getItem('token')+'&type=recharge&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryclubcardrecord,
+        'token='+localStorage.getItem('token')+'&type=recharge&page='+page+'&size=15',
+        'post',function successCallBack(a){
         data = JSON.parse(a).data.items
         if(vid > JSON.parse(a).data.pageCount){
             document.getElementsByClassName('loadmore')[0].style.display='block';
@@ -16,11 +18,19 @@ function init(page){
             tr = document.createElement('tr')
             data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
             data[i].accountingAmount = Math.abs(data[i].accountingAmount)
-            tr.innerHTML =
-                '<td>'+data[i].receiverId+'</td>\n' +
-                '<td>'+data[i].accountingAmount+'张会员'+data[i].product+'</td>\n' +
-                '<td>'+data[i].accountingTime+'</td>\n' +
-                '<td>'+data[i].summary.text+'</td>\n';
+            if(data[i].product == '玉石'){
+                tr.innerHTML =
+                    '<td>'+data[i].receiverId+'</td>\n' +
+                    '<td>'+data[i].accountingAmount+'个'+data[i].product+'</td>\n' +
+                    '<td>'+data[i].accountingTime+'</td>\n' +
+                    '<td>'+data[i].summary.text+'</td>\n';
+            }else{
+                tr.innerHTML =
+                    '<td>'+data[i].receiverId+'</td>\n' +
+                    '<td>'+data[i].accountingAmount+'张会员'+data[i].product+'</td>\n' +
+                    '<td>'+data[i].accountingTime+'</td>\n' +
+                    '<td>'+data[i].summary.text+'</td>\n';
+            }
             document.getElementById('table').appendChild(tr)
         }
     })

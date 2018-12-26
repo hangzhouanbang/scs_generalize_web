@@ -3,67 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>推广员管理后台</title>
+    <!--清除缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css?v=1.0.0">
 </head>
 <body>
-<div class="title">推广员管理后台  </div>
+<div class="title">推广员管理后台</div>
 <img src="../img/icon_back.png" alt="" onclick="javascript :history.back(-1);" class="back">
 <div class="mess" id="table1"></div>
 <div id="table2" class="t_table"></div>
-<table class="t_table" id="table4">
-    <tr>
-        <td onclick="javascript:window.location.href='earnings.html'">
-            <img src="../img/icon_shouyi.png" alt="">
-            <p>查看收益</p>
-        </td>
-        <td onclick="javascript:window.location.href='income_withdrawal.html'">
-            <img src="../img/icon_tixian.png" alt="">
-            <p>收益提现</p>
-        </td>
-        <td onclick="javascript:window.location.href='promotion_code.html'">
-            <img src="../img/icon_bangding.png" alt="">
-            <p>绑定查询</p>
-        </td>
-    </tr>
-    <tr>
-        <td onclick="javascript:window.location.href='my_subordinates.html'">
-            <img src="../img/icon_xiaji.png" alt="">
-            <p>我的下级</p>
-        </td>
-        <td onclick="javascript:window.location.href='membership_card.html'">
-            <img src="../img/icon_huiyuanka.png" alt="">
-            <p>使用会员卡</p>
-        </td>
-        <td onclick="javascript:window.location.href='myCode.html'">
-            <img src="../img/icon_erweima.png" alt="">
-            <p>我的二维码</p>
-        </td>
-    </tr>
-    <tr>
-        <td onclick="javascript:window.location.href='purchase_history.html'">
-            <img src="../img/icon_goumai.png" alt="">
-            <p>查看购买记录</p>
-        </td>
-        <td onclick="javascript:window.location.href='examples_record.html?id='">
-            <img src="../img/icon_zhuanzeng.png" alt="">
-            <p>查看转赠记录</p>
-        </td>
-        <td onclick="javascript:window.location.href='recharge_record.html'">
-            <img src="../img/icon_chongzhi.png" alt=""><br>
-            <p>查看充值记录</p>
-        </td>
-    </tr>
-    <tr>
-        <td onclick="javascript:window.location.href='for_record.html'">
-            <img src="../img/icon_duihuan.png" alt=""><br>
-            <p>查看兑换记录</p>
-        </td>
-    </tr>
-</table>
+<ul class="t_table" id="table4">
+    <li onclick="javascript:window.location.href='earnings.html'">
+        <img src="../img/icon_shouyi.png" alt="">
+        <p>查看收益</p>
+    </li>
+    <li onclick="javascript:window.location.href='income_withdrawal.html'" class="sytx">
+        <img src="../img/icon_tixian.png" alt="">
+        <p>收益提现</p>
+    </li>
+    <li onclick="javascript:window.location.href='promotion_code.html'">
+        <img src="../img/icon_bangding.png" alt="">
+        <p>绑定查询</p>
+    </li>
+    <li onclick="javascript:window.location.href='my_subordinates.html'">
+        <img src="../img/icon_xiaji.png" alt="">
+        <p>我的下级</p>
+    </li>
+    <li onclick="javascript:window.location.href='membership_card.html'">
+        <img src="../img/icon_huiyuanka.png" alt="">
+        <p>玩家充值</p>
+    </li>
+    <li onclick="javascript:window.location.href='myCode.html'">
+        <img src="../img/icon_erweima.png" alt="">
+        <p>我的二维码</p>
+    </li>
+    <li onclick="javascript:window.location.href='purchase_history.html'">
+        <img src="../img/icon_goumai.png" alt="">
+        <p>查看购买记录</p>
+    </li>
+    <li onclick="javascript:window.location.href='examples_record.html?id='">
+        <img src="../img/icon_zhuanzeng.png" alt="">
+        <p>查看转赠记录</p>
+    </li>
+    <li onclick="javascript:window.location.href='recharge_record.html'">
+        <img src="../img/icon_chongzhi.png" alt=""><br>
+        <p>查看充值记录</p>
+    </li>
+    <li onclick="javascript:window.location.href='for_record.html'">
+        <img src="../img/icon_duihuan.png" alt=""><br>
+        <p>查看兑换记录</p>
+    </li>
+</ul>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-<script src="../js/public.js"></script>
-<script src="../js/first_index.js"></script>
+<script src="../js/public.js?v=1.0.0"></script>
+<script src="../js/first_index.js?v=1.0.0"></script>
 </body>
 </html>

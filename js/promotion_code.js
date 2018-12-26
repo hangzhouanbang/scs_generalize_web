@@ -5,7 +5,9 @@ function back() {
 var html=[];
 var data,tr,score;
 function init(page){
-    ajax_method(map.localurl+map.queryinvitation,'token='+localStorage.getItem('token')+'&page='+page+'&size=15','post',function successCallBack(a){
+    ajax_method(map.localurl+map.queryinvitation,
+        'token='+localStorage.getItem('token')+'&page='+page+'&size=15',
+        'post',function successCallBack(a){
         data = JSON.parse(a).data.listPage.items
         score = JSON.parse(a).data
         var html1 = '<span>'+score.invitationCode+'</span><br>\n' +
@@ -35,7 +37,9 @@ init(1);
 window.onscroll = function() {
     if(getScrollTop() + getClientHeight() == getScrollHeight()) {
         vid++;
-        ajax_method(map.localurl+map.queryinvitation,'token='+localStorage.getItem('token')+'&page='+vid+'&size=15','post',function successCallBack(a){
+        ajax_method(map.localurl+map.queryinvitation,
+            'token='+localStorage.getItem('token')+'&page='+vid+'&size=15',
+            'post',function successCallBack(a){
             data = JSON.parse(a).data.items;
             if(vid > JSON.parse(a).data.pageCount){
                 document.getElementsByClassName('loadmore')[0].style.display='block';
