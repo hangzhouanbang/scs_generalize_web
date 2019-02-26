@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>业务查询</title>
+    <!--清除缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/earnings.css?v=1.0.1">
+</head>
+<body>
+<div class="title">业务查询</div>
+<img src="../img/icon_back.png" alt="" onclick="javascript :window.location.href='first_index.html'" class="back">
+<img src="../img/btn.png" alt="" onclick="javascript :window.location.href='historical_earnings.html'" class="xq">
+<div class="rebate" style="display:block;">
+</div>
+<div class="my_players">
+    <span class="active" id="players" onclick="javascript:window.location.href = 'business_query.html'">我的玩家</span>
+    <span id="agents" onclick="javascript:window.location.href = 'recruitment_Agents.html'">下级代理</span>
+</div>
+<ul id="my_players">
+    <!--<li>-->
+    <!--<div class="left">-->
+    <!--<img src="../img/logo.png" alt="">-->
+    <!--</div>-->
+    <!--<div class="center">-->
+    <!--<div class="top">-->
+    <!--<p>玩家昵称：徐小姐</p>-->
+    <!--<p>玩家ID：654321</p>-->
+    <!--</div>-->
+    <!--<p>绑定时间：2018-10-17 18:21:15</p>-->
+    <!--<div class="bottom">-->
+    <!--<span>今日消费50.00</span>-->
+    <!--<span>返20.00</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="right">-->
+    <!--<p onclick="javascript :window.location.href='player_details.html'">详 <br> 情</p>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<div class="left">-->
+    <!--<img src="../img/logo.png" alt="">-->
+    <!--</div>-->
+    <!--<div class="center">-->
+    <!--<div class="top">-->
+    <!--<p>玩家昵称：徐小姐啊啊啊啊啊啊啊</p>-->
+    <!--<p>玩家ID：654321</p>-->
+    <!--</div>-->
+    <!--<p>绑定时间：2018-10-17 18:21:15</p>-->
+    <!--<div class="bottom">-->
+    <!--<span>今日消费50.00</span>-->
+    <!--<span>返20.00</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="right">-->
+    <!--<p onclick="javascript :window.location.href='player_details.html'">详 <br> 情</p>-->
+    <!--</div>-->
+    <!--</li>-->
+</ul>
+
+<div class="no_data">没有数据！</div>
+<div class="loadmore">
+    已全部加载
+</div>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="../js/public.js?v=1.0.0"></script>
+<script src="../js/business_query.js?v=1.0.1"></script>
+</html>

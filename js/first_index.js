@@ -6,8 +6,12 @@ function init(){
         localStorage.setItem('type',data.agent.agentType.type)
         if(data.agent.agentType.type == '推广经理'){
             document.getElementsByClassName('sytx')[0].style.display = 'none'
+            document.getElementsByClassName('sytx')[1].style.display = 'none'
+            document.getElementsByClassName('ywcx')[0].style.display = 'block'
         }else{
             document.getElementsByClassName('sytx')[0].style.display = 'block'
+            document.getElementsByClassName('sytx')[1].style.display = 'block'
+            document.getElementsByClassName('ywcx')[0].style.display = 'none'
         }
         document.getElementsByClassName('title')[0].innerHTML = data.agent.agentType.type + '管理后台'
         var html = '<div class="left">\n' +

@@ -76,18 +76,18 @@ init();
 
 function cz(page){
     ajax_method(map.localurl+map.queryclubcardrecord,
-        'token='+localStorage.getItem('token')+'&type=recharge&page='+page+'&size=10',
+        'token='+localStorage.getItem('token')+'&type=give&page='+page+'&size=10',
         'post',function successCallBack(a){
         var rechangedata = JSON.parse(a).data.items
         if(page > JSON.parse(a).data.pageCount){
             document.getElementsByClassName('loadmore')[0].style.display='block';
             return;
         }
-        // console.log(rechangedata)
+        console.log(rechangedata)
         for(var i = 0;i < rechangedata.length;i++){
             var tr = document.createElement('tr')
-            var receiverId = rechangedata[i].receiverId.substring(3)
-            // console.log(receiverId)
+            var receiverId = rechangedata[i].receiverId.substring(4)
+            console.log(receiverId)
             rechangedata[i].accountingTime = formatDate(new Date(rechangedata[i].accountingTime))
             rechangedata[i].accountingAmount = Math.abs(rechangedata[i].accountingAmount)
             tr.innerHTML =
@@ -96,7 +96,7 @@ function cz(page){
                 '<td>'+rechangedata[i].accountingAmount+'</td>'+
                 '<td>'+rechangedata[i].accountingTime+'</td>\n' +
                 '<td>'+
-                    '<input type="button" value="充值" class="btn1 recharge" onclick="recharge('+receiverId+')"/><br/>'+
+                    '<input type="button" value="转赠"  class="btn1 donation zeng" onclick="pass_on('+receiverId+')"/><br/>'+
                 '</td>'
             document.getElementById('table3').appendChild(tr)
         }
@@ -128,27 +128,26 @@ del.onclick = function(){
     input.value = ''
     del.style.display = 'none'
 }
-
-var id,deserve,memberId,redata,shuzhi;
-function recharge(receiverId){
-    console.log(receiverId)
+ 
+var id,deserve,agentId,redata,shuzhi;
+function pass_on(receiverId){
     ajax_method(map.localurl + map.confirm,
-        'memberId='+receiverId+'&agentId=', 
+        'memberId=&agentId='+receiverId, 
         'post', function successCallBack(h){
-        console.log(JSON.parse(h))
+        // console.log(JSON.parse(h))
         redata = JSON.parse(h)
         if(redata.msg == 'invalid memberId'){
             show(document.getElementsByClassName('mask8'),'')
         }else{
-            show(document.getElementsByClassName('mask'),document.getElementsByClassName('mask1'));
-            memberId = redata.data.memberId;
-            var html4 = '<div id="Card">玩家充值</div>\n'+
+            show(document.getElementsByClassName('mask3'),document.getElementsByClassName('mask4'));
+            agentId = redata.data.agentId;
+            var html4 = '<div id="Card">玩家转赠</div>\n'+
             '<div class="player">\n'+
-                '<span>充值对象：'+redata.data.memberName+'</span>\n'+
-                '<span>ID：'+redata.data.memberId+'</span>\n'+
+                '<span>转赠对象：'+redata.data.agentName+'</span>\n'+
+                '<span>ID：'+redata.data.agentId+'</span>\n'+
             '</div>\n'+
             '<div class="topup_type">\n'+
-                '<p>充值类型</p>\n'+
+                '<p>转赠类型</p>\n'+
                 '<span id="ri" class="pocket">\n'+
                     '<img src="../img/icon_rika.png" alt="">\n'+
                     '<img src="../img/select.png" alt="">\n'+
@@ -172,7 +171,7 @@ function recharge(receiverId){
             '</div>\n'+
             '<div class="number">\n'+
                 '<img src="../img/icon_shuliang.png" alt="">\n'+
-                '<input type="number" placeholder="请输入充值数量，如1,2" id="number" pattern="[0-9]*">\n'+
+                '<input type="number" placeholder="请输入转赠数量，如1,2" id="number" pattern="[0-9]*">\n'+
             '</div>\n'+
             '<div class="DIVIDE devidecard">\n'+
                 '<input type="button" value="1">\n'+
@@ -185,12 +184,12 @@ function recharge(receiverId){
                 '<input type="button" value="18000">\n'+
             '</div>\n'+
             '<div class="querycard">\n'+
-                '<span onclick="hide(document.getElementsByClassName(\'mask\'))">取消</span>\n'+
-                '<span onclick="sure()">确认充值</span>\n'+
+                '<span onclick="hide(document.getElementsByClassName(\'mask3\'))">取消</span>\n'+
+                '<span onclick="sure()">确认转赠</span>\n'+
             '</div>'+
             '<div class="tip" id="tip">\n'+
             '</div>'
-            document.getElementsByClassName('GAME_GUIDE')[0].innerHTML = html4;
+            document.getElementsByClassName('zhuanzeng')[0].innerHTML = html4;
     
             var spans = document.getElementsByClassName('pocket');
             var devideyu = document.getElementsByClassName('devideyu')[0];
@@ -249,7 +248,6 @@ function recharge(receiverId){
                     }
                 }
             }
-        
         }
     })
 }
@@ -263,35 +261,33 @@ for(var i = 0;i < inputs.length;i++){
     }
 }
 
-
 function sure(){
     if(deserve){
         var amount = deserve
     }else{
         var amount = shuzhi
     }
-    console.log(amount)
     ajax_method(map.localurl + map.rechargeCheck, 
-        'token='+localStorage.getItem('token')+'&memberId='+memberId+'&card='+id+'&number='+amount,
+        'token='+localStorage.getItem('token')+'&memberId='+agentId+'&card='+id+'&number='+amount, 
         'post', function successCallBack(h){
         console.log(JSON.parse(h))
         var rechargeCheck = JSON.parse(h)
         if(rechargeCheck.success){
-            show(document.getElementsByClassName('mask1'),document.getElementsByClassName('mask'))
+            show(document.getElementsByClassName('mask4'),document.getElementsByClassName('mask3'))
             console.log(redata)
             if(id == 'yu'){
                 var ka = '玉石'
                 var html4 = ' <div class="headline">\n' +
-                '                <p>请确认充值内容</p>\n' +
+                '                <p>请确认转赠内容</p>\n' +
                 '                <img src="'+rechargeCheck.data.headimgurl+'" alt="">'+
-                '                <p>玩家：'+redata.data.memberId+'</p>\n' +
-                '                <p>昵称：'+redata.data.memberName+'</p>\n' +
+                '                <p>玩家：'+redata.data.agentId+'</p>\n' +
+                '                <p>昵称：'+redata.data.agentName+'</p>\n' +
                 '                <p>'+ka+'：'+amount+'个</p>\n' +
                 '            </div>\n' +
                 '            <div class="querycard">\n' +
-                '                <span onclick="show(document.getElementsByClassName(\'mask\'),document.getElementsByClassName(\'mask1\'))">返回修改</span>\n' +
-                '                 <input onclick="sure1()" value="确认充值" class="qrcz" type="button">\n' +
-                '            </div>\n'
+                '                <span onclick="show(document.getElementsByClassName(\'mask3\'),document.getElementsByClassName(\'mask4\'))">返回修改</span>\n' +
+                '                 <input onclick="sure1()" value="确认转赠" class="qrzz" type="button">\n' +
+                '            </div>\n' 
             }else{
                 if(id == 'ri'){
                     var ka = '日卡'
@@ -306,18 +302,18 @@ function sure(){
                     var ka = '季卡'
                 }
                 var html4 = ' <div class="headline">\n' +
-                '                <p>请确认充值内容</p>\n' +
+                '                <p>请确认转赠内容</p>\n' +
                 '                <img src="'+rechargeCheck.data.headimgurl+'" alt="">'+
-                '                <p>玩家：'+redata.data.memberId+'</p>\n' +
-                '                <p>昵称：'+redata.data.memberName+'</p>\n' +
+                '                <p>玩家：'+redata.data.agentId+'</p>\n' +
+                '                <p>昵称：'+redata.data.agentName+'</p>\n' +
                 '                <p>'+ka+'：'+amount+'张</p>\n' +
                 '            </div>\n' +
                 '            <div class="querycard">\n' +
-                '                <span onclick="show(document.getElementsByClassName(\'mask\'),document.getElementsByClassName(\'mask1\'))">返回修改</span>\n' +
-                '                 <input onclick="sure1()" value="确认充值" class="qrcz" type="button">\n' +
+                '                <span onclick="show(document.getElementsByClassName(\'mask3\'),document.getElementsByClassName(\'mask4\'))">返回修改</span>\n' +
+                '                 <input onclick="sure1()" value="确认转赠" class="qrzz" type="button">\n' +
                 '            </div>\n'
             } 
-            document.getElementsByClassName('confirm_prepaid_phone')[0].innerHTML = html4;
+            document.getElementsByClassName('Donation')[0].innerHTML = html4;
         }else{
             var tip = '<img src="../img/icon_woring.png" alt="">'+rechargeCheck.msg;
             document.getElementById('tip').innerHTML = tip
@@ -325,40 +321,39 @@ function sure(){
         }
     })
 }
-//第二次确认充值
+//第二次确认转赠
 function sure1(){
-    console.log(111)
-    document.getElementsByClassName('qrcz')[0].disabled = 'true'
+    document.getElementsByClassName('qrzz')[0].disabled = 'true'
     if(deserve){
         var amount = deserve
     }else{
         var amount = document.getElementById('number').value
     }
-    ajax_method(map.localurl+map.recharge,
+    ajax_method(map.localurl+map.giveclubcard,
         'token='+localStorage.getItem('token')+
-        '&memberId='+redata.data.memberId+
+        '&receiverId='+redata.data.agentId+
         '&card='+id+
         '&number='+amount,'post',function successCallBack(a){
         var sure = JSON.parse(a);
         console.log(sure)
         if(sure.success){
-            show(document.getElementsByClassName('mask2'),document.getElementsByClassName('mask1'))
-            ajax_method(map.localurl + map.queryaccount, 'token='+localStorage.getItem('token'), 'post', function successCallBack(c){
-                var html7 = '<div class="headline">充值成功！</div>\n' +
+            show(document.getElementsByClassName('mask5'),document.getElementsByClassName('mask4'))
+            ajax_method(map.localurl + map.queryaccount, 
+                'token='+localStorage.getItem('token'), 
+                'post', function successCallBack(c){
+                var html7 = '<div class="headline">转赠成功！</div>\n' +
                     '            <img src="../img/icon_success.png" alt="">\n' +
                     '            <div class="message">目前剩余 <br>\n' +
                     '                日卡：'+JSON.parse(c).clubCardRi+'张，周卡：'+JSON.parse(c).clubCardZhou+'张，月卡：'+JSON.parse(c).clubCardYue+'张，季卡：'+JSON.parse(c).clubCardJi+'张，玉石：'+JSON.parse(c).coins+'个 \n' +
                     '</div>\n' +
                     '            <div class="querycard">\n' +
-                    '                <a href="membership_card.html" onclick="hide(document.getElementsByClassName(\'mask2\'))">玩家充值</a>\n' +
-                    '                <a href="recharge_record.html?id="'+redata.data.memberId+'>充值记录</a>\n' +
+                    '                <a href="lower_level.html" onclick="hide(document.getElementsByClassName(\'mask2\'))">下级转赠</a>\n' +
+                    '                <a href="examples_record.html?id='+redata.data.agentId+'">转赠记录</a>\n' +
                     '            </div>'
-                document.getElementsByClassName('recharged_successfully')[0].innerHTML = html7;
+                document.getElementsByClassName('examples_of_successful')[0].innerHTML = html7;
             })
         }else{
-            show(document.getElementsByClassName('mask6'),document.getElementsByClassName('mask1'))
+            show(document.getElementsByClassName('mask7'),document.getElementsByClassName('mask4'))
         }
     })
 }
-
-

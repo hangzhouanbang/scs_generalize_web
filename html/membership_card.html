@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>使用会员卡</title>
+    <title>玩家充值</title>
     <!--清除缓存-->
     <META HTTP-EQUIV="pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
@@ -12,115 +12,151 @@
     <link rel="stylesheet" type="text/css" href="../css/membership_card.css?v=1.0.0">
 </head>
 <body>
-    <div class="title">使用会员卡</div>
+    <div class="title">玩家充值</div>
     <img src="../img/icon_back.png" alt="" onclick="javascript :window.location.href='first_index.html'" class="back">
+    <div class="residue" id="residue">
+        <!-- <p class="surplus">剩余</p>
+        <div class="balance">
+            <span>
+                <p>日卡</p>
+                <p>322</p>
+            </span>
+            <span>
+                <p>周卡</p>
+                <p>322</p>
+            </span>
+            <span>
+                <p>月卡</p>
+                <p class="color">0</p>
+            </span>
+            <span>
+                <p>季卡</p>
+                <p>322</p>
+            </span>
+            <span>
+                <p>玉石</p>
+                <p>322</p>
+            </span>
+        </div> -->
+    </div>
+    <div class="search">
+        <input type="text" placeholder="ID搜索" id="ssid">
+        <img src="../img/search.png " alt="" class="sousuo">
+        <img src="../img/delete.png" alt="" class="delete">
+        <span onclick="recharge(document.getElementById('ssid').value)">充值</span>
+    </div>
+    <p class="near">最近充值记录</p>
     <table class="t_table" id="table3">
+        <tr>
+            <td style="width:2.5rem;">昵称/ID</td>
+            <td>类型</td>
+            <td>数量</td>
+            <td>时间</td>
+            <td>操作</td>
+        </tr>
         <!--<tr>-->
-            <!--<td>物品</td>-->
-            <!--<td>拥有数量</td>-->
-            <!--<td>操作</td>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td><img src="../img/icon_rika.png" style="width: 0.66rem;height:0.9rem;"></td>-->
+            <!--<td>徐大翔123 <br> 658626</td>-->
+            <!--<td>玉石</td>-->
             <!--<td>100</td>-->
+            <!--<td>2018-12-29 12:37:21</td>-->
             <!--<td>-->
-                <!--<input type="button" value="充值账号" class="btn1 recharge" id="ri"-->
+                <!--<input type="button" value="充值" class="btn1 recharge"-->
                        <!--onclick="recharge(this)"/><br/>-->
-                <!--<input type="button" value="转赠"  class="btn1 donation zeng" id="ri1"-->
-                       <!--onclick="pass_on(this)"/>-->
             <!--</td>-->
         <!--</tr>-->
         <!--<tr>-->
-            <!--<td><img src="../img/icon_zhouka.png" style="width: 0.66rem;height:0.9rem;"></td>-->
+            <!--<td>徐大翔123 <br> 658626</td>-->
+            <!--<td>玉石</td>-->
             <!--<td>100</td>-->
+            <!--<td>2018-12-29 12:37:21</td>-->
             <!--<td>-->
-                <!--<input type="button" value="充值账号" class="btn1 recharge" id="zhou"-->
-                       <!--onclick="recharge(this)"/><br/>-->
-                <!--<input type="button" value="转赠"  class="btn1 donation zeng" id="zhou1"-->
-                       <!--onclick="pass_on(this)"/>-->
-            <!--</td>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td><img src="../img/icon_yueka.png" style="width: 0.66rem;height:0.9rem;"></td>-->
-            <!--<td>100</td>-->
-            <!--<td>-->
-                <!--<input type="button" value="充值账号" class="btn1 recharge" id="yue"-->
-                       <!--onclick="recharge(this)"/><br/>-->
-                <!--<input type="button" value="转赠" class="btn1 donation zeng" id="yue1"-->
-                       <!--onclick="pass_on(this)"/>-->
-            <!--</td>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td><img src="../img/icon_jika.png" style="width: 0.66rem;height:0.9rem;"></td>-->
-            <!--<td>100</td>-->
-            <!--<td>-->
-                <!--<input type="button" value="充值账号" class="btn1 recharge" id="ji"-->
-                       <!--onclick="recharge(this)"/><br/>-->
-                <!--<input type="button" value="转赠" class="btn1 donation zeng" id="ji1"-->
-                       <!--onclick="pass_on(this)"/>-->
-            <!--</td>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td><img src="../img/icon_jade.png" style="width: 0.66rem;height:0.9rem;"></td>-->
-            <!--<td>20000000</td>-->
-            <!--<td>-->
-                <!--<input type="button" value="充值账号" class="btn1 recharge" id="yu"-->
+                <!--<input type="button" value="充值" class="btn1 recharge"-->
                        <!--onclick="recharge(this)"/><br/>-->
             <!--</td>-->
         <!--</tr>-->
     </table>
 
+    <div class="loadmore">
+        已全部加载
+    </div>
+
     <!--充值账号-->
     <div class="mask">
         <div class="GAME_GUIDE">
+            <!-- <div id="Card">玩家充值</div>
             <div class="player">
-                <img src="../img/icon_person.png" alt="">
-                <input type="text" placeholder="请输入充值玩家的ID" id="playerID">
+                <span>充值对象：哈哈哈哈哈</span>
+                <span>ID：123456</span>
             </div>
-            <div class="categories">
-                <img src="../img/icon_leixing.png" alt="">
-                <input type="text" id="Card" readonly>
+            <div class="topup_type">
+                <p>充值类型</p>
+                <span class="checked">
+                    <img src="../img/icon_rika.png" alt="">
+                    <img src="../img/select.png" alt="">
+                </span>
+                <span>
+                    <img src="../img/icon_zhouka.png" alt="">
+                    <img src="../img/select.png" alt="">
+                </span>
+                <span>
+                    <img src="../img/icon_yueka.png" alt="">
+                    <img src="../img/select.png" alt="">
+                </span>
+                <span>
+                    <img src="../img/icon_jika.png" alt="">
+                    <img src="../img/select.png" alt="">
+                </span>
+                <span>
+                    <img src="../img/icon_jade.png" alt="">
+                    <img src="../img/select.png" alt="">
+                </span>
             </div>
             <div class="number">
                 <img src="../img/icon_shuliang.png" alt="">
                 <input type="number" placeholder="请输入充值数量，如1,2" id="number" pattern="[0-9]*">
             </div>
+            <div class="DIVIDE">
+                <input type="button" value="1" class="select">
+                <input type="button" value="2">
+                <input type="button" value="3">
+            </div>
             <div class="querycard">
                 <span onclick="hide(document.getElementsByClassName('mask'))">取消</span>
                 <span onclick="sure()">确认充值</span>
             </div>
-            <div class="tip">周卡数量不够啦~</div>
-            <div class="X" onclick="hide(document.getElementsByClassName('mask'))">x</div>
+            <div class="tip">
+                <img src="../img/icon_woring.png" alt="">周卡数量不够啦~
+            </div> -->
         </div>
     </div>
 
     <!--确认充值-->
     <div class="mask1">
         <div class="confirm_prepaid_phone">
-            <!--<div class="headline">-->
-                <!--<p>请确认充值内容</p>-->
-                <!--<p>玩家：388515</p>-->
-                <!--<p>昵称：一川闲絮</p>-->
-                <!--<p>周卡：一张</p>-->
-            <!--</div>-->
-            <!--<div class="querycard">-->
-                <!--<span onclick="show(document.getElementsByClassName('mask'),document.getElementsByClassName('mask1'))">返回修改</span>-->
-                <!--<span onclick="sure1()">确认充值</span>-->
-            <!--</div>-->
-            <!--<div class="X" onclick="hide(document.getElementsByClassName('mask1'))">x</div>-->
+            <div class="headline">
+                <p>请确认充值内容</p>
+                <img src="../img/logo.png" alt="">
+                <p>玩家ID：388515</p>
+                <p>昵称：一川闲絮</p>
+                <p>周卡：一张</p>
+            </div>
+            <div class="querycard">
+                <span onclick="show(document.getElementsByClassName('mask'),document.getElementsByClassName('mask1'))">返回修改</span>
+                <input onclick="sure1()" value="确认充值" class="qrcz" type="button">
+            </div>
         </div>
     </div>
     <!--充值成功-->
     <div class="mask2">
         <div class="recharged_successfully">
-            <!--<div class="headline">充值成功！</div>-->
-            <!--<img src="../img/icon_success.png" alt="">-->
-            <!--<div class="message">目前剩余 <br>-->
-                <!--日卡：1张，周卡：10张，月卡：1张，季卡：1张，玉石：180000</div>-->
-            <!--<div class="querycard">-->
-                <!--<a href="first_index.html" onclick="hide(document.getElementsByClassName('mask2'))">返回首页</a>-->
-                <!--<a href="recharge_record.html">充值记录</a>-->
-            <!--</div>-->
+            <div class="headline">充值成功！</div>
+            <img src="../img/icon_success.png" alt="">
+            <div class="message">目前剩余 <br>
+                日卡：1张，周卡：10张，月卡：1张，季卡：1张，玉石：180000</div>
+            <div class="querycard">
+                <a href="first_index.html" onclick="hide(document.getElementsByClassName('mask2'))">返回首页</a>
+                <a href="recharge_record.html">充值记录</a>
+            </div>
         </div>
     </div>
     <!--充值失败-->
@@ -138,77 +174,17 @@
     <!--玩家不存在-->
     <div class="mask8">
         <div class="top-up-failure">
-            <div class="headline">玩家不存在！</div>
-            <img src="../img/icon_close.png" alt="">
+            <!-- <div class="tip">提示</div> -->
+            <div class="headline">该玩家不存在，请重新输入。</div>
+            <!-- <div class="sure">确定</div> -->
+            <img src="../img/icon_close.png" alt=""> 
             <div class="querycard">
                 <a href="first_index.html" onclick="hide(document.getElementsByClassName('mask2'))">返回首页</a>
-                <a href="javascript:void(0)" onclick="show(document.getElementsByClassName('mask'),document.getElementsByClassName('mask8'))">返回上级</a>
+                <a href="javascript:void(0)" onclick="hide(document.getElementsByClassName('mask8'))">返回上级</a>
             </div>
         </div>
     </div>
 
-    <!--转赠-->
-    <div class="mask3">
-        <div class="zhuanzeng">
-            <div class="player">
-                <img src="../img/icon_person.png" alt="">
-                <input type="text" placeholder="请输入赠送推广员的ID" id="ID">
-            </div>
-            <div class="categories">
-                <img src="../img/icon_leixing.png" alt="">
-                <input type="text" id="Card1" readonly>
-            </div>
-            <div class="number">
-                <img src="../img/icon_shuliang.png" alt="">
-                <input type="number" placeholder="请输入赠送物品数量，如1,2" id="num" pattern="[0-9]*">
-            </div>
-            <div class="querycard">
-                <span onclick="hide(document.getElementsByClassName('mask3'))">取消</span>
-                <span onclick="Donation1()">确认转赠</span>
-            </div>
-            <div class="tip">周卡数量不够啦~</div>
-            <div class="X" onclick="hide(document.getElementsByClassName('mask3'))">x</div>
-        </div>
-    </div>
-    <div class="mask4">
-        <div class="Donation">
-            <!--<div class="headline">-->
-                <!--<p>请确认转赠内容</p>-->
-                <!--<p>玩家：381551</p>-->
-                <!--&lt;!&ndash;<p>昵称：就爱抹茶味</p>&ndash;&gt;-->
-                <!--<p>月卡：一张</p>-->
-            <!--</div>-->
-            <!--<div class="querycard">-->
-                <!--<a href="first_index.html" onclick="hide(document.getElementsByClassName('mask4'))">我再想想</a>-->
-                <!--<span onclick="Donation2()">确认转赠</span>-->
-            <!--</div>-->
-        </div>
-    </div>
-    <!--转赠成功-->
-    <div class="mask5">
-        <div class="examples_of_successful">
-            <!--<div class="headline">转赠成功！</div>-->
-            <!--<img src="../img/icon_success.png" alt="">-->
-            <!--<div class="message">目前剩余 <br>-->
-                <!--会员日卡：10张，周卡：1张，月卡：1张，季卡：1张，玉石：1800000-->
-            <!--</div>-->
-            <!--<div class="querycard">-->
-                <!--<a href="first_index.html" onclick="hide(document.getElementsByClassName('mask5'))">返回首页</a>-->
-                <!--<a href="examples_record.html?id='+document.getElementById("ID").value+'">转赠记录</a>-->
-            <!--</div>-->
-        </div>
-    </div>
-    <!--充值失败-->
-    <div class="mask7">
-        <div class="examples-of-failure">
-            <div class="headline">转赠失败！</div>
-            <img src="../img/icon_close.png" alt="">
-            <div class="querycard">
-                <a href="first_index.html" onclick="hide(document.getElementsByClassName('mask2'))">返回首页</a>
-                <a href="javascript:void(0)" onclick="show(document.getElementsByClassName('mask3'),document.getElementsByClassName('mask7'))">返回上级</a>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/public.js?v=1.0.0"></script>

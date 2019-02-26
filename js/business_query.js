@@ -1,26 +1,29 @@
-//今日收益和本月收益
-ajax_method(map.localurl+map.queryreward,'token='+localStorage.getItem('token'),'post',function successCallBack(a) {
-    var data = JSON.parse(a)
-    var html = '<div class="today">\n' +
-        '            <p>今日返利（元)</p>\n' +
-        '            <p>'+data.data.dayReward+'</p>\n' +
-        '        </div>\n' +
-        '        <div class="current">\n' +
-        '            <p>当月返利（元)</p>\n' +
-        '            <p>'+data.data.monthReward+'</p>\n' +
-        '        </div>'
+ //推广经理
+// 今日总消费和本月总消费
+ajax_method(map.localurl+map.querycost,'token='+localStorage.getItem('token'),'post',function successCallBack(a) {
+    var data = JSON.parse(a).data
+    console.log(data)
+    var html = '<p class="consumption_statistics">消费统计（元）</p>\n' +
+        '        <p class="consumption_statistics">\n' +
+        '            <span>今日玩家：'+data.memebrDayCost+'</span>\n' +
+        '            <span>当月玩家：'+data.memberMonthCost+'</span>\n' +
+        '        </p>\n' +
+        '        <p class="consumption_statistics">\n' +
+        '            <span>今日代理：'+data.juniorDayCost+'</span>\n' +
+        '            <span>当月代理：'+data.juniorMonthCost+'</span>\n' +
+        '        </p>\n' +
+        '        <p class="consumption_statistics">\n' +
+        '            <span>今日总计：'+data.totalDayCost+'</span>\n' +
+        '            <span>当月总计：'+data.totalMonthCost+'</span>\n' +
+        '        </p>'
     document.getElementsByClassName('rebate')[0].innerHTML = html
 })
 
 //我的玩家
 var vid = 1;
 function init(page){
-    ajax_method(map.localurl+map.querymemberreward,
-        'token='+localStorage.getItem('token')+'&page='+page+'&size=10',
-        'post',function successCallBack(a) {
+    ajax_method(map.localurl+map.querymembercost,'token='+localStorage.getItem('token')+'&page='+page+'&size=10','post',function successCallBack(a) {
         var data = JSON.parse(a).data.listPage.items
-        var type = JSON.parse(a).data.type
-        console.log(type)
         if(data == []){
             document.getElementsByClassName('no_data')[0].style.display='block';
             return;
@@ -32,7 +35,7 @@ function init(page){
         for(var i = 0;i < data.length;i++){
             var li = document.createElement('li');
             data[i].inviteTime = formatDate(new Date(data[i].inviteTime))
-            li.innerHTML = ' <div class="left">\n' +
+                li.innerHTML = ' <div class="left">\n' +
                 '                <img src="'+data[i].headimgurl+'" alt="">\n' +
                 '            </div>\n' +
                 '            <div class="center">\n' +
@@ -42,8 +45,8 @@ function init(page){
                 '                </div>\n' +
                 '                <p>绑定时间：'+data[i].inviteTime+'</p>\n' +
                 '                <div class="bottom">\n' +
-                '                    <span>今日消费'+data[i].totalamount+'</span>\n' +
-                '                    <span>返'+data[i].agentReward+'</span>\n' +
+                '                    <span>今日消费：'+data[i].memebrDayCost+'</span>\n' +
+                '                    <span></span>\n' +
                 '                </div>\n' +
                 '            </div>\n' +
                 '            <div class="right">\n' +

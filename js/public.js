@@ -158,10 +158,18 @@ var map = {
     agentverify:'/agent/verify',
     managequeryconsumer:'/agent/managequeryconsumer',
     confirm:'/clubcard/confirm',
-    findagenthistory:'/history/findagenthistory'
+    findagenthistory:'/history/findagenthistory',
+    querycost:'/agent/querycost',
+    querymembercost:'/agent/querymembercost',
+    querymembercostdetail:'/agent/querymembercostdetail',
+    queryagentcost:'/agent/queryagentcost',
+    queryhistorycost:'/agent/queryhistorycost',
+    queryhistoryreward:'/agent/queryhistoryreward',
+    rechargeCheck:'/member/rechargeCheck',
+    queryinvitationRecord:'/invitation/queryinvitationRecord'
 };
-map.localurl = "http://scs.3cscy.com";
-// map.localurl = "http://192.168.0.134:96";
+map.localurl = "http://3cs.3cscy.com";
+// map.localurl = "http://192.168.0.156:96";
 
 // 七牛云的上传地址，根据自己所在地区选择，这里是华东区
 map.domain = 'http://up.qiniu.com'

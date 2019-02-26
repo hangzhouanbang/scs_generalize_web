@@ -90,3 +90,32 @@
 table{
     margin:-0.1rem auto 0 auto;
 }
+#table1{
+    display:none;
+}
+.my_players{
+    margin:0.5rem 0 0.5rem 0.9rem;
+}
+.my_players span{
+    width:2.88rem;
+    height:0.54rem;
+    display:inline-block;
+    text-align: center;
+    line-height: 0.54rem;
+    border:1px solid #007AFF;
+    font-size: 13px;
+    color: #007AFF;
+}
+.my_players span:nth-child(1){
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.my_players span:nth-child(2){
+    margin-left:-0.1rem;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.my_players span.active{
+    color: #FFFFFF;
+    background-color: #007AFF;
+}

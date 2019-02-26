@@ -58,10 +58,11 @@ body {
     padding-top:0.15rem;
 }
 .consumption_statistics span:nth-child(1){
-    float:left;
+    display:inline-block;
+    width:3.4rem;
 }
 .consumption_statistics span:nth-child(2){
-    float:right;
+    /*float:right;*/
 }
 .my_players{
     margin:0.5rem 0 0.5rem 0.9rem;
@@ -153,13 +154,13 @@ li .center .bottom span{
     -webkit-transform:scale(0.8);
     color: #666666;
     position: absolute;
-    top:0.005rem;
+    top:-0.03rem;
 }
 li .center .bottom span:nth-child(1){
     left:0.3rem;
 }
 li .center .bottom span:nth-child(2){
-    right:1rem;
+    right:0.3rem;
 }
 li .right{
     background: #007AFF;

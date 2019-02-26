@@ -1,22 +1,22 @@
 var memberId = window.location.href.slice(window.location.href.indexOf('id=')+3)
+var type = localStorage.getItem('type')
 function init(page){
-    ajax_method(map.localurl+map.querymemberrewarddetail,
-        'token='+localStorage.getItem('token')+'&page='+page+'&size=10&memberId='+memberId,
-        'post',function successCallBack(a) {
-            var data = JSON.parse(a).data.items
-            var type = JSON.parse(a).data.type
-            if(data.length == 0){
-                document.getElementsByClassName('no_data')[0].style.display='block';
-                return;
-            }
-            if(page > JSON.parse(a).data.pageCount){
-                document.getElementsByClassName('loadmore')[0].style.display='block';
-                return;
-            }
-            for(var i = 0;i < data.length;i++){
-                var li = document.createElement('li');
-                data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
-                if(type == '推广经理'){
+    if(type == '推广经理'){
+        ajax_method(map.localurl+map.querymembercostdetail,
+            'token='+localStorage.getItem('token')+'&page='+page+'&size=10&memberId='+memberId,
+            'post',function successCallBack(a) {
+                var data = JSON.parse(a).data.listPage.items
+                if(data.length == 0){
+                    document.getElementsByClassName('no_data')[0].style.display='block';
+                    return;
+                }
+                if(page > JSON.parse(a).data.pageCount){
+                    document.getElementsByClassName('loadmore')[0].style.display='block';
+                    return;
+                }
+                for(var i = 0;i < data.length;i++){
+                    var li = document.createElement('li');
+                    data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
                     li.innerHTML = ' <div class="top">\n' +
                         '                <span>时间：'+data[i].accountingTime+'</span>\n' +
                         '                <span>'+data[i].summary.text+'</span>\n' +
@@ -26,7 +26,25 @@ function init(page){
                         '                <p>玩家ID：'+data[i].memberId+'</p>\n' +
                         '                <p>消费'+data[i].totalamount+'</p>\n' +
                         '            </div>'
-                }else{
+                    document.getElementsByTagName('ul')[0].appendChild(li)
+                }
+            })
+    }else{
+        ajax_method(map.localurl+map.querymemberrewarddetail,
+            'token='+localStorage.getItem('token')+'&page='+page+'&size=10&memberId='+memberId,
+            'post',function successCallBack(a) {
+                var data = JSON.parse(a).data.listPage.items
+                if(data.length == 0){
+                    document.getElementsByClassName('no_data')[0].style.display='block';
+                    return;
+                }
+                if(page > JSON.parse(a).data.pageCount){
+                    document.getElementsByClassName('loadmore')[0].style.display='block';
+                    return;
+                }
+                for(var i = 0;i < data.length;i++){
+                    var li = document.createElement('li');
+                    data[i].accountingTime = formatDate(new Date(data[i].accountingTime))
                     li.innerHTML = ' <div class="top">\n' +
                         '                <span>时间：'+data[i].accountingTime+'</span>\n' +
                         '                <span>'+data[i].summary.text+'</span>\n' +
@@ -36,10 +54,10 @@ function init(page){
                         '                <p>玩家ID：'+data[i].memberId+'</p>\n' +
                         '                <p>消费'+data[i].totalamount+' 返'+data[i].accountingAmount+'</p>\n' +
                         '            </div>'
+                    document.getElementsByTagName('ul')[0].appendChild(li)
                 }
-                document.getElementsByTagName('ul')[0].appendChild(li)
-            }
-        })
+            })
+    }
 }
 init(1)
 var vid = 1;

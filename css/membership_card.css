@@ -19,55 +19,128 @@ body {
     top:0.22rem;
     left:0.5rem;
 }
+.residue .surplus{
+    padding:0;
+    margin:0.1rem 0 0 0.3rem;
+    font-size: 0.28rem;
+    color: #353535;
+}
+.residue .balance span{
+    width: 19%;
+    display:inline-block;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #353535;
+}
+.color{
+    color:#F12C20;
+}
+.search{
+    background: #F0EFF5;
+    width: 100%;
+    height:0.88rem;
+    position: relative;
+}
+.search input{
+    width:5.1rem;
+    height:0.56rem;
+    background: #FFFFFF;
+    border: 0 solid #E6E6EA;
+    border-radius: 5px;
+    outline: none;
+    margin:0.15rem 0.2rem;
+    padding-left:0.6rem;
+}
+.search .sousuo{
+    width:0.3rem;
+    height:0.3rem;
+    position: absolute;
+    top:0.3rem;
+    left:0.4rem;
+}
+.search .delete{
+    width:0.3rem;
+    height:0.3rem;
+    position: absolute;
+    top:0.3rem;
+    right:1.8rem;
+    display:none;
+}
+.search span{
+    background: #1AAD19;
+    border: 0 solid rgba(5,5,5,0.08);
+    border-radius: 3px;
+    display:inline-block;
+    width:1.2rem;
+    height:0.6rem;
+    text-align: center;
+    line-height: 0.6rem;
+    color:#fff;
+    margin-left:-0.1rem;
+}
+.near{
+    font-size: 0.28rem;
+    color: #666666;
+    margin:0.1rem 0 0 0.2rem;
+    padding:0;
+}
 .t_table {
     text-align: center;
-    width: 7rem;
+    width: 7.2rem;
     margin: 0 auto;
     border-collapse: collapse;
     color:#333;
 }
 .t_table tr{
-    width: 7rem;
+    width: 7.2rem;
     display: block; /*将tr设置为块体元素*/
     margin: 10px 0; /*设置tr间距为2px*/
+}
+.t_table tr:nth-child(2){
+    margin: 0; /*设置tr间距为2px*/
 }
 .t_table tr:not(:first-child){
     background: #FAFAFA;
     box-shadow: 0 1px 1px 0 #B3BECB;
     border-radius: 2px;
-    height:1.26rem;
+    height:0.88rem;
 }
 .t_table tr:not(:first-child) td{
-    height:1.26rem;
+    height:0.88rem;
 }
-.t_table td {
-    width:2.5rem;
+.t_table tr td:nth-child(1) {
+    width:1.7rem;
+}
+.t_table tr td:nth-child(2) {
+    width:1rem;
+}
+.t_table tr td:nth-child(3) {
+    width:1rem;
+}
+.t_table tr td:nth-child(4) {
+    width:2rem;
+}
+.t_table tr td:nth-child(5) {
+    width:1.5rem;
+}
+.t_table td img{
+    width: 0.88rem;
+    height:0.88rem;
+    margin-top:0.1rem;
 }
 .btn,
 .btn1{
     border-radius: 4px;
-    color: rgba(16, 16, 16, 1);
+    color: #09BB07;
     text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background-color: #fff;
     display: inline-block;
     text-decoration: none;
-    width: 1.26rem;
-    height: 0.48rem;
+    width: 1.2rem;
+    height: 0.6rem;
     font-size:0.24rem;
     padding: 0;
-}
-
-.recharge{
-    border: 1px solid #F8574B;
-    color:#F8574B;
-}
-.zeng{
-    border: 1px solid #4A90E2;
-    color:#4A90E2;
-}
-.donation {
-    margin-top: 0.12rem;
+    border: 2px solid #09BB07;
+    background-color: #fff;
 }
 .btn_member {
     text-decoration: none;
@@ -78,7 +151,6 @@ body {
     color: #fff;
     text-align: center;
     display: inline-block;
-    text-decoration: none;
     font-size:0.24rem;
 }
 .exchange{
@@ -100,9 +172,9 @@ body {
 .mask7,
 .mask8{
     position: fixed;
-    top:0.8rem;
+    top:0;
     left:0;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.5);
     width:100%;
     height:100%;
     display: none;
@@ -121,7 +193,7 @@ body {
     transform: translateX(-50%);
     line-height: 20px;
     text-align: center;
-    width: 6.22rem;
+    width: 5.6rem;
 }
 .GAME_GUIDE,
 .zhuanzeng{
@@ -129,7 +201,7 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
     border-radius: 6px;
     border: 1px solid rgba(187, 187, 187, 1);
-    height: 4.4rem;
+    height: 5.76rem;
 }
 .confirm_prepaid_phone,
 .Donation{
@@ -168,7 +240,7 @@ body {
 .recharged_successfully .message,
 .examples_of_successful .message{
     font-size: 0.24rem;
-    margin:0 0.9rem;
+    margin:0 0.5rem;
 }
 .top-up-failure .querycard,
 .examples-of-failure .querycard{
@@ -179,49 +251,40 @@ body {
     margin-top:0.6rem;
 }
 .player,
-.categories,
 .number,
 .GAME_GUIDE .querycard ,
 .zhuanzeng .querycard {
     width: 5.6rem;
-    margin: 0.3rem auto 0 auto;
+    margin: 0.4rem auto 0 auto;
     position: relative;
 }
-.player {
-    margin-top: 0.4rem;
+.number{
+    margin:0.2rem auto 0 auto;
 }
 .querycard{
-    margin:1.9rem auto 0 auto;
+    margin:2.2rem auto 0 auto;
 }
-.player img,
-.categories img,
 .number img {
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.48rem;
+    height: 0.48rem;
     position: absolute;
     top: 0.16rem;
-    left: 0.15rem;
+    left: 0.5rem;
 }
-.player input,
-.categories input,
 .number input,
 .querycard input {
-    width: 4.8rem;
-    height: 0.6rem;
+    width: 4.2rem;
+    height: 0.72rem;
     color: rgba(136, 136, 136, 1);
     border: 1px solid #979797;
     border-radius: 4px;
     padding-left: 0.8rem;
     font-size:0.28rem;
 }
-.categories select{
-    width:5.65rem;
-    height:0.7rem;
-}
 .querycard span,
 .querycard a {
     display: inline-block;
-    width: 1.6rem;
+    width: 1.8rem;
     height: 0.6rem;
     line-height: 0.6rem;
     border-radius: 4px;
@@ -240,36 +303,41 @@ body {
     border-radius: 15px;
 }
 .tip {
-    display: none;
-    font-size: 10px;
+    /* display: none; */
+    font-size: 0.2rem;
     color: #F34235;
-}
-.X {
     position: absolute;
-    right: -0.2rem;
-    top: -0.3rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    color: rgba(16, 16, 16, 1);
-    text-align: center;
-    border: 1px solid rgba(187, 187, 187, 1);
-    border-radius: 50%;
-    line-height: 0.6rem;
-    font-size: 0.4rem;
-    background-color: #fff;
+    top: 4.6rem;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    /* -webkit-transform:scale(0.8); */
+}
+.tip img{
+    width:0.28rem;
+    height:0.28rem;
+    position: absolute;
+    top:0.1rem;
+    left:-0.3rem;
 }
 .headline {
     width: 5.32rem;
     height: 1.26rem;
     line-height: 29px;
     color: rgba(16, 16, 16, 1);
-    font-size: 0.4rem;
     text-align: center;
-    margin:0.5rem auto;
+    margin:0.2rem auto;
+    font-size:0.32rem;
+}
+.headline img{
+    width:0.8rem;
+    height:0.8rem;
 }
 .headline p{
     margin:0;
-    font-size:0.32rem;
+    padding:0;
+    line-height: 24px;
+    font-size:0.28rem;
+    color:#333;
 }
 /*充值成功*/
 .recharged_successfully .headline,
@@ -326,4 +394,110 @@ body {
 }
 .mess .right div span:nth-child(2){
     float:right;
+}
+#Card,
+#Card1{
+    font-size: 18px;
+    color: #000000;
+    padding-top:0.4rem;
+}
+.player{
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+.player span{
+    font-size: 0.24rem;
+    color: #666666;
+}
+.player span:nth-child(1){
+    float:left;
+    margin-left:0.3rem;
+}
+.player span:nth-child(2){
+    float:right;
+    margin-right:0.3rem;
+}
+.topup_type p{
+    text-align: left;
+    padding:0;
+    margin:0 0 0.1rem 0.3rem;
+    font-size: 0.28rem;
+    color: #353535;
+}
+.topup_type span{
+    width:0.8rem;
+    height:0.8rem;
+    background: #D8D8D8;
+    border-radius: 2px;
+    border:1px solid #D8D8D8;
+    display:inline-block;
+    position: relative;
+}
+.topup_type span img:nth-child(1){
+    width:100%;
+    height:100%;
+    margin-left:0;
+}
+.topup_type span img:nth-child(2){
+    width:0.34rem;
+    height:0.34rem;
+    position: absolute;
+    right:0;
+    bottom:0;
+    display:none;
+}
+.topup_type span.checked{
+    border:1px solid #09BB07;
+}
+.topup_type span:not(:nth-child(2)){
+    margin-left:0.12rem;
+}
+.zz span:not(:nth-child(2)){
+    margin-left:0.4rem;
+}
+.DIVIDE{
+    margin-top:0.2rem;
+}
+.devideyu{
+    display:none;
+}
+.DIVIDE input{
+    border:none;
+    border: 2px solid #A1A1A1;
+    border-radius: 4px;
+    width:1.6rem;
+    height:0.6rem;
+    background-color: #fff;
+    font-size: 0.28rem;
+    color: #A1A1A1;
+    outline:none;
+}
+.DIVIDE input.select{
+    border: 2px solid #09BB07;
+    color:#09BB07;
+}
+.GAME_GUIDE .querycard,
+.zhuanzeng .querycard{
+    margin: 0.3rem auto 0 auto;
+}
+.loadmore{
+    display:none;
+    font-size:0.32rem;
+    text-align: center;
+    margin-bottom:0.2rem;
+}
+.querycard .qrcz,
+.querycard .qrzz{
+    width: 1.8rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    padding-left:0.15rem;
+    border:none;
+    background-color:#F34235;
+    margin-left:0.4rem;
+    outline:none;
+    -webkit-appearance:none;
 }
