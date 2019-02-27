@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的邀请记录</title>
+    <!--清除缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/purchase_history.css?v=1.0.0">
+    <link rel="stylesheet" href="../css/for_record.css?v=1.0.0">
+    <link rel="stylesheet" href="../css/promotion_code.css?v=1.0.0">
+</head>
+<body>
+<div class="select_code">推广码查询</div>
+<img src="../img/icon_back.png" alt="" onclick="javascript :window.location.href='first_index.html'" class="back">
+<div class="generalization">
+    <div class="myCode">
+        <div class="my">我的邀请码</div>
+        <div class="code">
+            <!--<span>WF3456</span><br>-->
+            <!--<span>长按复制邀请码</span>-->
+        </div>
+    </div>
+    <div class="QR" onclick="javascript:window.location.href = 'myCode.html'">
+        <img src="../img/icon-2ma.png" alt="">
+        <span>查看二维码</span>
+    </div>
+</div>
+<div class="my_players">
+    <span id="players" onclick="javascript:window.location.href = 'promotion_code.html'">有效邀请</span>
+    <span id="agents" onclick="javascript:window.location.href = 'to_activate.html'" class="active">待激活</span>
+</div>
+<div class="invited_record">我的邀请记录</div>
+<table id="table">
+    <tr>
+        <th>绑定时间</th>
+        <th>绑定ID</th>
+        <th>玩家昵称</th>
+        <th>积分</th>
+    </tr>
+    <div class="loadmore">
+        已全部加载
+    </div>
+</table>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="../js/public.js?v=1.0.0"></script>
+<script src="../js/to_activate.js"></script>
+</body>
+</html>
