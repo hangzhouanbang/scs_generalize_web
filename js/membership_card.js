@@ -86,8 +86,10 @@ function cz(page){
         // console.log(rechangedata)
         for(var i = 0;i < rechangedata.length;i++){
             var tr = document.createElement('tr')
-            var receiverId = rechangedata[i].receiverId.substring(3)
-            // console.log(receiverId)
+            var receiverId = '1'+ rechangedata[i].receiverId.substring(3)
+            // var receiverId = rechangedata[i].receiverId
+            //
+            console.log(receiverId)
             rechangedata[i].accountingTime = formatDate(new Date(rechangedata[i].accountingTime))
             rechangedata[i].accountingAmount = Math.abs(rechangedata[i].accountingAmount)
             tr.innerHTML =
@@ -131,9 +133,14 @@ del.onclick = function(){
 
 var id,deserve,memberId,redata,shuzhi;
 function recharge(receiverId){
-    console.log(receiverId)
+    if(receiverId.toString().length > 6){
+        var id = receiverId.toString().substring(1)
+    }else{
+        var id = receiverId
+    }
+    console.log(id)
     ajax_method(map.localurl + map.confirm,
-        'memberId='+receiverId+'&agentId=', 
+        'memberId='+id+'&agentId=',
         'post', function successCallBack(h){
         console.log(JSON.parse(h))
         redata = JSON.parse(h)

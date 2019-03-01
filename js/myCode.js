@@ -12,10 +12,10 @@ ajax_method(map.localurl+map.queryimage,
         document.getElementsByTagName('ul')[0].appendChild(li)
     }
     var lis = document.getElementsByTagName('li');
-    var oli = null,num=0;//oli是上一次的值,num是初始值
-    oli = lis[num];
+    var oli;
     for(var j = 0;j < lis.length;j++){
-        lis.index = j;
+        // lis.index = j;
+        oli = lis[j];
         lis[j].onclick=function(e){
             console.log(e.srcElement.id)
             order = e.srcElement.id;
